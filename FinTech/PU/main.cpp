@@ -28,26 +28,9 @@
 #include <cstdlib>
 #include <ostream>
 
-// Qt includes
-
-#include <QFileInfo>
-#include <QCoreApplication>
-#include <QJsonArray>
-#include <QJsonObject>
-#include <QJsonDocument>
-#include <QString>
-#include <QFile>
-#include <QTextStream>
-#include <QTextCodec>
-#include <QVector>
-#include <QDebug>
-#include <QDir>
-
-#include <QObject>
-
 // OpenNN includes
 
-#include "../opennn/opennn.h"
+#include "../../soc-ntm/opennn/opennn.h"
 
 using namespace OpenNN;
 using namespace std;
@@ -58,13 +41,13 @@ int main(void)
 {
     try
     {
-        cout << "Hello Blank Application" << endl;
+        cout << "Hello PU Application" << endl;
 
         srand(static_cast<unsigned>(time(nullptr)));
 
 		// Here your code
 
-        cout << "Bye Blank Application" << endl;
+        cout << "Bye PU Application" << endl;
 
         return 0;
 
