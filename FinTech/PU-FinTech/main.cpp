@@ -41,13 +41,13 @@ int main(void)
 {
     try
     {
-        cout << "Hello PU Application" << endl;
+        cout << "Hello PU-FinTech Application" << endl;
 
         srand(static_cast<unsigned>(time(nullptr)));
 
 		// Here your code
 
-        cout << "Bye PU Application" << endl;
+        cout << "Bye PU-FinTech Application" << endl;
 
         return 0;
 

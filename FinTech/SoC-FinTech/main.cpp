@@ -41,13 +41,13 @@ int main(void)
 {
     try
     {
-        cout << "Hello SoC Application" << endl;
+        cout << "Hello SoC-FinTech Application" << endl;
 
         srand(static_cast<unsigned>(time(nullptr)));
 
 		// Here your code
 
-        cout << "Bye SoC Application" << endl;
+        cout << "Bye SoC-FinTech Application" << endl;
 
         return 0;
 
