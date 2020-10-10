@@ -29,8 +29,8 @@
 
 // OpenNN includes
 
-#include "../../soc-ntm/opennn/opennn.h"
-#include "../../soc-ntm/opennn/statistics.h"
+#include "../../soc-ntm/opennn/opennn/opennn.h"
+#include "../../soc-ntm/opennn/opennn/statistics.h"
 
 using namespace OpenNN;
 using namespace std;
