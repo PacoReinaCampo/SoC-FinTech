@@ -40,6 +40,9 @@
  *   Paco Reina Campo <pacoreinacampo@queenfield.tech>
  */
 
+use rand::Rng;
+
 fn main() {
-  println!("Hello QueenField!");
+  let mut rng = rand::thread_rng();
+  println!("Random f64: {}", rng.gen::<f64>());
 }
