@@ -40,16 +40,14 @@
  *   Paco Reina Campo <pacoreinacampo@queenfield.tech>
  */
 
+use algebra_multithreading::matrix_product::simple_product_ab;
+use algebra_multithreading::{main_inner, parse_args};
+
 fn main() {
+    let opts = parse_args(
+        "sequential-mm",
+        "Sequential matrix product routine for square matrices with 1.0_f64 elements",
+    );
 
-  // Constants
-  const SIZE_I_IN: u32 = 3;
-  const SIZE_J_IN: u32 = 3;
-
-  // Body
-  for i in 1..SIZE_J_IN {
-    for j in 1..SIZE_I_IN {
-      DATA_OUT(i, j) = DATA_IN(j, i);
-    }
-  }
+    main_inner(opts, simple_product_ab);
 }

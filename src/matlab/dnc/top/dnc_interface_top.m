@@ -44,7 +44,7 @@
 ###################################################################################
 %}
 
-function Y_OUT = dnc_top(W_IN, K_IN, V_IN, D_IN, U_IN, B_IN, P_IN, Q_IN, X_IN)
+function [Y_OUT, R_OUT, XI_OUT, RHO_OUT, H_OUT] = dnc_interface_top(W_IN, K_IN, V_IN, D_IN, U_IN, B_IN, P_IN, Q_IN, X_IN)
   % Package
   addpath(genpath('../../math/algebra/matrix'));
   addpath(genpath('../../math/algebra/tensor'));
@@ -69,7 +69,7 @@ function Y_OUT = dnc_top(W_IN, K_IN, V_IN, D_IN, U_IN, B_IN, P_IN, Q_IN, X_IN)
   % Body
   for t = 1:SIZE_T_IN
     if (t == 1)
-      vector_h_int = zeros(SIZE_L_IN, 1);
+      H_OUT = zeros(SIZE_L_IN, 1);
 
       matrix_m_int = zeros(SIZE_N_IN, SIZE_W_IN);
       matrix_l_int = zeros(SIZE_N_IN, SIZE_N_IN);
@@ -84,74 +84,74 @@ function Y_OUT = dnc_top(W_IN, K_IN, V_IN, D_IN, U_IN, B_IN, P_IN, Q_IN, X_IN)
       % xi(t;s) = U(s;l)·h(t;l)
       matrix_operation_int = ntm_matrix_transpose(V_IN);
 
-      vector_xi_int = dnc_interface_vector(matrix_operation_int, vector_h_int);
+      XI_OUT = dnc_interface_vector(matrix_operation_int, H_OUT);
 
 
 
-      % INTERFACE_MATRIX_STATE
+      % INTERFACE_MATRIX_STATE MATRIX
 
       % rho(t;i;m) = U(i;m;l)·h(t;i;l)
       tensor_operation_int = ntm_tensor_transpose(D_IN);
 
-      matrix_rho_int = dnc_interface_matrix(tensor_operation_int, vector_h_int);
+      RHO_OUT = dnc_interface_matrix(tensor_operation_int, H_OUT);
 
 
 
       % READ_HEADS_STATE
 
-      % READ_KEYS_STATE
-
-      % k(t;i;k) = k^(t;i;k)
-      k_read_int = matrix_rho_int(:, 6:SIZE_W_IN + 5);
-
-      % READ_STRENGTHS_STATE
-
-      % beta(t;i) = oneplus(beta^(t;i))
-      beta_read_int = matrix_rho_int(:, 5);
-
       % FREE_GATES_STATE
 
       % f(t;i) = sigmoid(f^(t;i))
-      f_read_int = matrix_rho_int(:, 4);
+      f_read_int = RHO_OUT(:, SIZE_W_IN + 5);
+
+      % READ_KEYS_STATE
+
+      % k(t;i;k) = k^(t;i;k)
+      k_read_int = RHO_OUT(:, 5:SIZE_W_IN + 4);
 
       % READ_MODES_STATE
 
       % pi(t;i;p) = softmax(pi^(t;i;p))
-      pi_read_int = matrix_rho_int(:, 1:3);
+      pi_read_int = RHO_OUT(:, 2:4);
+
+      % READ_STRENGTHS_STATE
+
+      % beta(t;i) = oneplus(beta^(t;i))
+      beta_read_int = RHO_OUT(:, 1);
 
 
 
       % WRITE_HEADS_STATE
 
-      % WRITE_KEY_STATE
+      % ALLOCATION_GATE_STATE
 
-      % k(t;k) = k^(t;k)
-      k_write_int = vector_xi_int(2*SIZE_W_IN + 4:3*SIZE_W_IN + 3);
-
-      % WRITE_STRENGTH_STATE
-
-      % beta(t) = oneplus(beta^(t))
-      beta_write_int = vector_xi_int(2*SIZE_W_IN + 3);
+      % ga(t) = sigmoid(g^(t))
+      ga_write_int = XI_OUT(3*SIZE_W_IN + 3);
 
       % ERASE_VECTOR_STATE
 
       % e(t;k) = sigmoid(e^(t;k))
-      e_write_int = vector_xi_int(SIZE_W_IN + 3:2*SIZE_W_IN + 2);
-
-      % WRITE_VECTOR_STATE
-
-      % v(t;k) = v^(t;k)
-      v_write_int = vector_xi_int(3:SIZE_W_IN + 2);
-
-      % ALLOCATION_GATE_STATE
-
-      % ga(t) = sigmoid(g^(t))
-      ga_write_int = vector_xi_int(2);
+      e_write_int = XI_OUT(2*SIZE_W_IN + 3:3*SIZE_W_IN + 2);
 
       % WRITE_GATE_STATE
 
       % gw(t) = sigmoid(gw^(t))
-      gw_write_int = vector_xi_int(1);
+      gw_write_int = XI_OUT(2*SIZE_W_IN + 2);
+
+      % WRITE_KEY_STATE
+
+      % k(t;k) = k^(t;k)
+      k_write_int = XI_OUT(SIZE_W_IN + 2:2*SIZE_W_IN + 1);
+
+      % WRITE_STRENGTH_STATE
+
+      % beta(t) = oneplus(beta^(t))
+      beta_write_int = XI_OUT(SIZE_W_IN + 1);
+
+      % WRITE_VECTOR_STATE
+
+      % v(t;k) = v^(t;k)
+      v_write_int = XI_OUT(1:SIZE_W_IN);
 
 
 
@@ -206,23 +206,17 @@ function Y_OUT = dnc_top(W_IN, K_IN, V_IN, D_IN, U_IN, B_IN, P_IN, Q_IN, X_IN)
 
       % READ_VECTORS
       % r(t;i;k) = transpose(M(t;j;k))·w(t;i;j)
-      matrix_r_int = dnc_read_vectors(matrix_m_int, matrix_w_int);
+      R_OUT = dnc_read_vectors(matrix_m_int, matrix_w_int);
 
 
 
       % CONTROLLER_BODY_STATE
-
-      % FNN Convolutional mode: h(t;l) = sigmoid(W(l;x)*x(t;x) + K(i;l;k)*r(t;i;k) + D(i;l;m)*rho(t;i;m) + V(l;s)*xi(t;s) + U(l;l)*h(t-1;l) + b(l))
-      % FNN Standard mode:      h(t;l) = sigmoid(W(l;x)·x(t;x) + K(i;l;k)·r(t;i;k) + D(i;l;m)·rho(t;i;m) + V(l;s)·xi(t;s) + U(l;l)·h(t-1;l) + b(l))
-
-      vector_h_int = ntm_controller(W_IN, K_IN, V_IN, D_IN, U_IN, B_IN, matrix_r_int, vector_xi_int, matrix_rho_int, vector_h_int, X_IN(t, :));
-
-
+      H_OUT = ntm_controller(W_IN, K_IN, V_IN, D_IN, U_IN, B_IN, R_OUT, XI_OUT, RHO_OUT, H_OUT, X_IN(t, :));
 
       % OUTPUT_VECTOR_STATE
 
       % y(t;y) = P(i;y;k)·r(t;i;k) + Q(y;l)·h(t;l)
-      Y_OUT(t, :) = dnc_output_vector(P_IN, matrix_r_int, Q_IN, vector_h_int);
+      Y_OUT(t, :) = dnc_output_vector(P_IN, R_OUT, Q_IN, H_OUT);
     end
   end
 end

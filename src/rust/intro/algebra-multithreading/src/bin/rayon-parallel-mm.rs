@@ -40,16 +40,15 @@
  *   Paco Reina Campo <pacoreinacampo@queenfield.tech>
  */
 
+use algebra_multithreading::main_inner;
+use algebra_multithreading::matrix_product::par_product_ab_rayon;
+use algebra_multithreading::parse_args;
+
 fn main() {
+    let opts = parse_args(
+        "rayon-parallel-mm",
+        "Parallel, using rayon, matrix product routine",
+    );
 
-  // Constants
-  const SIZE_I_IN: u32 = 3;
-  const SIZE_J_IN: u32 = 3;
-
-  // Body
-  for i in 1..SIZE_J_IN {
-    for j in 1..SIZE_I_IN {
-      DATA_OUT(i, j) = DATA_IN(j, i);
-    }
-  }
+    main_inner(opts, par_product_ab_rayon);
 }

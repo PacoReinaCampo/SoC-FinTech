@@ -44,42 +44,75 @@
 ###################################################################################
 %}
 
-function C_OUT = ntm_matrix_content_based_addressing(K_IN, BETA_IN, M_IN)
+function [Y_OUT, R_OUT, XI_OUT, RHO_OUT, H_OUT] = ntm_interface_top(W_IN, K_IN, V_IN, D_IN, U_IN, B_IN, P_IN, Q_IN, X_IN)
   % Package
-  addpath(genpath('../../math/algebra/vector'));
   addpath(genpath('../../math/algebra/matrix'));
-  addpath(genpath('../../math/calculus/matrix'));
+  addpath(genpath('../../math/algebra/tensor'));
+  addpath(genpath('../../math/function/vector'));
+
+  addpath(genpath('../../controller/FNN/standard'));
+
+  addpath(genpath('../memory'));
+  addpath(genpath('../read_heads'));
+  addpath(genpath('../write_heads'));
 
   % Constants
-  SIZE_R_IN = length(BETA_IN);
+  [SIZE_R_IN, SIZE_Y_IN, SIZE_W_IN] = size(P_IN);
 
-  [SIZE_N_IN, SIZE_W_IN] = size(M_IN);
+  [SIZE_T_IN, ~] = size(X_IN);
 
-  % Internal Signals
-  matrix_beta_int = zeros(SIZE_R_IN, SIZE_N_IN);
+  SIZE_L_IN = length(B_IN);
 
-  matrix_j_operation_int = zeros(SIZE_R_IN, SIZE_N_IN);
-  vector_j_operation_int = zeros(SIZE_N_IN, 1);
-  vector_k_operation_int = zeros(SIZE_W_IN, 1);
+  SIZE_N_IN = 3;
+
+  % Signals
+  Y_OUT = zeros(SIZE_T_IN, SIZE_Y_IN);
 
   % Body
-  % C(M[j,·],k,beta)[i;j] = softmax(cosine_similarity(k,M[j,·])·beta)[i;j]
+  for t = 1:SIZE_T_IN
+    if (t == 1)
+      H_OUT = zeros(SIZE_L_IN, 1);
 
-  for i = 1:SIZE_R_IN
-    for j = 1:SIZE_N_IN
-      matrix_beta_int(i, j) = BETA_IN(i);
+      matrix_m_int = zeros(SIZE_N_IN, SIZE_W_IN);
 
-      for k = 1:SIZE_W_IN
-        vector_k_operation_int(k) = M_IN(j, k);
+      matrix_w_int = zeros(SIZE_R_IN, SIZE_N_IN);
+    else
+      % INTERFACE VECTOR
+      matrix_operation_int = ntm_matrix_transpose(V_IN);
 
-        vector_j_operation_int(j) = K_IN(i, k);
-      end
+      XI_OUT = ntm_interface_vector(matrix_operation_int, H_OUT);
 
-      matrix_j_operation_int(i, j) = ntm_vector_cosine_similarity(vector_j_operation_int, vector_k_operation_int);
+      vector_e_int = XI_OUT(SIZE_W_IN + 1:2*SIZE_W_IN);
+      vector_a_int = XI_OUT(1:SIZE_W_IN);
+
+      % INTERFACE MATRIX
+      tensor_operation_int = ntm_tensor_transpose(D_IN);
+
+      RHO_OUT = ntm_interface_matrix(tensor_operation_int, H_OUT);
+
+      matrix_k_int = RHO_OUT(:, SIZE_N_IN + 4:SIZE_N_IN + SIZE_W_IN + 3);
+      vector_beta_int = RHO_OUT(:, SIZE_N_IN + 3);
+      vector_g_int = RHO_OUT(:, SIZE_N_IN + 2);
+      matrix_s_int = RHO_OUT(:, 2:SIZE_N_IN + 1);
+      vector_gamma_int = RHO_OUT(:, 1);
+
+      % ERASING
+      matrix_m_int = ntm_erasing(matrix_m_int, matrix_w_int, vector_e_int);
+
+      % WRITING
+      matrix_m_int = ntm_writing(matrix_m_int, matrix_w_int, vector_a_int);
+
+      % READING
+      R_OUT = ntm_reading(matrix_w_int, matrix_m_int);
+
+      % ADDRESSING
+      matrix_w_int = ntm_addressing(matrix_k_int, vector_beta_int, vector_g_int, matrix_s_int, vector_gamma_int, matrix_m_int, matrix_w_int);
+
+      % CONTROLLER
+      H_OUT = ntm_controller(W_IN, K_IN, V_IN, D_IN, U_IN, B_IN, R_OUT, XI_OUT, RHO_OUT, H_OUT, X_IN(t, :));
+
+      % OUTPUT VECTOR
+      Y_OUT(t, :) = ntm_output_vector(P_IN, R_OUT, Q_IN, H_OUT);
     end
   end
-
-  matrix_j_operation_int = matrix_j_operation_int.*matrix_beta_int;
-
-  C_OUT = ntm_matrix_softmax(matrix_j_operation_int);
 end

@@ -44,42 +44,29 @@
 ###################################################################################
 %}
 
-function C_OUT = ntm_matrix_content_based_addressing(K_IN, BETA_IN, M_IN)
-  % Package
-  addpath(genpath('../../math/algebra/vector'));
-  addpath(genpath('../../math/algebra/matrix'));
-  addpath(genpath('../../math/calculus/matrix'));
+% Constants
+SIZE_T_IN = 3;
+SIZE_X_IN = 3;
+SIZE_Y_IN = 3;
+SIZE_N_IN = 3;
+SIZE_W_IN = 3;
+SIZE_L_IN = 3;
+SIZE_R_IN = 3;
 
-  % Constants
-  SIZE_R_IN = length(BETA_IN);
+SIZE_M_IN = SIZE_N_IN + SIZE_W_IN + 3;
+SIZE_S_IN = 2*SIZE_W_IN;
 
-  [SIZE_N_IN, SIZE_W_IN] = size(M_IN);
+% Signals
+W_IN = rand(SIZE_L_IN, SIZE_X_IN);
+K_IN = rand(SIZE_R_IN, SIZE_L_IN, SIZE_W_IN);
+V_IN = rand(SIZE_L_IN, SIZE_S_IN);
+D_IN = rand(SIZE_R_IN, SIZE_L_IN, SIZE_M_IN);
+U_IN = rand(SIZE_L_IN, SIZE_L_IN);
+B_IN = rand(SIZE_L_IN, 1);
+P_IN = rand(SIZE_R_IN, SIZE_Y_IN, SIZE_W_IN);
+Q_IN = rand(SIZE_Y_IN, SIZE_L_IN);
 
-  % Internal Signals
-  matrix_beta_int = zeros(SIZE_R_IN, SIZE_N_IN);
+X_IN = rand(SIZE_T_IN, SIZE_X_IN);
 
-  matrix_j_operation_int = zeros(SIZE_R_IN, SIZE_N_IN);
-  vector_j_operation_int = zeros(SIZE_N_IN, 1);
-  vector_k_operation_int = zeros(SIZE_W_IN, 1);
-
-  % Body
-  % C(M[j,·],k,beta)[i;j] = softmax(cosine_similarity(k,M[j,·])·beta)[i;j]
-
-  for i = 1:SIZE_R_IN
-    for j = 1:SIZE_N_IN
-      matrix_beta_int(i, j) = BETA_IN(i);
-
-      for k = 1:SIZE_W_IN
-        vector_k_operation_int(k) = M_IN(j, k);
-
-        vector_j_operation_int(j) = K_IN(i, k);
-      end
-
-      matrix_j_operation_int(i, j) = ntm_vector_cosine_similarity(vector_j_operation_int, vector_k_operation_int);
-    end
-  end
-
-  matrix_j_operation_int = matrix_j_operation_int.*matrix_beta_int;
-
-  C_OUT = ntm_matrix_softmax(matrix_j_operation_int);
-end
+% DUT
+[Y_OUT, R_OUT, XI_OUT, RHO_OUT, H_OUT] = ntm_interface_top(W_IN, K_IN, V_IN, D_IN, U_IN, B_IN, P_IN, Q_IN, X_IN);
