@@ -262,6 +262,6 @@ begin
 
         Y_OUT => y_out_top
         );
-  end generate dnc_top_philosopher;
+  end generate dnc_top_worker;
 
 end ntm_workers_architecture;

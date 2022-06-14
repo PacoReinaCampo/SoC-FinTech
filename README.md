@@ -178,6 +178,27 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 | `derr`  |    1   |   Output  | Bus Cycle Error Output          |
 | `dint`  |    1   |   Output  | Interrupt Signal Output         |
 
+## 2.3. FUNCTIONALITY
+
+### 2.3.1. Philosophers T-DNC/NTM-SoC
+
+#### 2.3.1.1. PU-NTM
+
+#### 2.3.1.2. SoC-NTM
+
+### 2.3.2. Soldiers T-DNC/NTM-SoC
+
+#### 2.3.2.1. PU-NTM
+
+#### 2.3.2.2. SoC-NTM
+
+### 2.3.3. Workers T-DNC/NTM-SoC
+
+#### 2.3.3.1. PU-NTM
+
+#### 2.3.3.2. SoC-NTM
+
+
 # 3. WORKFLOW
 
 **1. System Level (SystemC/SystemVerilog)**
