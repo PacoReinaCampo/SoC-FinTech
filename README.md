@@ -198,7 +198,6 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 
 #### 2.3.3.2. SoC-NTM
 
-
 # 3. WORKFLOW
 
 **1. System Level (SystemC/SystemVerilog)**
