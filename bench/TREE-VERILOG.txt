@@ -1,0 +1,15 @@
+.
+├── tests
+│   ├── philosophers
+│   │   └── ntm_philosophers_testbench.sv
+│   ├── soldiers
+│   │   └── ntm_soldiers_testbench.sv
+│   └── workers
+│       └── ntm_workers_testbench.sv
+└── uvm
+    ├── philosophers
+    │   └── ntm_philosophers_testbench.sv
+    ├── soldiers
+    │   └── ntm_soldiers_testbench.sv
+    └── workers
+        └── ntm_workers_testbench.sv

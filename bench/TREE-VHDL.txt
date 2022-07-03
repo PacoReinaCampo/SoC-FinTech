@@ -1,0 +1,15 @@
+.
+├── osvvm
+│   ├── philosophers
+│   │   └── ntm_philosophers_testbench.vhd
+│   ├── soldiers
+│   │   └── ntm_soldiers_testbench.vhd
+│   └── workers
+│       └── ntm_workers_testbench.vhd
+└── tests
+    ├── philosophers
+    │   └── ntm_philosophers_testbench.vhd
+    ├── soldiers
+    │   └── ntm_soldiers_testbench.vhd
+    └── workers
+        └── ntm_workers_testbench.vhd

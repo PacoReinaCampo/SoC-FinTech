@@ -1,0 +1,11 @@
+.
+├── philosophers
+│   └── ntm_philosophers.sv
+├── pkg
+│   ├── ntm_philosophers_pkg.sv
+│   ├── ntm_soldiers_pkg.sv
+│   └── ntm_workers_pkg.sv
+├── soldiers
+│   └── ntm_soldiers.sv
+└── workers
+    └── ntm_workers.sv
