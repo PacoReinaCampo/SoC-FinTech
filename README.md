@@ -31,7 +31,7 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 #### 1.0.5. PROCESS ASSURANCE
 #### 1.0.6. CERTIFICATION LIAISON PROCESS
 #### 1.0.7. HARDWARE DESIGN LIFECYCLE DATA
-##### 1.0.7.1 The Certification Authority
+##### 1.0.7.1 Certification Authority
 ##### 1.0.7.2 Certification Reviews
 ##### 1.0.7.3 Scheduling of Reviews
 #### 1.0.8. ADDITIONAL CONSIDERATIONS
