@@ -45,7 +45,7 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 ##### 1.1.1.1. Structural UML diagrams
 ###### 1.1.1.1.1. Class diagram
 ###### 1.1.1.1.2. Component diagram
-###### 1.1.1.1.3. Composite structure diagram
+###### 1.1.1.1.3. Composite diagram
 ###### 1.1.1.1.4. Deployment diagram
 ###### 1.1.1.1.5. Object diagram
 ###### 1.1.1.1.6. Package diagram
@@ -53,7 +53,7 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 ##### 1.1.1.2. Behavioral UML diagrams
 ###### 1.1.1.2.1. Activity diagram
 ###### 1.1.1.2.2. Communication diagram
-###### 1.1.1.2.3. Interaction overview diagram
+###### 1.1.1.2.3. Interaction diagram
 ###### 1.1.1.2.4. Sequence diagram
 ###### 1.1.1.2.5. State diagram
 ###### 1.1.1.2.6. Timing diagram
@@ -64,7 +64,7 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 ##### 1.1.2.1. Structural UML diagrams
 ###### 1.1.2.1.1. Class diagram
 ###### 1.1.2.1.2. Component diagram
-###### 1.1.2.1.3. Composite structure diagram
+###### 1.1.2.1.3. Composite diagram
 ###### 1.1.2.1.4. Deployment diagram
 ###### 1.1.2.1.5. Object diagram
 ###### 1.1.2.1.6. Package diagram
@@ -72,7 +72,7 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 ##### 1.1.2.2. Behavioral UML diagrams
 ###### 1.1.2.2.1. Activity diagram
 ###### 1.1.2.2.2. Communication diagram
-###### 1.1.2.2.3. Interaction overview diagram
+###### 1.1.2.2.3. Interaction diagram
 ###### 1.1.2.2.4. Sequence diagram
 ###### 1.1.2.2.5. State diagram
 ###### 1.1.2.2.6. Timing diagram
