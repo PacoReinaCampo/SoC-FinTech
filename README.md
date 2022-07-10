@@ -3,108 +3,102 @@ title:  Financial Technology with a System on Chip
 author: QueenField
 geometry: "left=3cm,right=2cm,top=3cm,bottom=2cm"
 ---
-# 1. INTRODUCTION
+
+# 0. INTRODUCTION
 
 A System on Chip (SoC) is an integrated circuit that integrates components of a computer system (PU, RAM, GPIO, etc). As they are integrated on a single substrate, SoCs consume much less power and take up much less area than multi-chip designs with equivalent functionality. SoCs are common in the mobile computing, embedded systems and the Internet of Things.
 
 An Automation Financial Method (AFM) is the technology and innovation that aims to compete with Traditional Financial Methods in the delivery of financial services. It is an emerging industry that uses technology to improve activities in finance. AFM is the new applications, processes, products, or business models in the financial services industry, composed of complementary financial services and provided as an end-to-end process via the Internet.
 
-### 1.0. DO-254
+### 0.0. DO-254
 
-#### 1.0.1. HARDWARE PLANNING PROCESS
-##### 1.0.1.1. Plan for Hardware Aspects of Certification
-##### 1.0.1.2. Hardware Design Plan
-##### 1.0.1.3. Hardware Validation Plan
-##### 1.0.1.4. Hardware Verification Plan
-##### 1.0.1.5. Hardware Configuration Management Plan
-##### 1.0.1.6. Hardware Process Assurance Plan
-#### 1.0.2. HARDWARE DESIGN PROCESS
-##### 1.0.2.1 Requirements Capture Process
-##### 1.0.2.2 Conceptual Design Process
-##### 1.0.2.3 Detailed Design Process
-##### 1.0.2.4 Implementation Process
-##### 1.0.2.5 Production Transition Process
-#### 1.0.3. VALIDATION AND VERIFICATION PROCESS
-##### 1.0.3.1 Validation Process
-##### 1.0.3.2 Verification Process
-#### 1.0.4. CONFIGURATION MANAGEMENT PROCESS
-#### 1.0.5. PROCESS ASSURANCE
-#### 1.0.6. CERTIFICATION LIAISON PROCESS
-#### 1.0.7. HARDWARE DESIGN LIFECYCLE DATA
-##### 1.0.7.1 Certification Authority
-##### 1.0.7.2 Certification Reviews
-##### 1.0.7.3 Scheduling of Reviews
-#### 1.0.8. ADDITIONAL CONSIDERATIONS
-##### 1.0.8.1 Previously Developed Hardware
-##### 1.0.8.2 Commercial Components Usage
+#### 0.0.1. HARDWARE PLANNING PROCESS
+##### 0.0.1.1. Plan for Hardware Aspects of Certification
+##### 0.0.1.2. Hardware Design Plan
+##### 0.0.1.3. Hardware Validation Plan
+##### 0.0.1.4. Hardware Verification Plan
+##### 0.0.1.5. Hardware Configuration Management Plan
+##### 0.0.1.6. Hardware Process Assurance Plan
+#### 0.0.2. HARDWARE DESIGN PROCESS
+##### 0.0.2.1 Requirements Capture Process
+##### 0.0.2.2 Conceptual Design Process
+##### 0.0.2.3 Detailed Design Process
+##### 0.0.2.4 Implementation Process
+##### 0.0.2.5 Production Transition Process
+#### 0.0.3. VALIDATION AND VERIFICATION PROCESS
+##### 0.0.3.1 Validation Process
+##### 0.0.3.2 Verification Process
+#### 0.0.4. CONFIGURATION MANAGEMENT PROCESS
+#### 0.0.5. PROCESS ASSURANCE
+#### 0.0.6. CERTIFICATION LIAISON PROCESS
+#### 0.0.7. HARDWARE DESIGN LIFECYCLE DATA
+##### 0.0.7.1 The Certification Authority
+##### 0.0.7.2 Certification Reviews
+##### 0.0.7.3 Scheduling of Reviews
+#### 0.0.8. ADDITIONAL CONSIDERATIONS
+##### 0.0.8.1 Previously Developed Hardware
+##### 0.0.8.2 Commercial Components Usage
 
-### 1.1. Model
+### 0.1. Requeriments
 
-#### 1.1.1. MatLab Language
+##### 0.1.1. Structural UML diagrams
 
-##### 1.1.1.1. Structural UML diagrams
-###### 1.1.1.1.1. Class diagram
-###### 1.1.1.1.2. Component diagram
-###### 1.1.1.1.3. Composite diagram
-###### 1.1.1.1.4. Deployment diagram
-###### 1.1.1.1.5. Object diagram
-###### 1.1.1.1.6. Package diagram
-###### 1.1.1.1.7. Profile diagram
-##### 1.1.1.2. Behavioral UML diagrams
-###### 1.1.1.2.1. Activity diagram
-###### 1.1.1.2.2. Communication diagram
-###### 1.1.1.2.3. Interaction diagram
-###### 1.1.1.2.4. Sequence diagram
-###### 1.1.1.2.5. State diagram
-###### 1.1.1.2.6. Timing diagram
-###### 1.1.1.2.7. Use case diagram
+###### 0.1.1.1. Class diagram
+###### 0.1.1.2. Component diagram
+###### 0.1.1.3. Composite diagram
+###### 0.1.1.4. Deployment diagram
+###### 0.1.1.5. Object diagram
+###### 0.1.1.6. Package diagram
+###### 0.1.1.7. Profile diagram
 
-#### 1.1.2. Rust Language
+##### 0.1.2. Behavioral UML diagrams
 
-##### 1.1.2.1. Structural UML diagrams
-###### 1.1.2.1.1. Class diagram
-###### 1.1.2.1.2. Component diagram
-###### 1.1.2.1.3. Composite diagram
-###### 1.1.2.1.4. Deployment diagram
-###### 1.1.2.1.5. Object diagram
-###### 1.1.2.1.6. Package diagram
-###### 1.1.2.1.7. Profile diagram
-##### 1.1.2.2. Behavioral UML diagrams
-###### 1.1.2.2.1. Activity diagram
-###### 1.1.2.2.2. Communication diagram
-###### 1.1.2.2.3. Interaction diagram
-###### 1.1.2.2.4. Sequence diagram
-###### 1.1.2.2.5. State diagram
-###### 1.1.2.2.6. Timing diagram
-###### 1.1.2.2.7. Use case diagram
+###### 0.1.2.1. Activity diagram
+###### 0.1.2.2. Communication diagram
+###### 0.1.2.3. Interaction diagram
+###### 0.1.2.4. Sequence diagram
+###### 0.1.2.5. State diagram
+###### 0.1.2.6. Timing diagram
+###### 0.1.2.7. Use diagram
 
-### 1.2. Design
+### 0.2. Source
 
-#### 1.2.1. VHDL
+#### 0.2.1. MatLab Language
+#### 0.2.2. Rust Language
 
-#### 1.2.2. Verilog
+### 0.3. Model
 
-### 1.3. Verification
+#### 0.3.1. VHDL
+#### 0.3.2. Verilog
 
-#### 1.3.1. OSVVM-VHDL
+### 0.4. Design
 
-##### 1.3.1.1. OSVVM Checker
-##### 1.3.1.2. OSVVM Stimulus
-##### 1.3.1.3. OSVVM Testbench
+#### 0.4.1. VHDL
+#### 0.4.2. Verilog
 
-#### 1.3.2. UVM-Verilog
+### 0.5. Verification
 
-##### 1.3.2.1. UVM Agent
-##### 1.3.2.2. UVM Driver
-##### 1.3.2.3. UVM Enviroment
-##### 1.3.2.4. UVM Monitor
-##### 1.3.2.5. UVM Scoreboard
-##### 1.3.2.6. UVM Sequence
-##### 1.3.2.7. UVM Sequencer
-##### 1.3.2.8. UVM Subscriber
-##### 1.3.2.9. UVM Test
-##### 1.3.2.10. UVM Testbench
-##### 1.3.2.11. UVM Transaction
+#### 0.5.1. OSVVM-VHDL
+
+##### 0.5.1.1. OSVVM Checker
+##### 0.5.1.2. OSVVM Stimulus
+##### 0.5.1.3. OSVVM Testbench
+
+#### 0.5.2. UVM-Verilog
+
+##### 0.5.2.1. UVM Agent
+##### 0.5.2.2. UVM Driver
+##### 0.5.2.3. UVM Enviroment
+##### 0.5.2.4. UVM Monitor
+##### 0.5.2.5. UVM Scoreboard
+##### 0.5.2.6. UVM Sequence
+##### 0.5.2.7. UVM Sequencer
+##### 0.5.2.8. UVM Subscriber
+##### 0.5.2.9. UVM Test
+##### 0.5.2.10. UVM Testbench
+##### 0.5.2.11. UVM Transaction
+
+# 1. METODOLOGY
 
 # 2. PROJECTS
 
