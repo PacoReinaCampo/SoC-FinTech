@@ -39,66 +39,68 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 #### 0.0.8.1 Previously Developed Hardware
 #### 0.0.8.2 Commercial Components Usage
 
-## 0.1. Requeriments
+## 0.1. Best Practices
 
-#### 0.1.1. Structural UML diagrams
+# 1. METHODOLOGY
 
-##### 0.1.1.1. Class diagram
-##### 0.1.1.2. Component diagram
-##### 0.1.1.3. Composite diagram
-##### 0.1.1.4. Deployment diagram
-##### 0.1.1.5. Object diagram
-##### 0.1.1.6. Package diagram
-##### 0.1.1.7. Profile diagram
+## 1.1. Requeriments
 
-#### 0.1.2. Behavioral UML diagrams
+### 1.1.1. Structural UML diagrams
 
-##### 0.1.2.1. Activity diagram
-##### 0.1.2.2. Communication diagram
-##### 0.1.2.3. Interaction diagram
-##### 0.1.2.4. Sequence diagram
-##### 0.1.2.5. State diagram
-##### 0.1.2.6. Timing diagram
-##### 0.1.2.7. Use diagram
+#### 1.1.1.1. Class diagram
+#### 1.1.1.2. Component diagram
+#### 1.1.1.3. Composite diagram
+#### 1.1.1.4. Deployment diagram
+#### 1.1.1.5. Object diagram
+#### 1.1.1.6. Package diagram
+#### 1.1.1.7. Profile diagram
 
-## 0.2. Source
+### 1.1.2. Behavioral UML diagrams
 
-### 0.2.1. MatLab Language
-### 0.2.2. Rust Language
+#### 1.1.2.1. Activity diagram
+#### 1.1.2.2. Communication diagram
+#### 1.1.2.3. Interaction diagram
+#### 1.1.2.4. Sequence diagram
+#### 1.1.2.5. State diagram
+#### 1.1.2.6. Timing diagram
+#### 1.1.2.7. Use diagram
 
-## 0.3. Model
+## 1.2. Source
 
-### 0.3.1. VHDL
-### 0.3.2. Verilog
+### 1.2.1. MatLab Language
+### 1.2.2. Rust Language
 
-## 0.4. Design
+## 1.3. Model
 
-### 0.4.1. VHDL
-### 0.4.2. Verilog
+### 1.3.1. VHDL
+### 1.3.2. Verilog
 
-## 0.5. Verification
+## 1.4. Design
 
-### 0.5.1. OSVVM-VHDL
+### 1.4.1. VHDL
+### 1.4.2. Verilog
 
-#### 0.5.1.1. OSVVM Checker
-#### 0.5.1.2. OSVVM Stimulus
-#### 0.5.1.3. OSVVM Testbench
+## 1.5. Verification
 
-### 0.5.2. UVM-Verilog
+### 1.5.1. OSVVM-VHDL
 
-#### 0.5.2.1. UVM Agent
-#### 0.5.2.2. UVM Driver
-#### 0.5.2.3. UVM Enviroment
-#### 0.5.2.4. UVM Monitor
-#### 0.5.2.5. UVM Scoreboard
-#### 0.5.2.6. UVM Sequence
-#### 0.5.2.7. UVM Sequencer
-#### 0.5.2.8. UVM Subscriber
-#### 0.5.2.9. UVM Test
-#### 0.5.2.10. UVM Testbench
-#### 0.5.2.11. UVM Transaction
+#### 1.5.1.1. OSVVM Checker
+#### 1.5.1.2. OSVVM Stimulus
+#### 1.5.1.3. OSVVM Testbench
 
-# 1. METODOLOGY
+### 1.5.2. UVM-Verilog
+
+#### 1.5.2.1. UVM Agent
+#### 1.5.2.2. UVM Driver
+#### 1.5.2.3. UVM Enviroment
+#### 1.5.2.4. UVM Monitor
+#### 1.5.2.5. UVM Scoreboard
+#### 1.5.2.6. UVM Sequence
+#### 1.5.2.7. UVM Sequencer
+#### 1.5.2.8. UVM Subscriber
+#### 1.5.2.9. UVM Test
+#### 1.5.2.10. UVM Testbench
+#### 1.5.2.11. UVM Transaction
 
 # 2. PROJECTS
 
