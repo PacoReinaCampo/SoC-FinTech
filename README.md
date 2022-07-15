@@ -41,9 +41,12 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 
 ## 0.1. Best Practices
 
+### 0.1.1. HARDWARE
+### 0.1.2. SOFTWARE
+
 # 1. METHODOLOGY
 
-## 1.1. Requeriments
+## 1.1. Requirements
 
 ### 1.1.1. Structural UML diagrams
 
@@ -67,40 +70,45 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 
 ## 1.2. Source
 
-### 1.2.1. MatLab Language
-### 1.2.2. Rust Language
+### 1.2.1. Ada Language
+### 1.2.2. C Language
 
 ## 1.3. Model
 
 ### 1.3.1. VHDL
 ### 1.3.2. Verilog
 
-## 1.4. Design
+## 1.5. Validation
 
-### 1.4.1. VHDL
-### 1.4.2. Verilog
+### 1.5.1. VHDL
+### 1.5.2. Verilog
 
-## 1.5. Verification
+## 1.5. Design
 
-### 1.5.1. OSVVM-VHDL
+### 1.5.1. VHDL
+### 1.5.2. Verilog
 
-#### 1.5.1.1. OSVVM Checker
-#### 1.5.1.2. OSVVM Stimulus
-#### 1.5.1.3. OSVVM Testbench
+## 1.6. Verification
 
-### 1.5.2. UVM-Verilog
+### 1.6.1. OSVVM-VHDL
 
-#### 1.5.2.1. UVM Agent
-#### 1.5.2.2. UVM Driver
-#### 1.5.2.3. UVM Enviroment
-#### 1.5.2.4. UVM Monitor
-#### 1.5.2.5. UVM Scoreboard
-#### 1.5.2.6. UVM Sequence
-#### 1.5.2.7. UVM Sequencer
-#### 1.5.2.8. UVM Subscriber
-#### 1.5.2.9. UVM Test
-#### 1.5.2.10. UVM Testbench
-#### 1.5.2.11. UVM Transaction
+#### 1.6.1.1. OSVVM Checker
+#### 1.6.1.2. OSVVM Stimulus
+#### 1.6.1.3. OSVVM Testbench
+
+### 1.6.2. UVM-Verilog
+
+#### 1.6.2.1. UVM Agent
+#### 1.6.2.2. UVM Driver
+#### 1.6.2.3. UVM Enviroment
+#### 1.6.2.4. UVM Monitor
+#### 1.6.2.5. UVM Scoreboard
+#### 1.6.2.6. UVM Sequence
+#### 1.6.2.7. UVM Sequencer
+#### 1.6.2.8. UVM Subscriber
+#### 1.6.2.9. UVM Test
+#### 1.6.2.10. UVM Testbench
+#### 1.6.2.11. UVM Transaction
 
 # 2. PROJECTS
 
