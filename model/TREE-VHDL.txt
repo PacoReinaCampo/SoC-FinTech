@@ -1,0 +1,11 @@
+.
+├── philosophers
+│   └── ntm_philosophers.vhd
+├── pkg
+│   ├── ntm_philosophers_pkg.vhd
+│   ├── ntm_soldiers_pkg.vhd
+│   └── ntm_workers_pkg.vhd
+├── soldiers
+│   └── ntm_soldiers.vhd
+└── workers
+    └── ntm_workers.vhd
