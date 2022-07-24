@@ -11,7 +11,7 @@ geometry: "left = 3cm, right = 2cm, top = 3cm, bottom = 2cm"
 A System on Chip (SoC) is an integrated circuit that integrates components of a computer system (PU, RAM, GPIO, etc). As they are integrated on a single substrate, SoCs consume much less power and take up much less area than multi-chip designs with equivalent functionality. SoCs are common in the mobile computing, embedded systems and the Internet of Things.
 
 An Automation Financial Method (AFM) is the technology and innovation that aims to compete with Traditional Financial Methods in the delivery of financial services. It is an emerging industry that uses technology to improve activities in finance. AFM is the new applications, processes, products, or business models in the financial services industry, composed of complementary financial services and provided as an end-to-end process via the Internet.
-r
+
 ## 0.0. DO-254
 
 ### 0.0.1. HARDWARE PLANNING PROCESS
