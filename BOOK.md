@@ -52,7 +52,7 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 
 ## 1.1. Requirements
 
-![UML Diagrams Overview](../doc/graphviz/uml_diagrams_overview.png)
+![UML Diagrams Overview](../requirements/uml_diagrams_overview.png)
 
 ### 1.1.1. Structural UML diagrams
 
