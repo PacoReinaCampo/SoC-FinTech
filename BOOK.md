@@ -80,7 +80,7 @@ An Automation Financial Method (AFM) is the technology and innovation that aims 
 
 # 1. METHODOLOGY
 
-![Project Workflow](../doc/project.png)
+![Project Workflow](../doc/project.svg)
 
 ## 1.1. Requirements
 
@@ -558,7 +558,7 @@ libboost-python-dev libboost-filesystem-dev zlib1g-dev
 
 ## 4.1. FRONT-END OPEN SOURCE TOOLS
 
-![Front-End](../doc/front-end.png)
+![Front-End](../doc/front-end.svg)
 
 ### 4.1.1. Modeling System Level of Hardware
 
@@ -754,7 +754,7 @@ git clone https://github.com/YosysHQ/SymbiYosys
 
 ## 4.2. BACK-END OPEN SOURCE TOOLS
 
-![Back-End](../doc/back-end.png)
+![Back-End](../doc/back-end.svg)
 
 **Library**
 
