@@ -1,11 +1,72 @@
-.
-├── philosophers
-│   └── ntm_philosophers.sv
+├── classes
+│   ├── philosophers
+│   │   └── ntm_philosophers.sv
+│   ├── soldiers
+│   │   └── ntm_soldiers.sv
+│   └── workers
+│       └── ntm_workers.sv
 ├── pkg
-│   ├── ntm_philosophers_pkg.sv
-│   ├── ntm_soldiers_pkg.sv
-│   └── ntm_workers_pkg.sv
-├── soldiers
-│   └── ntm_soldiers.sv
-└── workers
-    └── ntm_workers.sv
+│   ├── classes
+│   │   ├── ntm_philosophers_pkg.sv
+│   │   ├── ntm_soldiers_pkg.sv
+│   │   └── ntm_workers_pkg.sv
+│   └── traditional
+│       └── traditional_state_pkg.sv
+└── traditional
+    ├── traditional_advanced_computer_architecture
+    │   ├── traditional_multi_processor_system_on_chip
+    │   │   └── traditional_multi_processor_system_on_chip.sv
+    │   ├── traditional_processing_unit
+    │   │   ├── traditional_mimd.sv
+    │   │   ├── traditional_misd.sv
+    │   │   ├── traditional_simd.sv
+    │   │   └── traditional_sisd.sv
+    │   └── traditional_system_on_chip
+    │       ├── traditional_bus_on_chip.sv
+    │       └── traditional_network_on_chip.sv
+    ├── traditional_computer_architecture
+    │   ├── traditional_harvard_architecture
+    │   │   ├── traditional_alu.sv
+    │   │   ├── traditional_control_unit.sv
+    │   │   ├── traditional_io_unit.sv
+    │   │   └── traditional_memory_unit.sv
+    │   └── traditional_von_neumann_architecture
+    │       ├── traditional_alu.sv
+    │       ├── traditional_control_unit.sv
+    │       ├── traditional_io_unit.sv
+    │       └── traditional_memory_unit.sv
+    ├── traditional_information
+    │   ├── traditional_bit
+    │   │   └── traditional_bit.sv
+    │   ├── traditional_combinational_logic
+    │   │   ├── traditional_arithmetic_circuits.sv
+    │   │   └── traditional_logic_circuits.sv
+    │   ├── traditional_finite_state_machine
+    │   │   └── traditional_finite_state_machine.sv
+    │   ├── traditional_logic_gate
+    │   │   ├── traditional_and_gate.sv
+    │   │   ├── traditional_nand_gate.sv
+    │   │   ├── traditional_nor_gate.sv
+    │   │   ├── traditional_not_gate.sv
+    │   │   ├── traditional_or_gate.sv
+    │   │   ├── traditional_xnor_gate.sv
+    │   │   ├── traditional_xor_gate.sv
+    │   │   └── traditional_yes_gate.sv
+    │   └── traditional_pushdown_automaton
+    │       └── traditional_pushdown_automaton.sv
+    ├── traditional_neural_network
+    │   ├── traditional_feedforward_neural_network
+    │   │   └── traditional_feedforward_neural_network.sv
+    │   ├── traditional_long_short_term_memory_neural_network
+    │   │   └── traditional_long_short_term_memory_neural_network.sv
+    │   └── traditional_transformer_neural_network
+    │       └── traditional_transformer_neural_network.sv
+    └── traditional_turing_machine
+        ├── traditional_differentiable_neural_computer
+        │   ├── traditional_feedforward_differentiable_neural_computer.sv
+        │   ├── traditional_lstm_differentiable_neural_computer.sv
+        │   └── traditional_transformer_differentiable_neural_computer.sv
+        └── traditional_neural_turing_machine
+            ├── traditional_feedforward_neural_turing_machine.sv
+            ├── traditional_lstm_neural_turing_machine.sv
+            └── traditional_transformer_neural_turing_machine.sv
