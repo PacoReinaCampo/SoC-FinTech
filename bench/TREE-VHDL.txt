@@ -1,4 +1,3 @@
-.
 ├── osvvm
 │   ├── philosophers
 │   │   └── ntm_philosophers_testbench.vhd
