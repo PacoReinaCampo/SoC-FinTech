@@ -961,97 +961,117 @@ class traditional_workers : private traditional_classes {
 
 # 3. ORGANIZATION
 
-## 3.1. Mechanics
+## 3.1. TRADITIONAL COMPUTING
 
-## 3.2. Information
+### 3.1.1. Traditional Mechanics
 
-### 3.2.1. Bit
+#### 3.1.1.1. Postulate I
 
-### 3.2.2. Logic Gate
+#### 3.1.1.2. Postulate II
 
-#### 3.2.2.1. YES/NOT Gate
+#### 3.1.1.3. Postulate III
 
-#### 3.2.2.2. AND/NAND Gate
+#### 3.1.1.4. Postulate IV
 
-#### 3.2.2.3. OR/NOR Gate
+#### 3.1.1.5. Postulate V
 
-#### 3.2.2.4. XOR/XNOR Gate
+#### 3.1.1.6. Postulate VI
 
-### 3.2.3. Combinational Logic
+### 3.1.2. Traditional Information
 
-#### 3.2.3.1. Arithmetic Circuits
+#### 3.1.2.1. Traditional Bit
 
-#### 3.2.3.2. Logic Circuits
+#### 3.1.2.2. Traditional Logic Gate
 
-### 3.2.4. Finite State Machine
+##### 3.1.2.2.1. Traditional YES/NOT Gate
 
-### 3.2.5. Pushdown Automaton
+##### 3.1.2.2.2. Traditional AND/NAND Gate
 
-## 3.3. Neural Network
+##### 3.1.2.2.3. Traditional OR/NOR Gate
 
-### 3.3.1. Feedforward Neural Network
+##### 3.1.2.2.4. Traditional XOR/XNOR Gate
 
-### 3.3.2. Long Short Term Memory Neural Network
+#### 3.1.2.3. Traditional Combinational Logic
 
-### 3.3.3. Transformer Neural Network
+##### 3.1.2.3.1. Traditional Arithmetic Circuits
 
-## 3.4. Turing Machine
+##### 3.1.2.3.2. Traditional Logic Circuits
 
-### 3.4.1. Neural Turing Machine
+#### 3.1.2.4. Traditional Finite State Machine
 
-#### 3.4.1.1. Feedforward Neural Turing Machine
+#### 3.1.2.5. Traditional Pushdown Automaton
 
-#### 3.4.1.2. LSTM Neural Turing Machine
+### 3.1.3. Traditional Neural Network
 
-#### 3.4.1.3. Transformer Neural Turing Machine
+#### 3.1.3.1. Traditional Feedforward Neural Network
 
-### 3.4.2. Differentiable Neural Computer
+#### 3.1.3.2. Traditional Long Short Term Memory Neural Network
 
-#### 3.4.2.1. Feedforward Differentiable Neural Computer
+#### 3.1.3.3. Traditional Transformer Neural Network
 
-#### 3.4.2.2. LSTM Differentiable Neural Computer
+### 3.1.4. Traditional Turing Machine
 
-#### 3.4.2.3. Transformer Differentiable Neural Computer
+#### 3.1.4.1. Traditional Neural Turing Machine
 
-## 3.5. Computer Architecture
+##### 3.1.4.1.1. Traditional Feedforward Neural Turing Machine
 
-### 3.5.1. von Neumann Architecture
+##### 3.1.4.1.2. Traditional LSTM Neural Turing Machine
 
-#### 3.5.1.1. Control Unit
+##### 3.1.4.1.3. Traditional Transformer Neural Turing Machine
 
-#### 3.5.1.2. ALU
+#### 3.1.4.2. Traditional Differentiable Neural Computer
 
-#### 3.5.1.3. Memory Unit
+##### 3.1.4.2.1. Traditional Feedforward Differentiable Neural Computer
 
-#### 3.5.1.4. I/O Unit
+##### 3.1.4.2.2. Traditional LSTM Differentiable Neural Computer
 
-### 3.5.2. Harvard Architecture
+##### 3.1.4.2.3. Traditional Transformer Differentiable Neural Computer
 
-#### 3.5.2.1. Control Unit
+### 3.1.5. Traditional Computer Architecture
 
-#### 3.5.2.2. ALU
+#### 3.1.5.1. Traditional von Neumann Architecture
 
-#### 3.5.2.3.Memory Unit
+##### 3.1.5.1.1. Traditional Control Unit
 
-#### 3.5.2.4.I/O Unit
+##### 3.1.5.1.2. Traditional ALU
 
-## 3.6. Advanced Computer Architecture
+##### 3.1.5.1.3. Traditional Memory Unit
 
-### 3.6.1. Processing Unit
+##### 3.1.5.1.4. Traditional I/O Unit
 
-#### 3.6.1.1. SISD
+#### 3.1.5.2. Traditional Harvard Architecture
 
-#### 3.6.1.2. SIMD
+##### 3.1.5.2.1. Traditional Control Unit
 
-#### 3.6.1.3. MISD
+##### 3.1.5.2.2. Traditional ALU
 
-#### 3.6.1.4. MIMD
+##### 3.1.5.2.3.Traditional Memory Unit
 
-### 3.6.2. System on Chip
+##### 3.1.5.2.4.Traditional I/O Unit
 
-#### 3.6.2.1. Bus on Chip
+### 3.1.6. Traditional Advanced Computer Architecture
 
-#### 3.6.2.2. Network on Chip
+#### 3.1.6.1. Traditional Processing Unit
+
+##### 3.1.6.1.1. Traditional SISD
+
+##### 3.1.6.1.2. Traditional SIMD
+
+##### 3.1.6.1.3. Traditional MISD
+
+##### 3.1.6.1.4. Traditional MIMD
+
+#### 3.1.6.2. Traditional System on Chip
+
+##### 3.1.6.2.1. Traditional Bus on Chip
+
+##### 3.1.6.2.2. Traditional Network on Chip
+
+## 3.2. CLASSES
+
+#### 3.2.1. Traditional Philosophers
+#### 3.2.2. Traditional Soldier
+#### 3.2.3. Traditional Workers
 
 # 4. HARDWARE WORKFLOW
 
