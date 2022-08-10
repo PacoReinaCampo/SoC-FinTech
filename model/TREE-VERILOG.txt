@@ -1,3 +1,4 @@
+verilog
 ├── classes
 │   ├── philosophers
 │   │   └── ntm_philosophers.sv
@@ -70,3 +71,5 @@
             ├── traditional_feedforward_neural_turing_machine.sv
             ├── traditional_lstm_neural_turing_machine.sv
             └── traditional_transformer_neural_turing_machine.sv
+
+28 directories, 44 files

@@ -1,3 +1,4 @@
+vhdl
 ├── classes
 │   ├── philosophers
 │   │   └── ntm_philosophers.vhd
@@ -6,8 +7,6 @@
 │   └── workers
 │       └── ntm_workers.vhd
 ├── ieee
-│   ├── math_real-body.vhdl
-│   └── math_real.vhdl
 ├── pkg
 │   ├── classes
 │   │   ├── ntm_philosophers_pkg.vhd
@@ -73,3 +72,5 @@
             ├── traditional_feedforward_neural_turing_machine.vhd
             ├── traditional_lstm_neural_turing_machine.vhd
             └── traditional_transformer_neural_turing_machine.vhd
+
+29 directories, 44 files
