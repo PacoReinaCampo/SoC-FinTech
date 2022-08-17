@@ -9,12 +9,12 @@
 --                  |_|                                                       --
 --                                                                            --
 --                                                                            --
---              Peripheral-NTM for MPSoC                                      --
+--              Peripheral-DNC for MPSoC                                      --
 --              Neural Turing Machine for MPSoC                               --
 --                                                                            --
 --------------------------------------------------------------------------------
 
--- Copyright (c) 2020-2021 by the author(s)
+-- Copyright (c) 2022-2023 by the author(s)
 --
 -- Permission is hereby granted, free of charge, to any person obtaining a copy
 -- of this software and associated documentation files (the "Software"), to deal
@@ -35,3 +35,95 @@
 -- THE SOFTWARE.
 --
 --------------------------------------------------------------------------------
+-- Author(s):
+--   Paco Reina Campo <pacoreinacampo@queenfield.tech>
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+package ntm_philosophers_pkg is
+
+  -----------------------------------------------------------------------
+  -- Components
+  -----------------------------------------------------------------------
+
+  -----------------------------------------------------------------------
+  -- RATIONAL
+  -----------------------------------------------------------------------
+
+  -- SCALAR
+  component ntm_philosophers_rational is
+    generic (
+      DATA_SIZE    : integer := 64;
+      CONTROL_SIZE : integer := 64
+      );
+    port (
+      -- GLOBAL
+      CLK : in std_logic;
+      RST : in std_logic;
+
+      -- CONTROL
+      START : in  std_logic;
+      READY : out std_logic;
+
+      -- DATA
+      MODULO_IN : in  std_logic_vector(DATA_SIZE-1 downto 0);
+      DATA_IN   : in  std_logic_vector(DATA_SIZE-1 downto 0);
+      DATA_OUT  : out std_logic_vector(DATA_SIZE-1 downto 0)
+      );
+  end component;
+
+  -----------------------------------------------------------------------
+  -- SPIRITED
+  -----------------------------------------------------------------------
+
+  -- SCALAR
+  component ntm_philosophers_spirited is
+    generic (
+      DATA_SIZE    : integer := 64;
+      CONTROL_SIZE : integer := 64
+      );
+    port (
+      -- GLOBAL
+      CLK : in std_logic;
+      RST : in std_logic;
+
+      -- CONTROL
+      START : in  std_logic;
+      READY : out std_logic;
+
+      -- DATA
+      MODULO_IN : in  std_logic_vector(DATA_SIZE-1 downto 0);
+      DATA_IN   : in  std_logic_vector(DATA_SIZE-1 downto 0);
+      DATA_OUT  : out std_logic_vector(DATA_SIZE-1 downto 0)
+      );
+  end component;
+
+  -----------------------------------------------------------------------
+  -- APPETITIVE
+  -----------------------------------------------------------------------
+
+  -- SCALAR
+  component ntm_philosophers_appetitive is
+    generic (
+      DATA_SIZE    : integer := 64;
+      CONTROL_SIZE : integer := 64
+      );
+    port (
+      -- GLOBAL
+      CLK : in std_logic;
+      RST : in std_logic;
+
+      -- CONTROL
+      START : in  std_logic;
+      READY : out std_logic;
+
+      -- DATA
+      MODULO_IN : in  std_logic_vector(DATA_SIZE-1 downto 0);
+      DATA_IN   : in  std_logic_vector(DATA_SIZE-1 downto 0);
+      DATA_OUT  : out std_logic_vector(DATA_SIZE-1 downto 0)
+      );
+  end component;
+
+end ntm_philosophers_pkg;
