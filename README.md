@@ -1,5 +1,5 @@
 # Financial Technology with a System on Chip
-##  QueenField
+## QueenField
 
 ![QueenField](../master/icon.jpg)
 
@@ -8,7 +8,6 @@
 A System on Chip (SoC) is an integrated circuit that integrates components of a computer system (PU, RAM, GPIO, etc). As they are integrated on a single substrate, SoCs consume much less power and take up much less area than multi-chip designs with equivalent functionality. SoCs are common in the mobile computing, embedded systems and the Internet of Things.
 
 An Automation Financial Method (AFM) is the technology and innovation that aims to compete with Traditional Financial Methods in the delivery of financial services. It is an emerging industry that uses technology to improve activities in finance. AFM is the new applications, processes, products, or business models in the financial services industry, composed of complementary financial services and provided as an end-to-end process via the Internet.
-r
 
 ## 0.1. BEST PRACTICES
 
@@ -633,9 +632,29 @@ sudo apt upgrade
 
 # 1. METHODOLOGY
 
-![Project Workflow](doc/project.svg)
+![Project Workflow](doc/book/assets/project.svg)
+
+* CONTROL
+  - certification
+  - doc
+  - quality
+  - requirements
+
+* DEVELOP
+  - bench
+  - model
+  - osvvm/uvm
+  - rtl
+  - software
+  - src
+
+* OPERATION
+  - sim
+  - compilation/synthesis
 
 ## 1.1. Requirements
+
+![UML Diagrams Overview](requirements/uml_diagrams_overview.svg)
 
 ### 1.1.1. Structural UML diagrams
 
@@ -657,49 +676,58 @@ sudo apt upgrade
 #### 1.1.2.6. Timing diagram
 #### 1.1.2.7. Use diagram
 
-## 1.2. Source
+## 1.2. Software
 
-### 1.2.1. Ada Language
-### 1.2.2. C Language
+### 1.2.1. Matlab Language
+### 1.2.1. Rust Language
 
-## 1.3. Model
+## 1.3. Source
 
-### 1.3.1. VHDL Language
-### 1.3.2. Verilog Language
+### 1.3.1. Ada Language
+### 1.3.2. C Language
+
+## 1.4. Model
+
+### 1.4.1. VHDL Language
+### 1.4.2. Verilog Language
 
 ## 1.5. Validation
 
 ### 1.5.1. VHDL Language
 ### 1.5.2. Verilog Language
 
-## 1.5. Design
+## 1.6. Design
 
-### 1.5.1. VHDL Language
-### 1.5.2. Verilog Language
+### 1.6.1. VHDL Language
+### 1.6.2. Verilog Language
 
-## 1.6. Verification
+## 1.7. Verification
 
-### 1.6.1. OSVVM-VHDL
+### 1.7.1. OSVVM-VHDL
 
-#### 1.6.1.1. OSVVM Checker
-#### 1.6.1.2. OSVVM Stimulus
-#### 1.6.1.3. OSVVM Testbench
+#### 1.7.1.1. OSVVM Checker
+#### 1.7.1.2. OSVVM Stimulus
+#### 1.7.1.3. OSVVM Testbench
 
-### 1.6.2. UVM-Verilog
+### 1.7.2. UVM-Verilog
 
 ![UVM Diagram Overview](bench/uvm-testbench.png)
 
-#### 1.6.2.1. UVM Agent
-#### 1.6.2.2. UVM Driver
-#### 1.6.2.3. UVM Enviroment
-#### 1.6.2.4. UVM Monitor
-#### 1.6.2.5. UVM Scoreboard
-#### 1.6.2.6. UVM Sequence
-#### 1.6.2.7. UVM Sequencer
-#### 1.6.2.8. UVM Subscriber
-#### 1.6.2.9. UVM Test
-#### 1.6.2.10. UVM Testbench
-#### 1.6.2.11. UVM Transaction
+#### 1.7.2.1. UVM Agent
+#### 1.7.2.2. UVM Driver
+#### 1.7.2.3. UVM Enviroment
+#### 1.7.2.4. UVM Monitor
+#### 1.7.2.5. UVM Scoreboard
+#### 1.7.2.6. UVM Sequence
+#### 1.7.2.7. UVM Sequencer
+#### 1.7.2.8. UVM Subscriber
+#### 1.7.2.9. UVM Test
+#### 1.7.2.10. UVM Testbench
+#### 1.7.2.11. UVM Transaction
+
+## 1.8. Quality
+## 1.9. Certification
+## 1.10. Documentation
 
 # 2. PROJECTS
 
@@ -707,7 +735,7 @@ sudo apt upgrade
 
 ### 2.1.1. INSTRUCTION CACHE
 
-#### 2.1.1.1 Instruction INPUTS/OUTPUTS AMBA4 AXI-Lite Bus
+#### 2.1.1.1 Instruction Inputs/Outputs AMBA4 AXI-Lite Bus
 
 ##### 2.1.1.1.1. Signals of the Read and Write Address channels
 
@@ -750,7 +778,7 @@ sudo apt upgrade
 | `BVALID`   |         1        |   Input   | xVALID handshake signal                         |
 | `BREADY`   |         1        |   Output  | xREADY handshake signal                         |
 
-#### 2.1.1.2. Instruction INPUTS/OUTPUTS AMBA3 AHB-Lite Bus
+#### 2.1.1.2. Instruction Inputs/Outputs AMBA3 AHB-Lite Bus
 
 | Port         |  Size  | Direction | Description                           |
 | ------------ | ------ | --------- | ------------------------------------- |
@@ -770,7 +798,7 @@ sudo apt upgrade
 | `IHREADY`    |    1   |   Input   | Instruction Slave Ready Indicator     |
 | `IHRESP`     |    1   |   Input   | Instruction Transfer Response         |
 
-#### 2.1.1.3. Instruction INPUTS/OUTPUTS Wishbone Bus
+#### 2.1.1.3. Instruction Inputs/Outputs Wishbone Bus
 
 | Port    |  Size  | Direction | Description                     |
 | ------- | ------ | --------- | ------------------------------- |
@@ -790,7 +818,7 @@ sudo apt upgrade
 
 ### 2.1.2. DATA CACHE
 
-#### 2.1.2.1. Data INPUTS/OUTPUTS AMBA4 AXI-Lite Bus
+#### 2.1.2.1. Data Inputs/Outputs AMBA4 AXI-Lite Bus
 
 ##### 2.1.2.1.1. Signals of the Read and Write Address channels
 
@@ -833,7 +861,7 @@ sudo apt upgrade
 | `BVALID`   |         1        |   Input   | xVALID handshake signal                         |
 | `BREADY`   |         1        |   Output  | xREADY handshake signal                         |
 
-#### 2.1.2.2. Data INPUTS/OUTPUTS AMBA3 AHB-Lite Bus
+#### 2.1.2.2. Data Inputs/Outputs AMBA3 AHB-Lite Bus
 
 | Port         |  Size  | Direction | Description                    |
 | ------------ | ------ | --------- | ------------------------------ |
@@ -853,7 +881,7 @@ sudo apt upgrade
 | `DHREADY`    |    1   |   Input   | Data Slave Ready Indicator     |
 | `DHRESP`     |    1   |   Input   | Data Transfer Response         |
 
-#### 2.1.2.3. Data INPUTS/OUTPUTS Wishbone Bus
+#### 2.1.2.3. Data Inputs/Outputs Wishbone Bus
 
 | Port    |  Size  | Direction | Description                     |
 | ------- | ------ | --------- | ------------------------------- |
@@ -875,12 +903,13 @@ sudo apt upgrade
 
 ### 2.2.1. Structure
 
+#### 2.2.1.1. Traditional Computing Classes
+
 ```cpp
 class traditional_classes {
    private:
       int number_pu;
       int number_soc;
-      int number_mpsoc;
 
    public:
       void traditional_method_0();  // method 0
@@ -890,14 +919,13 @@ class traditional_classes {
 };
 ```
 
-#### 2.2.1.1. Philosophers T-DNC/NTM-SoC
+##### 2.2.1.1.1. Philosophers Traditional T-DNC/NTM-SoC
 
 ```cpp
 class traditional_philosophers : private traditional_classes {
    private:
       int number_p_pu;
       int number_p_soc;
-      int number_p_mpsoc;
 
    public:
       void traditional_method_p0();  // method 0
@@ -907,18 +935,17 @@ class traditional_philosophers : private traditional_classes {
 };
 ```
 
-##### 2.2.1.1.1. PU-NTM
+###### 2.2.1.1.1.1. PU-NTM
 
-##### 2.2.1.1.2. SoC-NTM
+###### 2.2.1.1.1.2. SoC-NTM
 
-#### 2.2.1.2. Soldiers T-DNC/NTM-SoC
+##### 2.2.1.1.2. Soldiers Traditional T-DNC/NTM-SoC
 
 ```cpp
 class traditional_soldiers : private traditional_classes {
    private:
       int number_s_pu;
       int number_s_soc;
-      int number_s_mpsoc;
 
    public:
       void traditional_method_s0();  // method 0
@@ -928,18 +955,17 @@ class traditional_soldiers : private traditional_classes {
 };
 ```
 
-##### 2.2.1.2.1. PU-NTM
+###### 2.2.1.1.2.1. PU-NTM
 
-##### 2.2.1.2.2. SoC-NTM
+###### 2.2.1.1.2.2. SoC-NTM
 
-#### 2.2.1.3. Workers T-DNC/NTM-SoC
+##### 2.2.1.1.3. Workers Traditional T-DNC/NTM-SoC
 
 ```cpp
 class traditional_workers : private traditional_classes {
    private:
       int number_w_pu;
       int number_w_soc;
-      int number_w_mpsoc;
 
    public:
       void traditional_method_w0();  // method 0
@@ -949,9 +975,9 @@ class traditional_workers : private traditional_classes {
 };
 ```
 
-##### 2.2.1.3.1. PU-NTM
+###### 2.2.1.1.3.1. PU-NTM
 
-##### 2.2.1.3.2. SoC-NTM
+###### 2.2.1.1.3.2. SoC-NTM
 
 ### 2.2.2. Behavior
 
@@ -1067,12 +1093,6 @@ class traditional_workers : private traditional_classes {
 
 ##### 3.1.6.2.2. Traditional Network on Chip
 
-## 3.2. CLASSES
-
-#### 3.2.1. Traditional Philosophers
-#### 3.2.2. Traditional Soldier
-#### 3.2.3. Traditional Workers
-
 # 4. HARDWARE WORKFLOW
 
 **1. System Level (SystemC/SystemVerilog)**
@@ -1129,7 +1149,7 @@ libboost-python-dev libboost-filesystem-dev zlib1g-dev
 
 ## 4.1. FRONT-END OPEN SOURCE TOOLS
 
-![Front-End](doc/front-end.svg)
+![Front-End](doc/book/assets/front-end.svg)
 
 ### 4.1.1. Modeling System Level of Hardware
 
@@ -1325,7 +1345,7 @@ git clone https://github.com/YosysHQ/SymbiYosys
 
 ## 4.2. BACK-END OPEN SOURCE TOOLS
 
-![Back-End](doc/back-end.svg)
+![Back-End](doc/book/assets/back-end.svg)
 
 **Library**
 
