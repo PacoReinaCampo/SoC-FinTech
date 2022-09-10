@@ -106,8 +106,6 @@
 
 ##### Traditional Network on Chip
 
-#### Traditional Multi-Processor System on Chip
-
 ## CLASSES
 
 ### Traditional
