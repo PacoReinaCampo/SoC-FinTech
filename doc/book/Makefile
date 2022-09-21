@@ -56,7 +56,8 @@ PANDOC_OPTIONS=-f markdown       \
     --table-of-contents          \
     --number-sections            \
     --pdf-engine=xelatex         \
-    --highlight-style=monochrome \
+    -V lof=yes                   \
+    -V lot=yes                   \
     -V fontsize="10pt"           \
     -V documentclass=report      \
     -V papersize=A4              \
