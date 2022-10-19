@@ -1,6 +1,6 @@
 ---
 title: 'Financial Technology with a System on Chip'
-subtitle: 'QueenField ![](../../icon.jpg)'
+subtitle: 'QueenField ![](../../soc-fintech.svg){width=17cm}'
 
 author: Paco Reina Campo
 
