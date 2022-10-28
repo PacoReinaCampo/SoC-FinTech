@@ -6,14 +6,14 @@ vhdl
 │   │   └── ntm_soldiers.vhd
 │   └── workers
 │       └── ntm_workers.vhd
-├── ieee
-│   ├── math_real-body.vhd
-│   └── math_real.vhd
 ├── pkg
 │   ├── classes
 │   │   ├── ntm_philosophers_pkg.vhd
 │   │   ├── ntm_soldiers_pkg.vhd
 │   │   └── ntm_workers_pkg.vhd
+│   ├── ieee
+│   │   ├── math_real-body.vhd
+│   │   └── math_real.vhd
 │   └── traditional
 │       └── traditional_state_pkg.vhd
 └── traditional
