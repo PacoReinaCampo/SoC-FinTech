@@ -6,73 +6,73 @@ vhdl
 │   │   └── ntm_soldiers.vhd
 │   └── workers
 │       └── ntm_workers.vhd
-├── pkg
-│   ├── classes
-│   │   ├── ntm_philosophers_pkg.vhd
-│   │   ├── ntm_soldiers_pkg.vhd
-│   │   └── ntm_workers_pkg.vhd
-│   ├── ieee
-│   │   ├── math_real-body.vhd
-│   │   └── math_real.vhd
-│   └── traditional
-│       └── traditional_state_pkg.vhd
-└── traditional
-    ├── traditional_advanced_computer_architecture
-    │   ├── traditional_multi_processor_system_on_chip
-    │   │   └── traditional_multi_processor_system_on_chip.vhd
-    │   ├── traditional_processing_unit
-    │   │   ├── traditional_mimd.vhd
-    │   │   ├── traditional_misd.vhd
-    │   │   ├── traditional_simd.vhd
-    │   │   └── traditional_sisd.vhd
-    │   └── traditional_system_on_chip
-    │       ├── traditional_bus_on_chip.vhd
-    │       └── traditional_network_on_chip.vhd
-    ├── traditional_computer_architecture
-    │   ├── traditional_harvard_architecture
-    │   │   ├── traditional_alu.vhd
-    │   │   ├── traditional_control_unit.vhd
-    │   │   ├── traditional_io_unit.vhd
-    │   │   └── traditional_memory_unit.vhd
-    │   └── traditional_von_neumann_architecture
-    │       ├── traditional_alu.vhd
-    │       ├── traditional_control_unit.vhd
-    │       ├── traditional_io_unit.vhd
-    │       └── traditional_memory_unit.vhd
-    ├── traditional_information
-    │   ├── traditional_bit
-    │   │   └── traditional_bit.vhd
-    │   ├── traditional_combinational_logic
-    │   │   ├── traditional_arithmetic_circuits.vhd
-    │   │   └── traditional_logic_circuits.vhd
-    │   ├── traditional_finite_state_machine
-    │   │   └── traditional_finite_state_machine.vhd
-    │   ├── traditional_logic_gate
-    │   │   ├── traditional_and_gate.vhd
-    │   │   ├── traditional_nand_gate.vhd
-    │   │   ├── traditional_nor_gate.vhd
-    │   │   ├── traditional_not_gate.vhd
-    │   │   ├── traditional_or_gate.vhd
-    │   │   ├── traditional_xnor_gate.vhd
-    │   │   ├── traditional_xor_gate.vhd
-    │   │   └── traditional_yes_gate.vhd
-    │   └── traditional_pushdown_automaton
-    │       └── traditional_pushdown_automaton.vhd
-    ├── traditional_neural_network
-    │   ├── traditional_feedforward_neural_network
-    │   │   └── traditional_feedforward_neural_network.vhd
-    │   ├── traditional_long_short_term_memory_neural_network
-    │   │   └── traditional_long_short_term_memory_neural_network.vhd
-    │   └── traditional_transformer_neural_network
-    │       └── traditional_transformer_neural_network.vhd
-    └── traditional_turing_machine
-        ├── traditional_differentiable_neural_computer
-        │   ├── traditional_feedforward_differentiable_neural_computer.vhd
-        │   ├── traditional_lstm_differentiable_neural_computer.vhd
-        │   └── traditional_transformer_differentiable_neural_computer.vhd
-        └── traditional_neural_turing_machine
-            ├── traditional_feedforward_neural_turing_machine.vhd
-            ├── traditional_lstm_neural_turing_machine.vhd
-            └── traditional_transformer_neural_turing_machine.vhd
+├── computing
+│   ├── advanced_computer_architecture
+│   │   ├── multi_processor_system_on_chip
+│   │   │   └── multi_processor_system_on_chip.vhd
+│   │   ├── processing_unit
+│   │   │   ├── mimd.vhd
+│   │   │   ├── misd.vhd
+│   │   │   ├── simd.vhd
+│   │   │   └── sisd.vhd
+│   │   └── system_on_chip
+│   │       ├── bus_on_chip.vhd
+│   │       └── network_on_chip.vhd
+│   ├── computer_architecture
+│   │   ├── harvard_architecture
+│   │   │   ├── alu.vhd
+│   │   │   ├── control_unit.vhd
+│   │   │   ├── io_unit.vhd
+│   │   │   └── memory_unit.vhd
+│   │   └── von_neumann_architecture
+│   │       ├── alu.vhd
+│   │       ├── control_unit.vhd
+│   │       ├── io_unit.vhd
+│   │       └── memory_unit.vhd
+│   ├── information
+│   │   ├── bit
+│   │   │   └── bit.vhd
+│   │   ├── combinational_logic
+│   │   │   ├── arithmetic_circuits.vhd
+│   │   │   └── logic_circuits.vhd
+│   │   ├── finite_state_machine
+│   │   │   └── finite_state_machine.vhd
+│   │   ├── logic_gate
+│   │   │   ├── and_gate.vhd
+│   │   │   ├── nand_gate.vhd
+│   │   │   ├── nor_gate.vhd
+│   │   │   ├── not_gate.vhd
+│   │   │   ├── or_gate.vhd
+│   │   │   ├── xnor_gate.vhd
+│   │   │   ├── xor_gate.vhd
+│   │   │   └── yes_gate.vhd
+│   │   └── pushdown_automaton
+│   │       └── pushdown_automaton.vhd
+│   ├── neural_network
+│   │   ├── feedforward_neural_network
+│   │   │   └── feedforward_neural_network.vhd
+│   │   ├── long_short_term_memory_neural_network
+│   │   │   └── long_short_term_memory_neural_network.vhd
+│   │   └── transformer_neural_network
+│   │       └── transformer_neural_network.vhd
+│   └── turing_machine
+│       ├── differentiable_neural_computer
+│       │   ├── feedforward_differentiable_neural_computer.vhd
+│       │   ├── lstm_differentiable_neural_computer.vhd
+│       │   └── transformer_differentiable_neural_computer.vhd
+│       └── neural_turing_machine
+│           ├── feedforward_neural_turing_machine.vhd
+│           ├── lstm_neural_turing_machine.vhd
+│           └── transformer_neural_turing_machine.vhd
+└── pkg
+    ├── classes
+    │   ├── ntm_philosophers_pkg.vhd
+    │   ├── ntm_soldiers_pkg.vhd
+    │   └── ntm_workers_pkg.vhd
+    ├── computing
+    │   └── state_pkg.vhd
+    └── ieee
+        ├── math_real-body.vhd
+        └── math_real.vhd
 
 29 directories, 46 files
