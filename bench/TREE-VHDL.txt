@@ -67,7 +67,7 @@ vhdl
 │               ├── feedforward_neural_turing_machine_testbench.vhd
 │               ├── lstm_neural_turing_machine_testbench.vhd
 │               └── transformer_neural_turing_machine_testbench.vhd
-└── tests
+└── uvm
     ├── classes
     │   ├── philosophers
     │   │   └── ntm_philosophers_testbench.vhd

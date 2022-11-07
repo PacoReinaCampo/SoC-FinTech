@@ -1,5 +1,5 @@
 verilog
-├── tests
+├── osvvm
 │   ├── classes
 │   │   ├── philosophers
 │   │   │   └── ntm_philosophers_testbench.sv
