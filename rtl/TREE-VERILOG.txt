@@ -20,15 +20,27 @@ verilog
 │   │       └── network_on_chip.sv
 │   ├── computer_architecture
 │   │   ├── harvard_architecture
-│   │   │   ├── alu.sv
-│   │   │   ├── control_unit.sv
-│   │   │   ├── io_unit.sv
-│   │   │   └── memory_unit.sv
+│   │   │   ├── or1k
+│   │   │   │   ├── alu.sv
+│   │   │   │   ├── control_unit.sv
+│   │   │   │   ├── io_unit.sv
+│   │   │   │   └── memory_unit.sv
+│   │   │   └── riscv
+│   │   │       ├── alu.sv
+│   │   │       ├── control_unit.sv
+│   │   │       ├── io_unit.sv
+│   │   │       └── memory_unit.sv
 │   │   └── von_neumann_architecture
-│   │       ├── alu.sv
-│   │       ├── control_unit.sv
-│   │       ├── io_unit.sv
-│   │       └── memory_unit.sv
+│   │       ├── msp430
+│   │       │   ├── alu.sv
+│   │       │   ├── control_unit.sv
+│   │       │   ├── io_unit.sv
+│   │       │   └── memory_unit.sv
+│   │       └── riscv
+│   │           ├── alu.sv
+│   │           ├── control_unit.sv
+│   │           ├── io_unit.sv
+│   │           └── memory_unit.sv
 │   ├── information
 │   │   ├── bit
 │   │   │   └── bit.sv
@@ -72,4 +84,4 @@ verilog
     └── computing
         └── state_pkg.sv
 
-28 directories, 44 files
+32 directories, 52 files

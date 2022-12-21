@@ -21,15 +21,27 @@ verilog
 │       │       └── network_on_chip_testbench.sv
 │       ├── computer_architecture
 │       │   ├── harvard_architecture
-│       │   │   ├── alu_testbench.sv
-│       │   │   ├── control_unit_testbench.sv
-│       │   │   ├── io_unit_testbench.sv
-│       │   │   └── memory_unit_testbench.sv
+│       │   │   ├── or1k
+│       │   │   │   ├── alu_testbench.sv
+│       │   │   │   ├── control_unit_testbench.sv
+│       │   │   │   ├── io_unit_testbench.sv
+│       │   │   │   └── memory_unit_testbench.sv
+│       │   │   └── riscv
+│       │   │       ├── alu_testbench.sv
+│       │   │       ├── control_unit_testbench.sv
+│       │   │       ├── io_unit_testbench.sv
+│       │   │       └── memory_unit_testbench.sv
 │       │   └── von_neumann_architecture
-│       │       ├── alu_testbench.sv
-│       │       ├── control_unit_testbench.sv
-│       │       ├── io_unit_testbench.sv
-│       │       └── memory_unit_testbench.sv
+│       │       ├── msp430
+│       │       │   ├── alu_testbench.sv
+│       │       │   ├── control_unit_testbench.sv
+│       │       │   ├── io_unit_testbench.sv
+│       │       │   └── memory_unit_testbench.sv
+│       │       └── riscv
+│       │           ├── alu_testbench.sv
+│       │           ├── control_unit_testbench.sv
+│       │           ├── io_unit_testbench.sv
+│       │           └── memory_unit_testbench.sv
 │       ├── information
 │       │   ├── bit
 │       │   │   └── bit_testbench.sv
@@ -90,15 +102,27 @@ verilog
         │       └── network_on_chip_testbench.sv
         ├── computer_architecture
         │   ├── harvard_architecture
-        │   │   ├── alu_testbench.sv
-        │   │   ├── control_unit_testbench.sv
-        │   │   ├── io_unit_testbench.sv
-        │   │   └── memory_unit_testbench.sv
+        │   │   ├── or1k
+        │   │   │   ├── alu_testbench.sv
+        │   │   │   ├── control_unit_testbench.sv
+        │   │   │   ├── io_unit_testbench.sv
+        │   │   │   └── memory_unit_testbench.sv
+        │   │   └── riscv
+        │   │       ├── alu_testbench.sv
+        │   │       ├── control_unit_testbench.sv
+        │   │       ├── io_unit_testbench.sv
+        │   │       └── memory_unit_testbench.sv
         │   └── von_neumann_architecture
-        │       ├── alu_testbench.sv
-        │       ├── control_unit_testbench.sv
-        │       ├── io_unit_testbench.sv
-        │       └── memory_unit_testbench.sv
+        │       ├── msp430
+        │       │   ├── alu_testbench.sv
+        │       │   ├── control_unit_testbench.sv
+        │       │   ├── io_unit_testbench.sv
+        │       │   └── memory_unit_testbench.sv
+        │       └── riscv
+        │           ├── alu_testbench.sv
+        │           ├── control_unit_testbench.sv
+        │           ├── io_unit_testbench.sv
+        │           └── memory_unit_testbench.sv
         ├── information
         │   ├── bit
         │   │   └── bit_testbench.sv
@@ -135,4 +159,4 @@ verilog
                 ├── lstm_neural_turing_machine_testbench.sv
                 └── transformer_neural_turing_machine_testbench.sv
 
-52 directories, 83 files
+60 directories, 99 files

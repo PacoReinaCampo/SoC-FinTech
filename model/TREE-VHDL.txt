@@ -20,15 +20,27 @@ vhdl
 │   │       └── network_on_chip.vhd
 │   ├── computer_architecture
 │   │   ├── harvard_architecture
-│   │   │   ├── alu.vhd
-│   │   │   ├── control_unit.vhd
-│   │   │   ├── io_unit.vhd
-│   │   │   └── memory_unit.vhd
+│   │   │   ├── or1k
+│   │   │   │   ├── alu.vhd
+│   │   │   │   ├── control_unit.vhd
+│   │   │   │   ├── io_unit.vhd
+│   │   │   │   └── memory_unit.vhd
+│   │   │   └── riscv
+│   │   │       ├── alu.vhd
+│   │   │       ├── control_unit.vhd
+│   │   │       ├── io_unit.vhd
+│   │   │       └── memory_unit.vhd
 │   │   └── von_neumann_architecture
-│   │       ├── alu.vhd
-│   │       ├── control_unit.vhd
-│   │       ├── io_unit.vhd
-│   │       └── memory_unit.vhd
+│   │       ├── msp430
+│   │       │   ├── alu.vhd
+│   │       │   ├── control_unit.vhd
+│   │       │   ├── io_unit.vhd
+│   │       │   └── memory_unit.vhd
+│   │       └── riscv
+│   │           ├── alu.vhd
+│   │           ├── control_unit.vhd
+│   │           ├── io_unit.vhd
+│   │           └── memory_unit.vhd
 │   ├── information
 │   │   ├── bit
 │   │   │   └── bit.vhd
@@ -75,4 +87,4 @@ vhdl
         ├── math_real-body.vhd
         └── math_real.vhd
 
-29 directories, 46 files
+33 directories, 54 files

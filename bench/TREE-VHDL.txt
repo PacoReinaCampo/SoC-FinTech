@@ -21,15 +21,27 @@ vhdl
 │       │       └── network_on_chip_testbench.vhd
 │       ├── computer_architecture
 │       │   ├── harvard_architecture
-│       │   │   ├── alu_testbench.vhd
-│       │   │   ├── control_unit_testbench.vhd
-│       │   │   ├── io_unit_testbench.vhd
-│       │   │   └── memory_unit_testbench.vhd
+│       │   │   ├── or1k
+│       │   │   │   ├── alu_testbench.vhd
+│       │   │   │   ├── control_unit_testbench.vhd
+│       │   │   │   ├── io_unit_testbench.vhd
+│       │   │   │   └── memory_unit_testbench.vhd
+│       │   │   └── riscv
+│       │   │       ├── alu_testbench.vhd
+│       │   │       ├── control_unit_testbench.vhd
+│       │   │       ├── io_unit_testbench.vhd
+│       │   │       └── memory_unit_testbench.vhd
 │       │   └── von_neumann_architecture
-│       │       ├── alu_testbench.vhd
-│       │       ├── control_unit_testbench.vhd
-│       │       ├── io_unit_testbench.vhd
-│       │       └── memory_unit_testbench.vhd
+│       │       ├── msp430
+│       │       │   ├── alu_testbench.vhd
+│       │       │   ├── control_unit_testbench.vhd
+│       │       │   ├── io_unit_testbench.vhd
+│       │       │   └── memory_unit_testbench.vhd
+│       │       └── riscv
+│       │           ├── alu_testbench.vhd
+│       │           ├── control_unit_testbench.vhd
+│       │           ├── io_unit_testbench.vhd
+│       │           └── memory_unit_testbench.vhd
 │       ├── information
 │       │   ├── bit
 │       │   │   └── bit_testbench.vhd
@@ -89,15 +101,27 @@ vhdl
         │       └── network_on_chip_testbench.vhd
         ├── computer_architecture
         │   ├── harvard_architecture
-        │   │   ├── alu_testbench.vhd
-        │   │   ├── control_unit_testbench.vhd
-        │   │   ├── io_unit_testbench.vhd
-        │   │   └── memory_unit_testbench.vhd
+        │   │   ├── or1k
+        │   │   │   ├── alu_testbench.vhd
+        │   │   │   ├── control_unit_testbench.vhd
+        │   │   │   ├── io_unit_testbench.vhd
+        │   │   │   └── memory_unit_testbench.vhd
+        │   │   └── riscv
+        │   │       ├── alu_testbench.vhd
+        │   │       ├── control_unit_testbench.vhd
+        │   │       ├── io_unit_testbench.vhd
+        │   │       └── memory_unit_testbench.vhd
         │   └── von_neumann_architecture
-        │       ├── alu_testbench.vhd
-        │       ├── control_unit_testbench.vhd
-        │       ├── io_unit_testbench.vhd
-        │       └── memory_unit_testbench.vhd
+        │       ├── msp430
+        │       │   ├── alu_testbench.vhd
+        │       │   ├── control_unit_testbench.vhd
+        │       │   ├── io_unit_testbench.vhd
+        │       │   └── memory_unit_testbench.vhd
+        │       └── riscv
+        │           ├── alu_testbench.vhd
+        │           ├── control_unit_testbench.vhd
+        │           ├── io_unit_testbench.vhd
+        │           └── memory_unit_testbench.vhd
         ├── information
         │   ├── bit
         │   │   └── bit_testbench.vhd
@@ -136,4 +160,4 @@ vhdl
                 ├── lstm_neural_turing_machine_testbench.vhd
                 └── transformer_neural_turing_machine_testbench.vhd
 
-52 directories, 84 files
+60 directories, 100 files
