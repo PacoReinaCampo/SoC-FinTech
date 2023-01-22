@@ -1,80 +1,80 @@
 code
 ├── classes
 │   ├── philosophers
-│   │   └── ntm_philosophers.tb.m
+│   │   └── ntm_philosophers.m
 │   ├── soldiers
-│   │   └── ntm_soldiers.tb.m
+│   │   └── ntm_soldiers.m
 │   └── workers
-│       └── ntm_workers.tb.m
+│       └── ntm_workers.m
 ├── computing
 │   ├── advanced_computer_architecture
 │   │   ├── multi_processor_system_on_chip
-│   │   │   └── multi_processor_system_on_chip.tb.m
+│   │   │   └── multi_processor_system_on_chip.m
 │   │   ├── processing_unit
-│   │   │   ├── mimd.tb.m
-│   │   │   ├── misd.tb.m
-│   │   │   ├── simd.tb.m
-│   │   │   └── sisd.tb.m
+│   │   │   ├── mimd.m
+│   │   │   ├── misd.m
+│   │   │   ├── simd.m
+│   │   │   └── sisd.m
 │   │   └── system_on_chip
-│   │       ├── bus_on_chip.tb.m
-│   │       └── network_on_chip.tb.m
+│   │       ├── bus_on_chip.m
+│   │       └── network_on_chip.m
 │   ├── computer_architecture
 │   │   ├── harvard_architecture
-│   │   │   ├── alu.tb.m
-│   │   │   ├── control_unit.tb.m
-│   │   │   ├── io_unit.tb.m
-│   │   │   └── memory_unit.tb.m
+│   │   │   ├── alu.m
+│   │   │   ├── control_unit.m
+│   │   │   ├── io_unit.m
+│   │   │   └── memory_unit.m
 │   │   └── von_neumann_architecture
-│   │       ├── alu.tb.m
-│   │       ├── control_unit.tb.m
-│   │       ├── io_unit.tb.m
-│   │       └── memory_unit.tb.m
+│   │       ├── alu.m
+│   │       ├── control_unit.m
+│   │       ├── io_unit.m
+│   │       └── memory_unit.m
 │   ├── information
 │   │   ├── bit
-│   │   │   └── bit.tb.m
+│   │   │   └── bit.m
 │   │   ├── combinational_logic
-│   │   │   ├── arithmetic_circuits.tb.m
-│   │   │   └── logic_circuits.tb.m
+│   │   │   ├── arithmetic_circuits.m
+│   │   │   └── logic_circuits.m
 │   │   ├── finite_state_machine
-│   │   │   └── finite_state_machine.tb.m
+│   │   │   └── finite_state_machine.m
 │   │   ├── logic_gate
-│   │   │   ├── and_gate.tb.m
-│   │   │   ├── nand_gate.tb.m
-│   │   │   ├── nor_gate.tb.m
-│   │   │   ├── not_gate.tb.m
-│   │   │   ├── or_gate.tb.m
-│   │   │   ├── xnor_gate.tb.m
-│   │   │   ├── xor_gate.tb.m
-│   │   │   └── yes_gate.tb.m
+│   │   │   ├── and_gate.m
+│   │   │   ├── nand_gate.m
+│   │   │   ├── nor_gate.m
+│   │   │   ├── not_gate.m
+│   │   │   ├── or_gate.m
+│   │   │   ├── xnor_gate.m
+│   │   │   ├── xor_gate.m
+│   │   │   └── yes_gate.m
 │   │   └── pushdown_automaton
-│   │       └── pushdown_automaton.tb.m
+│   │       └── pushdown_automaton.m
 │   ├── neural_network
 │   │   ├── feedforward_neural_network
-│   │   │   └── feedforward_neural_network.tb.m
+│   │   │   └── feedforward_neural_network.m
 │   │   ├── long_short_term_memory_neural_network
-│   │   │   └── long_short_term_memory_neural_network.tb.m
+│   │   │   └── long_short_term_memory_neural_network.m
 │   │   └── transformer_neural_network
-│   │       └── transformer_neural_network.tb.m
+│   │       └── transformer_neural_network.m
 │   └── turing_machine
 │       ├── differentiable_neural_computer
-│       │   ├── feedforward_differentiable_neural_computer.tb.m
-│       │   ├── lstm_differentiable_neural_computer.tb.m
-│       │   └── transformer_differentiable_neural_computer.tb.m
+│       │   ├── feedforward_differentiable_neural_computer.m
+│       │   ├── lstm_differentiable_neural_computer.m
+│       │   └── transformer_differentiable_neural_computer.m
 │       └── neural_turing_machine
-│           ├── feedforward_neural_turing_machine.tb.m
-│           ├── lstm_neural_turing_machine.tb.m
-│           └── transformer_neural_turing_machine.tb.m
+│           ├── feedforward_neural_turing_machine.m
+│           ├── lstm_neural_turing_machine.m
+│           └── transformer_neural_turing_machine.m
 └── pkg
     ├── classes
-    │   ├── ntm_philosophers_pkg.tb.m
-    │   ├── ntm_soldiers_pkg.tb.m
-    │   └── ntm_workers_pkg.tb.m
+    │   ├── ntm_philosophers_pkg.m
+    │   ├── ntm_soldiers_pkg.m
+    │   └── ntm_workers_pkg.m
     ├── computing
-    │   └── state_pkg.tb.m
+    │   └── state_pkg.m
     └── ieee
-        ├── math_complex-body.tb.m
-        ├── math_complex.tb.m
-        ├── math_real-body.tb.m
-        └── math_real.tb.m
+        ├── math_complex-body.m
+        ├── math_complex.m
+        ├── math_real-body.m
+        └── math_real.m
 
 29 directories, 48 files
