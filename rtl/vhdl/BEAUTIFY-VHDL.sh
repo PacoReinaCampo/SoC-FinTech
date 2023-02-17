@@ -44,4 +44,3 @@ emacs -batch vhdl/pkg/classes/ntm_workers_pkg.vhd -f vhdl-beautify-buffer -f sav
 emacs -batch vhdl/pkg/computing/state_pkg.vhd -f vhdl-beautify-buffer -f save-buffer
 emacs -batch vhdl/pkg/ieee/math_real-body.vhd -f vhdl-beautify-buffer -f save-buffer
 emacs -batch vhdl/pkg/ieee/math_real.vhd -f vhdl-beautify-buffer -f save-buffer
-

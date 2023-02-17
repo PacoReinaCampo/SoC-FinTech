@@ -42,4 +42,3 @@ vhdl2verilog vhdl/pkg/classes/ntm_philosophers_pkg.sv
 vhdl2verilog vhdl/pkg/classes/ntm_soldiers_pkg.sv
 vhdl2verilog vhdl/pkg/classes/ntm_workers_pkg.sv
 vhdl2verilog vhdl/pkg/computing/state_pkg.sv
-

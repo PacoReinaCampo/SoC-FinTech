@@ -44,4 +44,3 @@ touch vhdl/pkg/classes/ntm_workers_pkg.vhd
 touch vhdl/pkg/computing/state_pkg.vhd
 touch vhdl/pkg/ieee/math_real-body.vhd
 touch vhdl/pkg/ieee/math_real.vhd
-
