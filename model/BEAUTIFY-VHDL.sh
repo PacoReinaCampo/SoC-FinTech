@@ -1,47 +1,45 @@
-emacs -batch vhdl/classes/philosophers/ntm_philosophers.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/classes/soldiers/ntm_soldiers.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/classes/workers/ntm_workers.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/advanced_computer_architecture/multi_processor_system_on_chip/multi_processor_system_on_chip.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/advanced_computer_architecture/processing_unit/mimd.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/advanced_computer_architecture/processing_unit/misd.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/advanced_computer_architecture/processing_unit/simd.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/advanced_computer_architecture/processing_unit/sisd.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/advanced_computer_architecture/system_on_chip/bus_on_chip.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/advanced_computer_architecture/system_on_chip/network_on_chip.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/computer_architecture/harvard_architecture/alu.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/computer_architecture/harvard_architecture/control_unit.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/computer_architecture/harvard_architecture/io_unit.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/computer_architecture/harvard_architecture/memory_unit.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/computer_architecture/von_neumann_architecture/alu.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/computer_architecture/von_neumann_architecture/control_unit.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/computer_architecture/von_neumann_architecture/io_unit.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/computer_architecture/von_neumann_architecture/memory_unit.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/bit/bit.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/combinational_logic/arithmetic_circuits.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/combinational_logic/logic_circuits.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/finite_state_machine/finite_state_machine.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/logic_gate/and_gate.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/logic_gate/nand_gate.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/logic_gate/nor_gate.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/logic_gate/not_gate.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/logic_gate/or_gate.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/logic_gate/xnor_gate.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/logic_gate/xor_gate.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/logic_gate/yes_gate.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/information/pushdown_automaton/pushdown_automaton.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/neural_network/feedforward_neural_network/feedforward_neural_network.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/neural_network/long_short_term_memory_neural_network/long_short_term_memory_neural_network.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/neural_network/transformer_neural_network/transformer_neural_network.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/turing_machine/differentiable_neural_computer/feedforward_differentiable_neural_computer.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/turing_machine/differentiable_neural_computer/lstm_differentiable_neural_computer.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/turing_machine/differentiable_neural_computer/transformer_differentiable_neural_computer.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/turing_machine/neural_turing_machine/feedforward_neural_turing_machine.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/turing_machine/neural_turing_machine/lstm_neural_turing_machine.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/computing/turing_machine/neural_turing_machine/transformer_neural_turing_machine.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/pkg/classes/ntm_philosophers_pkg.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/pkg/classes/ntm_soldiers_pkg.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/pkg/classes/ntm_workers_pkg.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/pkg/computing/state_pkg.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/pkg/ieee/math_real-body.vhd -f vhdl-beautify-buffer -f save-buffer
-emacs -batch vhdl/pkg/ieee/math_real.vhd -f vhdl-beautify-buffer -f save-buffer
+###################################################################################
+##                                            __ _      _     _                  ##
+##                                           / _(_)    | |   | |                 ##
+##                __ _ _   _  ___  ___ _ __ | |_ _  ___| | __| |                 ##
+##               / _` | | | |/ _ \/ _ \ '_ \|  _| |/ _ \ |/ _` |                 ##
+##              | (_| | |_| |  __/  __/ | | | | | |  __/ | (_| |                 ##
+##               \__, |\__,_|\___|\___|_| |_|_| |_|\___|_|\__,_|                 ##
+##                  | |                                                          ##
+##                  |_|                                                          ##
+##                                                                               ##
+##                                                                               ##
+##              QueenField                                                       ##
+##              Multi-Processor System on Chip                                   ##
+##                                                                               ##
+###################################################################################
 
+###################################################################################
+##                                                                               ##
+## Copyright (c) 2022-2025 by the author(s)                                      ##
+##                                                                               ##
+## Permission is hereby granted, free of charge, to any person obtaining a copy  ##
+## of this software and associated documentation files (the "Software"), to deal ##
+## in the Software without restriction, including without limitation the rights  ##
+## to use, copy, modify, merge, publish, distribute, sublicense, and/or sell     ##
+## copies of the Software, and to permit persons to whom the Software is         ##
+## furnished to do so, subject to the following conditions:                      ##
+##                                                                               ##
+## The above copyright notice and this permission notice shall be included in    ##
+## all copies or substantial portions of the Software.                           ##
+##                                                                               ##
+## THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR    ##
+## IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,      ##
+## FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE   ##
+## AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER        ##
+## LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, ##
+## OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN     ##
+## THE SOFTWARE.                                                                 ##
+##                                                                               ##
+## ============================================================================= ##
+## Author(s):                                                                    ##
+##   Paco Reina Campo <pacoreinacampo@queenfield.tech>                           ##
+##                                                                               ##
+###################################################################################
+
+find . -type f -name '*.vhd' -exec emacs -batch {} -f vhdl-beautify-buffer -f save-buffer \;
