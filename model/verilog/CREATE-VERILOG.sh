@@ -8,22 +8,14 @@ touch code/computing/advanced_computer_architecture/processing_unit/simd.sv
 touch code/computing/advanced_computer_architecture/processing_unit/sisd.sv
 touch code/computing/advanced_computer_architecture/system_on_chip/bus_on_chip.sv
 touch code/computing/advanced_computer_architecture/system_on_chip/network_on_chip.sv
-touch code/computing/computer_architecture/harvard_architecture/or1k/alu.sv
-touch code/computing/computer_architecture/harvard_architecture/or1k/control_unit.sv
-touch code/computing/computer_architecture/harvard_architecture/or1k/io_unit.sv
-touch code/computing/computer_architecture/harvard_architecture/riscv/memory_unit.sv
-touch code/computing/computer_architecture/harvard_architecture/riscv/alu.sv
-touch code/computing/computer_architecture/harvard_architecture/riscv/control_unit.sv
-touch code/computing/computer_architecture/harvard_architecture/riscv/io_unit.sv
-touch code/computing/computer_architecture/harvard_architecture/riscv/memory_unit.sv
-touch code/computing/computer_architecture/von_neumann_architecture/msp430/alu.sv
-touch code/computing/computer_architecture/von_neumann_architecture/msp430/control_unit.sv
-touch code/computing/computer_architecture/von_neumann_architecture/msp430/io_unit.sv
-touch code/computing/computer_architecture/von_neumann_architecture/msp430/memory_unit.sv
-touch code/computing/computer_architecture/von_neumann_architecture/riscv/alu.sv
-touch code/computing/computer_architecture/von_neumann_architecture/riscv/control_unit.sv
-touch code/computing/computer_architecture/von_neumann_architecture/riscv/io_unit.sv
-touch code/computing/computer_architecture/von_neumann_architecture/riscv/memory_unit.sv
+touch code/computing/computer_architecture/harvard_architecture/alu.sv
+touch code/computing/computer_architecture/harvard_architecture/control_unit.sv
+touch code/computing/computer_architecture/harvard_architecture/io_unit.sv
+touch code/computing/computer_architecture/harvard_architecture/memory_unit.sv
+touch code/computing/computer_architecture/von_neumann_architecture/alu.sv
+touch code/computing/computer_architecture/von_neumann_architecture/control_unit.sv
+touch code/computing/computer_architecture/von_neumann_architecture/io_unit.sv
+touch code/computing/computer_architecture/von_neumann_architecture/memory_unit.sv
 touch code/computing/information/bit/bit.sv
 touch code/computing/information/combinational_logic/arithmetic_circuits.sv
 touch code/computing/information/combinational_logic/logic_circuits.sv
@@ -50,3 +42,4 @@ touch code/pkg/classes/ntm_philosophers_pkg.sv
 touch code/pkg/classes/ntm_soldiers_pkg.sv
 touch code/pkg/classes/ntm_workers_pkg.sv
 touch code/pkg/computing/state_pkg.sv
+
