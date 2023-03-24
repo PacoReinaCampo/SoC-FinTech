@@ -20,27 +20,11 @@ code
 │   │       └── network_on_chip.sv
 │   ├── computer_architecture
 │   │   ├── harvard_architecture
-│   │   │   ├── or1k
-│   │   │   │   ├── alu.sv
-│   │   │   │   ├── control_unit.sv
-│   │   │   │   ├── io_unit.sv
-│   │   │   │   └── memory_unit.sv
-│   │   │   └── riscv
-│   │   │       ├── alu.sv
-│   │   │       ├── control_unit.sv
-│   │   │       ├── io_unit.sv
-│   │   │       └── memory_unit.sv
+│   │   │   ├── pu_or1k.sv
+│   │   │   └── pu_riscv.sv
 │   │   └── von_neumann_architecture
-│   │       ├── msp430
-│   │       │   ├── alu.sv
-│   │       │   ├── control_unit.sv
-│   │       │   ├── io_unit.sv
-│   │       │   └── memory_unit.sv
-│   │       └── riscv
-│   │           ├── alu.sv
-│   │           ├── control_unit.sv
-│   │           ├── io_unit.sv
-│   │           └── memory_unit.sv
+│   │       ├── pu_msp430.sv
+│   │       └── pu_riscv.sv
 │   ├── information
 │   │   ├── bit
 │   │   │   └── bit.sv
@@ -84,4 +68,4 @@ code
     └── computing
         └── state_pkg.sv
 
-32 directories, 52 files
+28 directories, 40 files

@@ -20,27 +20,11 @@ code
 │   │       └── network_on_chip.vhd
 │   ├── computer_architecture
 │   │   ├── harvard_architecture
-│   │   │   ├── or1k
-│   │   │   │   ├── alu.vhd
-│   │   │   │   ├── control_unit.vhd
-│   │   │   │   ├── io_unit.vhd
-│   │   │   │   └── memory_unit.vhd
-│   │   │   └── riscv
-│   │   │       ├── alu.vhd
-│   │   │       ├── control_unit.vhd
-│   │   │       ├── io_unit.vhd
-│   │   │       └── memory_unit.vhd
+│   │   │   ├── pu_or1k.vhd
+│   │   │   └── pu_riscv.vhd
 │   │   └── von_neumann_architecture
-│   │       ├── msp430
-│   │       │   ├── alu.vhd
-│   │       │   ├── control_unit.vhd
-│   │       │   ├── io_unit.vhd
-│   │       │   └── memory_unit.vhd
-│   │       └── riscv
-│   │           ├── alu.vhd
-│   │           ├── control_unit.vhd
-│   │           ├── io_unit.vhd
-│   │           └── memory_unit.vhd
+│   │       ├── pu_msp430.vhd
+│   │       └── pu_riscv.vhd
 │   ├── information
 │   │   ├── bit
 │   │   │   └── bit.vhd
@@ -84,7 +68,9 @@ code
     ├── computing
     │   └── state_pkg.vhd
     └── ieee
+        ├── math_complex-body.vhd
+        ├── math_complex.vhd
         ├── math_real-body.vhd
         └── math_real.vhd
 
-33 directories, 54 files
+29 directories, 44 files
