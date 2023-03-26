@@ -1,14 +1,11 @@
 code
 ├── classes
 │   ├── philosophers
-│   │   ├── ntm_philosophers_testbench.sv
-│   │   └── ntm_philosophers_testbench_testbench.sv
+│   │   └── ntm_philosophers_testbench.sv
 │   ├── soldiers
-│   │   ├── ntm_soldiers_testbench.sv
-│   │   └── ntm_soldiers_testbench_testbench.sv
+│   │   └── ntm_soldiers_testbench.sv
 │   └── workers
-│       ├── ntm_workers_testbench.sv
-│       └── ntm_workers_testbench_testbench.sv
+│       └── ntm_workers_testbench.sv
 └── computing
     ├── advanced_computer_architecture
     │   ├── multi_processor_system_on_chip
@@ -80,4 +77,4 @@ code
             ├── lstm_neural_turing_machine_testbench.sv
             └── transformer_neural_turing_machine_testbench.sv
 
-29 directories, 51 files
+29 directories, 48 files
