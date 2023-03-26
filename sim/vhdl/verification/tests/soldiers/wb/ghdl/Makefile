@@ -1,10 +1,10 @@
 all: build simulate
 
 build:
-	ghdl -a --std=08 ../../../../../../rtl/vhdl/wb/pkg/peripheral_spram_wb_pkg.vhd
-	ghdl -a --std=08 ../../../../../../rtl/vhdl/wb/core/peripheral_ram_generic_wb.vhd
-	ghdl -a --std=08 ../../../../../../rtl/vhdl/wb/core/peripheral_spram_wb.vhd
-	ghdl -a --std=08 ../../../../../../bench/vhdl/code/tests/core/wb/peripheral_spram_testbench.vhd
+	ghdl -a --std=08 ../../../../../../../rtl/vhdl/wb/pkg/peripheral_spram_wb_pkg.vhd
+	ghdl -a --std=08 ../../../../../../../rtl/vhdl/wb/core/peripheral_ram_generic_wb.vhd
+	ghdl -a --std=08 ../../../../../../../rtl/vhdl/wb/core/peripheral_spram_wb.vhd
+	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/tests/core/wb/peripheral_spram_testbench.vhd
 
 simulate:
 	ghdl -m --std=08 peripheral_spram_testbench
