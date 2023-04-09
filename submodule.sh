@@ -42,5 +42,11 @@
 ##                                                                               ##
 ###################################################################################
 
+# Remove Submodule
+git rm -rf soc-ntm
+
 # Update Submodule
 git submodule update --init --recursive --remote
+
+# Add Submodule
+git submodule add --force https://github.com/PacoReinaCampo/SoC-NTM.git soc-ntm
