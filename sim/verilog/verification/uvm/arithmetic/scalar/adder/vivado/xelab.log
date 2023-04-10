@@ -1,0 +1,5 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab ntm_uvm_testbench -relax -s top -timescale 1ns/1ps 
+Multi-threading is on. Using 18 slave threads.
+ERROR: [XSIM 43-3225] Cannot find design unit work.ntm_uvm_testbench in library work located at xsim.dir/work.
