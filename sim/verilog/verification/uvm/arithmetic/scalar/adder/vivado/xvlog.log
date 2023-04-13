@@ -1,5 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/GitHub/code/Advanced/SoC-FinTech/verification/uvm/application/arithmetic/scalar/adder/ntm_design.sv" into library work
-INFO: [VRFC 10-311] analyzing module ntm_design
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/GitHub/code/Advanced/SoC-FinTech/verification/uvm/application/arithmetic/scalar/adder/ntm_design.sv" into library work
-INFO: [VRFC 10-311] analyzing module ntm_design
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'ntm_design' [/home/user/GitHub/code/Advanced/SoC-FinTech/verification/uvm/application/arithmetic/scalar/adder/ntm_design.sv:40]
