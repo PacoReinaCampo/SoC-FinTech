@@ -3,11 +3,11 @@ code
 │   ├── design
 │   │   ├── classes
 │   │   │   ├── philosophers
-│   │   │   │   └── ntm_philosophers_testbench.sv
+│   │   │   │   └── accelerator_philosophers_testbench.sv
 │   │   │   ├── soldiers
-│   │   │   │   └── ntm_soldiers_testbench.sv
+│   │   │   │   └── accelerator_soldiers_testbench.sv
 │   │   │   └── workers
-│   │   │       └── ntm_workers_testbench.sv
+│   │   │       └── accelerator_workers_testbench.sv
 │   │   └── computing
 │   │       ├── advanced_computer_architecture
 │   │       │   ├── multi_processor_system_on_chip
@@ -160,11 +160,11 @@ code
     ├── design
     │   ├── classes
     │   │   ├── philosophers
-    │   │   │   └── ntm_philosophers_testbench.sv
+    │   │   │   └── accelerator_philosophers_testbench.sv
     │   │   ├── soldiers
-    │   │   │   └── ntm_soldiers_testbench.sv
+    │   │   │   └── accelerator_soldiers_testbench.sv
     │   │   └── workers
-    │   │       └── ntm_workers_testbench.sv
+    │   │       └── accelerator_workers_testbench.sv
     │   └── computing
     │       ├── advanced_computer_architecture
     │       │   ├── multi_processor_system_on_chip
