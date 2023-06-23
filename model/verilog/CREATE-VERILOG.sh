@@ -1,84 +1,190 @@
-###################################################################################
-##                                            __ _      _     _                  ##
-##                                           / _(_)    | |   | |                 ##
-##                __ _ _   _  ___  ___ _ __ | |_ _  ___| | __| |                 ##
-##               / _` | | | |/ _ \/ _ \ '_ \|  _| |/ _ \ |/ _` |                 ##
-##              | (_| | |_| |  __/  __/ | | | | | |  __/ | (_| |                 ##
-##               \__, |\__,_|\___|\___|_| |_|_| |_|\___|_|\__,_|                 ##
-##                  | |                                                          ##
-##                  |_|                                                          ##
-##                                                                               ##
-##                                                                               ##
-##              QueenField                                                       ##
-##              Multi-Processor System on Chip                                   ##
-##                                                                               ##
-###################################################################################
-
-###################################################################################
-##                                                                               ##
-## Copyright (c) 2022-2025 by the author(s)                                      ##
-##                                                                               ##
-## Permission is hereby granted, free of charge, to any person obtaining a copy  ##
-## of this software and associated documentation files (the "Software"), to deal ##
-## in the Software without restriction, including without limitation the rights  ##
-## to use, copy, modify, merge, publish, distribute, sublicense, and/or sell     ##
-## copies of the Software, and to permit persons to whom the Software is         ##
-## furnished to do so, subject to the following conditions:                      ##
-##                                                                               ##
-## The above copyright notice and this permission notice shall be included in    ##
-## all copies or substantial portions of the Software.                           ##
-##                                                                               ##
-## THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR    ##
-## IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,      ##
-## FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE   ##
-## AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER        ##
-## LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, ##
-## OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN     ##
-## THE SOFTWARE.                                                                 ##
-##                                                                               ##
-## ============================================================================= ##
-## Author(s):                                                                    ##
-##   Paco Reina Campo <pacoreinacampo@queenfield.tech>                           ##
-##                                                                               ##
-###################################################################################
-
-touch code/classes/philosophers/ntm_philosophers.sv
-touch code/classes/soldiers/ntm_soldiers.sv
-touch code/classes/workers/ntm_workers.sv
-touch code/computing/traditional_advanced_computer_architecture/traditional_multi_processor_system_on_chip/traditional_multi_processor_system_on_chip.sv
-touch code/computing/traditional_advanced_computer_architecture/traditional_processing_unit/traditional_mimd.sv
-touch code/computing/traditional_advanced_computer_architecture/traditional_processing_unit/traditional_misd.sv
-touch code/computing/traditional_advanced_computer_architecture/traditional_processing_unit/traditional_simd.sv
-touch code/computing/traditional_advanced_computer_architecture/traditional_processing_unit/traditional_sisd.sv
-touch code/computing/traditional_advanced_computer_architecture/traditional_system_on_chip/traditional_bus_on_chip.sv
-touch code/computing/traditional_advanced_computer_architecture/traditional_system_on_chip/traditional_network_on_chip.sv
-touch code/computing/traditional_computer_architecture/traditional_harvard_architecture/traditional_pu_riscv.sv
-touch code/computing/traditional_computer_architecture/traditional_harvard_architecture/traditional_pu_or1k.sv
-touch code/computing/traditional_computer_architecture/traditional_von_neumann_architecture/traditional_pu_riscv.sv
-touch code/computing/traditional_computer_architecture/traditional_von_neumann_architecture/traditional_pu_msp430.sv
-touch code/computing/traditional_information/traditional_bit/traditional_bit.sv
-touch code/computing/traditional_information/traditional_combinational_logic/traditional_arithmetic_circuits.sv
-touch code/computing/traditional_information/traditional_combinational_logic/traditional_logic_circuits.sv
-touch code/computing/traditional_information/traditional_finite_state_machine/traditional_finite_state_machine.sv
-touch code/computing/traditional_information/traditional_logic_gate/traditional_and_gate.sv
-touch code/computing/traditional_information/traditional_logic_gate/traditional_nand_gate.sv
-touch code/computing/traditional_information/traditional_logic_gate/traditional_nor_gate.sv
-touch code/computing/traditional_information/traditional_logic_gate/traditional_not_gate.sv
-touch code/computing/traditional_information/traditional_logic_gate/traditional_or_gate.sv
-touch code/computing/traditional_information/traditional_logic_gate/traditional_xnor_gate.sv
-touch code/computing/traditional_information/traditional_logic_gate/traditional_xor_gate.sv
-touch code/computing/traditional_information/traditional_logic_gate/traditional_yes_gate.sv
-touch code/computing/traditional_information/traditional_pushdown_automaton/traditional_pushdown_automaton.sv
-touch code/computing/traditional_neural_network/traditional_feedforward_neural_network/traditional_feedforward_neural_network.sv
-touch code/computing/traditional_neural_network/traditional_long_short_term_memory_neural_network/traditional_long_short_term_memory_neural_network.sv
-touch code/computing/traditional_neural_network/traditional_transformer_neural_network/traditional_transformer_neural_network.sv
-touch code/computing/traditional_turing_machine/traditional_differentiable_neural_computer/traditional_feedforward_differentiable_neural_computer.sv
-touch code/computing/traditional_turing_machine/traditional_differentiable_neural_computer/traditional_lstm_differentiable_neural_computer.sv
-touch code/computing/traditional_turing_machine/traditional_differentiable_neural_computer/traditional_transformer_differentiable_neural_computer.sv
-touch code/computing/traditional_turing_machine/traditional_neural_turing_machine/traditional_feedforward_neural_turing_machine.sv
-touch code/computing/traditional_turing_machine/traditional_neural_turing_machine/traditional_lstm_neural_turing_machine.sv
-touch code/computing/traditional_turing_machine/traditional_neural_turing_machine/traditional_transformer_neural_turing_machine.sv
-touch code/pkg/classes/ntm_philosophers_pkg.sv
-touch code/pkg/classes/ntm_soldiers_pkg.sv
-touch code/pkg/classes/ntm_workers_pkg.sv
-touch code/pkg/computing/traditional_state_pkg.sv
+touch code/arithmetic/float/matrix/model_matrix_float_adder.sv
+touch code/arithmetic/float/matrix/model_matrix_float_divider.sv
+touch code/arithmetic/float/matrix/model_matrix_float_multiplier.sv
+touch code/arithmetic/float/scalar/model_scalar_float_adder.sv
+touch code/arithmetic/float/scalar/model_scalar_float_divider.sv
+touch code/arithmetic/float/scalar/model_scalar_float_multiplier.sv
+touch code/arithmetic/float/tensor/model_tensor_float_adder.sv
+touch code/arithmetic/float/tensor/model_tensor_float_divider.sv
+touch code/arithmetic/float/tensor/model_tensor_float_multiplier.sv
+touch code/arithmetic/float/vector/model_vector_float_adder.sv
+touch code/arithmetic/float/vector/model_vector_float_divider.sv
+touch code/arithmetic/float/vector/model_vector_float_multiplier.sv
+touch code/arithmetic/integer/matrix/model_matrix_integer_adder.sv
+touch code/arithmetic/integer/matrix/model_matrix_integer_divider.sv
+touch code/arithmetic/integer/matrix/model_matrix_integer_multiplier.sv
+touch code/arithmetic/integer/scalar/model_scalar_integer_adder.sv
+touch code/arithmetic/integer/scalar/model_scalar_integer_divider.sv
+touch code/arithmetic/integer/scalar/model_scalar_integer_multiplier.sv
+touch code/arithmetic/integer/tensor/model_tensor_integer_adder.sv
+touch code/arithmetic/integer/tensor/model_tensor_integer_divider.sv
+touch code/arithmetic/integer/tensor/model_tensor_integer_multiplier.sv
+touch code/arithmetic/integer/vector/model_vector_integer_adder.sv
+touch code/arithmetic/integer/vector/model_vector_integer_divider.sv
+touch code/arithmetic/integer/vector/model_vector_integer_multiplier.sv
+touch code/arithmetic/modular/matrix/model_matrix_modular_adder.sv
+touch code/arithmetic/modular/matrix/model_matrix_modular_inverter.sv
+touch code/arithmetic/modular/matrix/model_matrix_modular_mod.sv
+touch code/arithmetic/modular/matrix/model_matrix_modular_multiplier.sv
+touch code/arithmetic/modular/scalar/model_scalar_modular_adder.sv
+touch code/arithmetic/modular/scalar/model_scalar_modular_inverter.sv
+touch code/arithmetic/modular/scalar/model_scalar_modular_mod.sv
+touch code/arithmetic/modular/scalar/model_scalar_modular_multiplier.sv
+touch code/arithmetic/modular/tensor/model_tensor_modular_adder.sv
+touch code/arithmetic/modular/tensor/model_tensor_modular_inverter.sv
+touch code/arithmetic/modular/tensor/model_tensor_modular_mod.sv
+touch code/arithmetic/modular/tensor/model_tensor_modular_multiplier.sv
+touch code/arithmetic/modular/vector/model_vector_modular_adder.sv
+touch code/arithmetic/modular/vector/model_vector_modular_inverter.sv
+touch code/arithmetic/modular/vector/model_vector_modular_mod.sv
+touch code/arithmetic/modular/vector/model_vector_modular_multiplier.sv
+touch code/controller/FNN/convolutional/model_controller.sv
+touch code/controller/FNN/standard/model_controller.sv
+touch code/controller/LSTM/convolutional/model_activation_gate_vector.sv
+touch code/controller/LSTM/convolutional/model_controller.sv
+touch code/controller/LSTM/convolutional/model_forget_gate_vector.sv
+touch code/controller/LSTM/convolutional/model_hidden_gate_vector.sv
+touch code/controller/LSTM/convolutional/model_input_gate_vector.sv
+touch code/controller/LSTM/convolutional/model_output_gate_vector.sv
+touch code/controller/LSTM/convolutional/model_state_gate_vector.sv
+touch code/controller/LSTM/standard/model_activation_gate_vector.sv
+touch code/controller/LSTM/standard/model_controller.sv
+touch code/controller/LSTM/standard/model_forget_gate_vector.sv
+touch code/controller/LSTM/standard/model_hidden_gate_vector.sv
+touch code/controller/LSTM/standard/model_input_gate_vector.sv
+touch code/controller/LSTM/standard/model_output_gate_vector.sv
+touch code/controller/LSTM/standard/model_state_gate_vector.sv
+touch code/controller/transformer/components/model_masked_multi_head_attention.sv
+touch code/controller/transformer/components/model_masked_scaled_dot_product_attention.sv
+touch code/controller/transformer/components/model_multi_head_attention.sv
+touch code/controller/transformer/components/model_scaled_dot_product_attention.sv
+touch code/controller/transformer/fnn/model_fnn.sv
+touch code/controller/transformer/functions/model_layer_norm.sv
+touch code/controller/transformer/functions/model_positional_encoding.sv
+touch code/controller/transformer/inputs/model_inputs_vector.sv
+touch code/controller/transformer/inputs/model_keys_vector.sv
+touch code/controller/transformer/inputs/model_queries_vector.sv
+touch code/controller/transformer/inputs/model_values_vector.sv
+touch code/controller/transformer/lstm/model_activation_gate_vector.sv
+touch code/controller/transformer/lstm/model_forget_gate_vector.sv
+touch code/controller/transformer/lstm/model_hidden_gate_vector.sv
+touch code/controller/transformer/lstm/model_input_gate_vector.sv
+touch code/controller/transformer/lstm/model_lstm.sv
+touch code/controller/transformer/lstm/model_output_gate_vector.sv
+touch code/controller/transformer/lstm/model_state_gate_vector.sv
+touch code/controller/transformer/top/model_controller.sv
+touch code/controller/transformer/top/model_decoder.sv
+touch code/controller/transformer/top/model_encoder.sv
+touch code/dnc/memory/model_addressing.sv
+touch code/dnc/memory/model_allocation_weighting.sv
+touch code/dnc/memory/model_backward_weighting.sv
+touch code/dnc/memory/model_content_based_addressing.sv
+touch code/dnc/memory/model_forward_weighting.sv
+touch code/dnc/memory/model_memory_matrix.sv
+touch code/dnc/memory/model_memory_retention_vector.sv
+touch code/dnc/memory/model_precedence_weighting.sv
+touch code/dnc/memory/model_read_content_weighting.sv
+touch code/dnc/memory/model_read_vectors.sv
+touch code/dnc/memory/model_read_weighting.sv
+touch code/dnc/memory/model_sort_vector.sv
+touch code/dnc/memory/model_temporal_link_matrix.sv
+touch code/dnc/memory/model_usage_vector.sv
+touch code/dnc/memory/model_write_content_weighting.sv
+touch code/dnc/memory/model_write_weighting.sv
+touch code/dnc/read_heads/model_read_heads.sv
+touch code/dnc/top/model_interface_matrix.sv
+touch code/dnc/top/model_interface_vector.sv
+touch code/dnc/top/model_output_vector.sv
+touch code/dnc/top/model_top.sv
+touch code/dnc/write_heads/model_write_heads.sv
+touch code/intro/model_intro_adder.sv
+touch code/math/algebra/matrix/model_matrix_convolution.sv
+touch code/math/algebra/matrix/model_matrix_inverse.sv
+touch code/math/algebra/matrix/model_matrix_multiplication.sv
+touch code/math/algebra/matrix/model_matrix_product.sv
+touch code/math/algebra/matrix/model_matrix_summation.sv
+touch code/math/algebra/matrix/model_matrix_transpose.sv
+touch code/math/algebra/matrix/model_matrix_vector_convolution.sv
+touch code/math/algebra/matrix/model_matrix_vector_product.sv
+touch code/math/algebra/matrix/model_transpose_vector_product.sv
+touch code/math/algebra/tensor/model_tensor_convolution.sv
+touch code/math/algebra/tensor/model_tensor_inverse.sv
+touch code/math/algebra/tensor/model_tensor_matrix_convolution.sv
+touch code/math/algebra/tensor/model_tensor_matrix_product.sv
+touch code/math/algebra/tensor/model_tensor_multiplication.sv
+touch code/math/algebra/tensor/model_tensor_product.sv
+touch code/math/algebra/tensor/model_tensor_summation.sv
+touch code/math/algebra/tensor/model_tensor_transpose.sv
+touch code/math/algebra/vector/model_dot_product.sv
+touch code/math/algebra/vector/model_vector_convolution.sv
+touch code/math/algebra/vector/model_vector_cosine_similarity.sv
+touch code/math/algebra/vector/model_vector_module.sv
+touch code/math/algebra/vector/model_vector_multiplication.sv
+touch code/math/algebra/vector/model_vector_summation.sv
+touch code/math/calculus/matrix/model_matrix_differentiation.sv
+touch code/math/calculus/matrix/model_matrix_integration.sv
+touch code/math/calculus/matrix/model_matrix_softmax.sv
+touch code/math/calculus/tensor/model_tensor_differentiation.sv
+touch code/math/calculus/tensor/model_tensor_integration.sv
+touch code/math/calculus/tensor/model_tensor_softmax.sv
+touch code/math/calculus/vector/model_vector_differentiation.sv
+touch code/math/calculus/vector/model_vector_integration.sv
+touch code/math/calculus/vector/model_vector_softmax.sv
+touch code/math/function/matrix/model_matrix_logistic_function.sv
+touch code/math/function/matrix/model_matrix_oneplus_function.sv
+touch code/math/function/scalar/model_scalar_logistic_function.sv
+touch code/math/function/scalar/model_scalar_oneplus_function.sv
+touch code/math/function/vector/model_vector_logistic_function.sv
+touch code/math/function/vector/model_vector_oneplus_function.sv
+touch code/math/series/matrix/model_matrix_cosh_function.sv
+touch code/math/series/matrix/model_matrix_exponentiator_function.sv
+touch code/math/series/matrix/model_matrix_logarithm_function.sv
+touch code/math/series/matrix/model_matrix_power_function.sv
+touch code/math/series/matrix/model_matrix_sinh_function.sv
+touch code/math/series/matrix/model_matrix_sqrt_function.sv
+touch code/math/series/matrix/model_matrix_tanh_function.sv
+touch code/math/series/scalar/model_scalar_cosh_function.sv
+touch code/math/series/scalar/model_scalar_exponentiator_function.sv
+touch code/math/series/scalar/model_scalar_logarithm_function.sv
+touch code/math/series/scalar/model_scalar_power_function.sv
+touch code/math/series/scalar/model_scalar_sinh_function.sv
+touch code/math/series/scalar/model_scalar_sqrt_function.sv
+touch code/math/series/scalar/model_scalar_tanh_function.sv
+touch code/math/series/vector/model_vector_cosh_function.sv
+touch code/math/series/vector/model_vector_exponentiator_function.sv
+touch code/math/series/vector/model_vector_logarithm_function.sv
+touch code/math/series/vector/model_vector_power_function.sv
+touch code/math/series/vector/model_vector_sinh_function.sv
+touch code/math/series/vector/model_vector_sqrt_function.sv
+touch code/math/series/vector/model_vector_tanh_function.sv
+touch code/ntm/memory/model_addressing.sv
+touch code/ntm/memory/model_content_based_addressing.sv
+touch code/ntm/read_heads/model_reading.sv
+touch code/ntm/top/model_interface_matrix.sv
+touch code/ntm/top/model_interface_vector.sv
+touch code/ntm/top/model_output_vector.sv
+touch code/ntm/top/model_top.sv
+touch code/ntm/write_heads/model_erasing.sv
+touch code/ntm/write_heads/model_writing.sv
+touch code/pkg/model_arithmetic_pkg.sv
+touch code/pkg/model_dnc_core_pkg.sv
+touch code/pkg/model_fnn_controller_pkg.sv
+touch code/pkg/model_intro_pkg.sv
+touch code/pkg/model_lstm_controller_pkg.sv
+touch code/pkg/model_math_pkg.sv
+touch code/pkg/model_ntm_core_pkg.sv
+touch code/pkg/model_state_pkg.sv
+touch code/state/feedback/model_state_matrix_feedforward.sv
+touch code/state/feedback/model_state_matrix_input.sv
+touch code/state/feedback/model_state_matrix_output.sv
+touch code/state/feedback/model_state_matrix_state.sv
+touch code/state/outputs/model_state_vector_output.sv
+touch code/state/outputs/model_state_vector_state.sv
+touch code/state/top/model_state_top.sv
+touch code/trainer/differentiation/model_matrix_controller_differentiation.sv
+touch code/trainer/differentiation/model_vector_controller_differentiation.sv
+touch code/trainer/FNN/model_trainer.sv
+touch code/trainer/LSTM/model_activation_trainer.sv
+touch code/trainer/LSTM/model_forget_trainer.sv
+touch code/trainer/LSTM/model_input_trainer.sv
+touch code/trainer/LSTM/model_output_trainer.sv

@@ -1,0 +1,4 @@
+cd D:/GitHub/code/Advanced/SoC-FinTech/sim/vhdl/verification/baremetal/math/series/msim
+
+do D:/GitHub/code/Advanced/SoC-FinTech/sim/vhdl/verification/baremetal/math/series/msim/macros/design.do
+do D:/GitHub/code/Advanced/SoC-FinTech/sim/vhdl/verification/baremetal/math/series/msim/macros/verification.do

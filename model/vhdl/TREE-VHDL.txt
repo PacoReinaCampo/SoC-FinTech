@@ -1,76 +1,243 @@
 code
-├── classes
-│   ├── philosophers
-│   │   └── ntm_philosophers.vhd
-│   ├── soldiers
-│   │   └── ntm_soldiers.vhd
-│   └── workers
-│       └── ntm_workers.vhd
-├── computing
-│   ├── advanced_computer_architecture
-│   │   ├── multi_processor_system_on_chip
-│   │   │   └── multi_processor_system_on_chip.vhd
-│   │   ├── processing_unit
-│   │   │   ├── mimd.vhd
-│   │   │   ├── misd.vhd
-│   │   │   ├── simd.vhd
-│   │   │   └── sisd.vhd
-│   │   └── system_on_chip
-│   │       ├── bus_on_chip.vhd
-│   │       └── network_on_chip.vhd
-│   ├── computer_architecture
-│   │   ├── harvard_architecture
-│   │   │   ├── pu_or1k.vhd
-│   │   │   └── pu_riscv.vhd
-│   │   └── von_neumann_architecture
-│   │       ├── pu_msp430.vhd
-│   │       └── pu_riscv.vhd
-│   ├── information
-│   │   ├── bit
-│   │   │   └── bit.vhd
-│   │   ├── combinational_logic
-│   │   │   ├── arithmetic_circuits.vhd
-│   │   │   └── logic_circuits.vhd
-│   │   ├── finite_state_machine
-│   │   │   └── finite_state_machine.vhd
-│   │   ├── logic_gate
-│   │   │   ├── and_gate.vhd
-│   │   │   ├── nand_gate.vhd
-│   │   │   ├── nor_gate.vhd
-│   │   │   ├── not_gate.vhd
-│   │   │   ├── or_gate.vhd
-│   │   │   ├── xnor_gate.vhd
-│   │   │   ├── xor_gate.vhd
-│   │   │   └── yes_gate.vhd
-│   │   └── pushdown_automaton
-│   │       └── pushdown_automaton.vhd
-│   ├── neural_network
-│   │   ├── feedforward_neural_network
-│   │   │   └── feedforward_neural_network.vhd
-│   │   ├── long_short_term_memory_neural_network
-│   │   │   └── long_short_term_memory_neural_network.vhd
-│   │   └── transformer_neural_network
-│   │       └── transformer_neural_network.vhd
-│   └── turing_machine
-│       ├── differentiable_neural_computer
-│       │   ├── feedforward_differentiable_neural_computer.vhd
-│       │   ├── lstm_differentiable_neural_computer.vhd
-│       │   └── transformer_differentiable_neural_computer.vhd
-│       └── neural_turing_machine
-│           ├── feedforward_neural_turing_machine.vhd
-│           ├── lstm_neural_turing_machine.vhd
-│           └── transformer_neural_turing_machine.vhd
-└── pkg
-    ├── classes
-    │   ├── ntm_philosophers_pkg.vhd
-    │   ├── ntm_soldiers_pkg.vhd
-    │   └── ntm_workers_pkg.vhd
-    ├── computing
-    │   └── state_pkg.vhd
-    └── ieee
-        ├── math_complex-body.vhd
-        ├── math_complex.vhd
-        ├── math_real-body.vhd
-        └── math_real.vhd
+├── architecture
+│   ├── mpsoc
+│   │   └── ntm_mpsoc.vhd
+│   ├── pu
+│   │   └── ntm_pu.vhd
+│   └── soc
+│       └── ntm_soc.vhd
+├── arithmetic
+│   ├── fixed
+│   │   ├── matrix
+│   │   │   ├── model_matrix_fixed_adder.vhd
+│   │   │   ├── model_matrix_fixed_divider.vhd
+│   │   │   └── model_matrix_fixed_multiplier.vhd
+│   │   ├── scalar
+│   │   │   ├── model_scalar_fixed_adder.vhd
+│   │   │   ├── model_scalar_fixed_divider.vhd
+│   │   │   └── model_scalar_fixed_multiplier.vhd
+│   │   ├── tensor
+│   │   │   ├── model_tensor_fixed_adder.vhd
+│   │   │   ├── model_tensor_fixed_divider.vhd
+│   │   │   └── model_tensor_fixed_multiplier.vhd
+│   │   └── vector
+│   │       ├── model_vector_fixed_adder.vhd
+│   │       ├── model_vector_fixed_divider.vhd
+│   │       └── model_vector_fixed_multiplier.vhd
+│   ├── float
+│   │   ├── matrix
+│   │   │   ├── model_matrix_float_adder.vhd
+│   │   │   ├── model_matrix_float_divider.vhd
+│   │   │   └── model_matrix_float_multiplier.vhd
+│   │   ├── scalar
+│   │   │   ├── model_scalar_float_adder.vhd
+│   │   │   ├── model_scalar_float_divider.vhd
+│   │   │   └── model_scalar_float_multiplier.vhd
+│   │   ├── tensor
+│   │   │   ├── model_tensor_float_adder.vhd
+│   │   │   ├── model_tensor_float_divider.vhd
+│   │   │   └── model_tensor_float_multiplier.vhd
+│   │   └── vector
+│   │       ├── model_vector_float_adder.vhd
+│   │       ├── model_vector_float_divider.vhd
+│   │       └── model_vector_float_multiplier.vhd
+│   └── integer
+│       ├── matrix
+│       │   ├── model_matrix_integer_adder.vhd
+│       │   ├── model_matrix_integer_divider.vhd
+│       │   └── model_matrix_integer_multiplier.vhd
+│       ├── scalar
+│       │   ├── model_scalar_integer_adder.vhd
+│       │   ├── model_scalar_integer_divider.vhd
+│       │   └── model_scalar_integer_multiplier.vhd
+│       ├── tensor
+│       │   ├── model_tensor_integer_adder.vhd
+│       │   ├── model_tensor_integer_divider.vhd
+│       │   └── model_tensor_integer_multiplier.vhd
+│       └── vector
+│           ├── model_vector_integer_adder.vhd
+│           ├── model_vector_integer_divider.vhd
+│           └── model_vector_integer_multiplier.vhd
+├── controller
+│   ├── FNN
+│   │   ├── convolutional
+│   │   │   └── model_controller.vhd
+│   │   └── standard
+│   │       └── model_controller.vhd
+│   ├── LSTM
+│   │   ├── convolutional
+│   │   │   ├── model_activation_gate_vector.vhd
+│   │   │   ├── model_controller.vhd
+│   │   │   ├── model_forget_gate_vector.vhd
+│   │   │   ├── model_hidden_gate_vector.vhd
+│   │   │   ├── model_input_gate_vector.vhd
+│   │   │   ├── model_output_gate_vector.vhd
+│   │   │   └── model_state_gate_vector.vhd
+│   │   └── standard
+│   │       ├── model_activation_gate_vector.vhd
+│   │       ├── model_controller.vhd
+│   │       ├── model_forget_gate_vector.vhd
+│   │       ├── model_hidden_gate_vector.vhd
+│   │       ├── model_input_gate_vector.vhd
+│   │       ├── model_output_gate_vector.vhd
+│   │       └── model_state_gate_vector.vhd
+│   └── transformer
+│       ├── components
+│       │   ├── model_masked_multi_head_attention.vhd
+│       │   ├── model_masked_scaled_dot_product_attention.vhd
+│       │   ├── model_multi_head_attention.vhd
+│       │   └── model_scaled_dot_product_attention.vhd
+│       ├── fnn
+│       │   └── model_fnn.vhd
+│       ├── functions
+│       │   ├── model_layer_norm.vhd
+│       │   └── model_positional_encoding.vhd
+│       ├── inputs
+│       │   ├── model_inputs_vector.vhd
+│       │   ├── model_keys_vector.vhd
+│       │   ├── model_queries_vector.vhd
+│       │   └── model_values_vector.vhd
+│       ├── lstm
+│       │   ├── model_activation_gate_vector.vhd
+│       │   ├── model_forget_gate_vector.vhd
+│       │   ├── model_hidden_gate_vector.vhd
+│       │   ├── model_input_gate_vector.vhd
+│       │   ├── model_lstm.vhd
+│       │   ├── model_output_gate_vector.vhd
+│       │   └── model_state_gate_vector.vhd
+│       └── top
+│           ├── model_controller.vhd
+│           ├── model_decoder.vhd
+│           └── model_encoder.vhd
+├── dnc
+│   ├── memory
+│   │   ├── model_addressing.vhd
+│   │   ├── model_allocation_weighting.vhd
+│   │   ├── model_backward_weighting.vhd
+│   │   ├── model_content_based_addressing.vhd
+│   │   ├── model_forward_weighting.vhd
+│   │   ├── model_memory_matrix.vhd
+│   │   ├── model_memory_retention_vector.vhd
+│   │   ├── model_precedence_weighting.vhd
+│   │   ├── model_read_content_weighting.vhd
+│   │   ├── model_read_vectors.vhd
+│   │   ├── model_read_weighting.vhd
+│   │   ├── model_sort_vector.vhd
+│   │   ├── model_temporal_link_matrix.vhd
+│   │   ├── model_usage_vector.vhd
+│   │   ├── model_write_content_weighting.vhd
+│   │   └── model_write_weighting.vhd
+│   ├── read_heads
+│   │   └── model_read_heads.vhd
+│   ├── top
+│   │   ├── model_interface_matrix.vhd
+│   │   ├── model_interface_vector.vhd
+│   │   ├── model_output_vector.vhd
+│   │   └── model_top.vhd
+│   └── write_heads
+│       └── model_write_heads.vhd
+├── math
+│   ├── algebra
+│   │   ├── matrix
+│   │   │   ├── model_matrix_convolution.vhd
+│   │   │   ├── model_matrix_inverse.vhd
+│   │   │   ├── model_matrix_multiplication.vhd
+│   │   │   ├── model_matrix_product.vhd
+│   │   │   ├── model_matrix_summation.vhd
+│   │   │   ├── model_matrix_transpose.vhd
+│   │   │   ├── model_matrix_vector_convolution.vhd
+│   │   │   ├── model_matrix_vector_product.vhd
+│   │   │   └── model_transpose_vector_product.vhd
+│   │   ├── tensor
+│   │   │   ├── model_tensor_convolution.vhd
+│   │   │   ├── model_tensor_inverse.vhd
+│   │   │   ├── model_tensor_matrix_convolution.vhd
+│   │   │   ├── model_tensor_matrix_product.vhd
+│   │   │   ├── model_tensor_product.vhd
+│   │   │   └── model_tensor_transpose.vhd
+│   │   └── vector
+│   │       ├── model_dot_product.vhd
+│   │       ├── model_vector_convolution.vhd
+│   │       ├── model_vector_cosine_similarity.vhd
+│   │       ├── model_vector_module.vhd
+│   │       ├── model_vector_multiplication.vhd
+│   │       └── model_vector_summation.vhd
+│   ├── calculus
+│   │   ├── matrix
+│   │   │   ├── model_matrix_differentiation.vhd
+│   │   │   ├── model_matrix_integration.vhd
+│   │   │   └── model_matrix_softmax.vhd
+│   │   ├── tensor
+│   │   │   ├── model_tensor_differentiation.vhd
+│   │   │   ├── model_tensor_integration.vhd
+│   │   │   └── model_tensor_softmax.vhd
+│   │   └── vector
+│   │       ├── model_vector_differentiation.vhd
+│   │       ├── model_vector_integration.vhd
+│   │       └── model_vector_softmax.vhd
+│   ├── function
+│   │   ├── matrix
+│   │   │   ├── model_matrix_logistic_function.vhd
+│   │   │   └── model_matrix_oneplus_function.vhd
+│   │   ├── scalar
+│   │   │   ├── model_scalar_logistic_function.vhd
+│   │   │   └── model_scalar_oneplus_function.vhd
+│   │   └── vector
+│   │       ├── model_vector_logistic_function.vhd
+│   │       └── model_vector_oneplus_function.vhd
+│   └── series
+│       ├── matrix
+│       │   ├── model_matrix_cosh_function.vhd
+│       │   ├── model_matrix_exponentiator_function.vhd
+│       │   ├── model_matrix_logarithm_function.vhd
+│       │   ├── model_matrix_power_function.vhd
+│       │   ├── model_matrix_sinh_function.vhd
+│       │   ├── model_matrix_sqrt_function.vhd
+│       │   └── model_matrix_tanh_function.vhd
+│       ├── scalar
+│       │   ├── model_scalar_cosh_function.vhd
+│       │   ├── model_scalar_exponentiator_function.vhd
+│       │   ├── model_scalar_logarithm_function.vhd
+│       │   ├── model_scalar_power_function.vhd
+│       │   ├── model_scalar_sinh_function.vhd
+│       │   ├── model_scalar_sqrt_function.vhd
+│       │   └── model_scalar_tanh_function.vhd
+│       └── vector
+│           ├── model_vector_cosh_function.vhd
+│           ├── model_vector_exponentiator_function.vhd
+│           ├── model_vector_logarithm_function.vhd
+│           ├── model_vector_power_function.vhd
+│           ├── model_vector_sinh_function.vhd
+│           ├── model_vector_sqrt_function.vhd
+│           └── model_vector_tanh_function.vhd
+├── pkg
+│   ├── model_arithmetic_pkg.vhd
+│   ├── model_fnn_controller_pkg.vhd
+│   ├── model_lstm_controller_pkg.vhd
+│   ├── model_math_pkg.vhd
+│   ├── model_ntm_core_pkg.vhd
+│   └── model_state_pkg.vhd
+├── state
+│   ├── feedback
+│   │   ├── model_state_matrix_feedforward.vhd
+│   │   ├── model_state_matrix_input.vhd
+│   │   ├── model_state_matrix_output.vhd
+│   │   └── model_state_matrix_state.vhd
+│   ├── outputs
+│   │   ├── model_state_vector_output.vhd
+│   │   └── model_state_vector_state.vhd
+│   └── top
+│       └── model_state_top.vhd
+└── trainer
+    ├── differentiation
+    │   ├── model_matrix_controller_differentiation.vhd
+    │   └── model_vector_controller_differentiation.vhd
+    ├── FNN
+    │   └── model_trainer.vhd
+    └── LSTM
+        ├── model_activation_trainer.vhd
+        ├── model_forget_trainer.vhd
+        ├── model_input_trainer.vhd
+        └── model_output_trainer.vhd
 
-29 directories, 44 files
+65 directories, 175 files

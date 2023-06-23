@@ -1,88 +1,190 @@
-###################################################################################
-##                                            __ _      _     _                  ##
-##                                           / _(_)    | |   | |                 ##
-##                __ _ _   _  ___  ___ _ __ | |_ _  ___| | __| |                 ##
-##               / _` | | | |/ _ \/ _ \ '_ \|  _| |/ _ \ |/ _` |                 ##
-##              | (_| | |_| |  __/  __/ | | | | | |  __/ | (_| |                 ##
-##               \__, |\__,_|\___|\___|_| |_|_| |_|\___|_|\__,_|                 ##
-##                  | |                                                          ##
-##                  |_|                                                          ##
-##                                                                               ##
-##                                                                               ##
-##              QueenField                                                       ##
-##              Multi-Processor System on Chip                                   ##
-##                                                                               ##
-###################################################################################
-
-###################################################################################
-##                                                                               ##
-## Copyright (c) 2022-2025 by the author(s)                                      ##
-##                                                                               ##
-## Permission is hereby granted, free of charge, to any person obtaining a copy  ##
-## of this software and associated documentation files (the "Software"), to deal ##
-## in the Software without restriction, including without limitation the rights  ##
-## to use, copy, modify, merge, publish, distribute, sublicense, and/or sell     ##
-## copies of the Software, and to permit persons to whom the Software is         ##
-## furnished to do so, subject to the following conditions:                      ##
-##                                                                               ##
-## The above copyright notice and this permission notice shall be included in    ##
-## all copies or substantial portions of the Software.                           ##
-##                                                                               ##
-## THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR    ##
-## IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,      ##
-## FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE   ##
-## AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER        ##
-## LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, ##
-## OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN     ##
-## THE SOFTWARE.                                                                 ##
-##                                                                               ##
-## ============================================================================= ##
-## Author(s):                                                                    ##
-##   Paco Reina Campo <pacoreinacampo@queenfield.tech>                           ##
-##                                                                               ##
-###################################################################################
-
-touch code/classes/philosophers/ntm_philosophers.vhd
-touch code/classes/soldiers/ntm_soldiers.vhd
-touch code/classes/workers/ntm_workers.vhd
-touch code/computing/traditional_advanced_computer_architecture/traditional_multi_processor_system_on_chip/traditional_multi_processor_system_on_chip.vhd
-touch code/computing/traditional_advanced_computer_architecture/traditional_processing_unit/traditional_mimd.vhd
-touch code/computing/traditional_advanced_computer_architecture/traditional_processing_unit/traditional_misd.vhd
-touch code/computing/traditional_advanced_computer_architecture/traditional_processing_unit/traditional_simd.vhd
-touch code/computing/traditional_advanced_computer_architecture/traditional_processing_unit/traditional_sisd.vhd
-touch code/computing/traditional_advanced_computer_architecture/traditional_system_on_chip/traditional_bus_on_chip.vhd
-touch code/computing/traditional_advanced_computer_architecture/traditional_system_on_chip/traditional_network_on_chip.vhd
-touch code/computing/traditional_computer_architecture/traditional_harvard_architecture/traditional_pu_riscv.vhd
-touch code/computing/traditional_computer_architecture/traditional_harvard_architecture/traditional_pu_or1k.vhd
-touch code/computing/traditional_computer_architecture/traditional_von_neumann_architecture/traditional_pu_riscv.vhd
-touch code/computing/traditional_computer_architecture/traditional_von_neumann_architecture/traditional_pu_msp430.vhd
-touch code/computing/traditional_information/traditional_bit/traditional_bit.vhd
-touch code/computing/traditional_information/traditional_combinational_logic/traditional_arithmetic_circuits.vhd
-touch code/computing/traditional_information/traditional_combinational_logic/traditional_logic_circuits.vhd
-touch code/computing/traditional_information/traditional_finite_state_machine/traditional_finite_state_machine.vhd
-touch code/computing/traditional_information/traditional_logic_gate/traditional_and_gate.vhd
-touch code/computing/traditional_information/traditional_logic_gate/traditional_nand_gate.vhd
-touch code/computing/traditional_information/traditional_logic_gate/traditional_nor_gate.vhd
-touch code/computing/traditional_information/traditional_logic_gate/traditional_not_gate.vhd
-touch code/computing/traditional_information/traditional_logic_gate/traditional_or_gate.vhd
-touch code/computing/traditional_information/traditional_logic_gate/traditional_xnor_gate.vhd
-touch code/computing/traditional_information/traditional_logic_gate/traditional_xor_gate.vhd
-touch code/computing/traditional_information/traditional_logic_gate/traditional_yes_gate.vhd
-touch code/computing/traditional_information/traditional_pushdown_automaton/traditional_pushdown_automaton.vhd
-touch code/computing/traditional_neural_network/traditional_feedforward_neural_network/traditional_feedforward_neural_network.vhd
-touch code/computing/traditional_neural_network/traditional_long_short_term_memory_neural_network/traditional_long_short_term_memory_neural_network.vhd
-touch code/computing/traditional_neural_network/traditional_transformer_neural_network/traditional_transformer_neural_network.vhd
-touch code/computing/traditional_turing_machine/traditional_differentiable_neural_computer/traditional_feedforward_differentiable_neural_computer.vhd
-touch code/computing/traditional_turing_machine/traditional_differentiable_neural_computer/traditional_lstm_differentiable_neural_computer.vhd
-touch code/computing/traditional_turing_machine/traditional_differentiable_neural_computer/traditional_transformer_differentiable_neural_computer.vhd
-touch code/computing/traditional_turing_machine/traditional_neural_turing_machine/traditional_feedforward_neural_turing_machine.vhd
-touch code/computing/traditional_turing_machine/traditional_neural_turing_machine/traditional_lstm_neural_turing_machine.vhd
-touch code/computing/traditional_turing_machine/traditional_neural_turing_machine/traditional_transformer_neural_turing_machine.vhd
-touch code/pkg/classes/ntm_philosophers_pkg.vhd
-touch code/pkg/classes/ntm_soldiers_pkg.vhd
-touch code/pkg/classes/ntm_workers_pkg.vhd
-touch code/pkg/computing/traditional_state_pkg.vhd
-touch code/pkg/ieee/math_complex-body.vhd
-touch code/pkg/ieee/math_complex.vhd
-touch code/pkg/ieee/math_real-body.vhd
-touch code/pkg/ieee/math_real.vhd
+touch code/arithmetic/float/matrix/ntm_matrix_float_adder.vhd
+touch code/arithmetic/float/matrix/ntm_matrix_float_divider.vhd
+touch code/arithmetic/float/matrix/ntm_matrix_float_multiplier.vhd
+touch code/arithmetic/float/scalar/ntm_scalar_float_adder.vhd
+touch code/arithmetic/float/scalar/ntm_scalar_float_divider.vhd
+touch code/arithmetic/float/scalar/ntm_scalar_float_multiplier.vhd
+touch code/arithmetic/float/tensor/ntm_tensor_float_adder.vhd
+touch code/arithmetic/float/tensor/ntm_tensor_float_divider.vhd
+touch code/arithmetic/float/tensor/ntm_tensor_float_multiplier.vhd
+touch code/arithmetic/float/vector/ntm_vector_float_adder.vhd
+touch code/arithmetic/float/vector/ntm_vector_float_divider.vhd
+touch code/arithmetic/float/vector/ntm_vector_float_multiplier.vhd
+touch code/arithmetic/integer/matrix/ntm_matrix_integer_adder.vhd
+touch code/arithmetic/integer/matrix/ntm_matrix_integer_divider.vhd
+touch code/arithmetic/integer/matrix/ntm_matrix_integer_multiplier.vhd
+touch code/arithmetic/integer/scalar/ntm_scalar_integer_adder.vhd
+touch code/arithmetic/integer/scalar/ntm_scalar_integer_divider.vhd
+touch code/arithmetic/integer/scalar/ntm_scalar_integer_multiplier.vhd
+touch code/arithmetic/integer/tensor/ntm_tensor_integer_adder.vhd
+touch code/arithmetic/integer/tensor/ntm_tensor_integer_divider.vhd
+touch code/arithmetic/integer/tensor/ntm_tensor_integer_multiplier.vhd
+touch code/arithmetic/integer/vector/ntm_vector_integer_adder.vhd
+touch code/arithmetic/integer/vector/ntm_vector_integer_divider.vhd
+touch code/arithmetic/integer/vector/ntm_vector_integer_multiplier.vhd
+touch code/arithmetic/modular/matrix/ntm_matrix_modular_adder.vhd
+touch code/arithmetic/modular/matrix/ntm_matrix_modular_inverter.vhd
+touch code/arithmetic/modular/matrix/ntm_matrix_modular_mod.vhd
+touch code/arithmetic/modular/matrix/ntm_matrix_modular_multiplier.vhd
+touch code/arithmetic/modular/scalar/ntm_scalar_modular_adder.vhd
+touch code/arithmetic/modular/scalar/ntm_scalar_modular_inverter.vhd
+touch code/arithmetic/modular/scalar/ntm_scalar_modular_mod.vhd
+touch code/arithmetic/modular/scalar/ntm_scalar_modular_multiplier.vhd
+touch code/arithmetic/modular/tensor/ntm_tensor_modular_adder.vhd
+touch code/arithmetic/modular/tensor/ntm_tensor_modular_inverter.vhd
+touch code/arithmetic/modular/tensor/ntm_tensor_modular_mod.vhd
+touch code/arithmetic/modular/tensor/ntm_tensor_modular_multiplier.vhd
+touch code/arithmetic/modular/vector/ntm_vector_modular_adder.vhd
+touch code/arithmetic/modular/vector/ntm_vector_modular_inverter.vhd
+touch code/arithmetic/modular/vector/ntm_vector_modular_mod.vhd
+touch code/arithmetic/modular/vector/ntm_vector_modular_multiplier.vhd
+touch code/controller/FNN/convolutional/ntm_controller.vhd
+touch code/controller/FNN/standard/ntm_controller.vhd
+touch code/controller/LSTM/convolutional/ntm_activation_gate_vector.vhd
+touch code/controller/LSTM/convolutional/ntm_controller.vhd
+touch code/controller/LSTM/convolutional/ntm_forget_gate_vector.vhd
+touch code/controller/LSTM/convolutional/ntm_hidden_gate_vector.vhd
+touch code/controller/LSTM/convolutional/ntm_input_gate_vector.vhd
+touch code/controller/LSTM/convolutional/ntm_output_gate_vector.vhd
+touch code/controller/LSTM/convolutional/ntm_state_gate_vector.vhd
+touch code/controller/LSTM/standard/ntm_activation_gate_vector.vhd
+touch code/controller/LSTM/standard/ntm_controller.vhd
+touch code/controller/LSTM/standard/ntm_forget_gate_vector.vhd
+touch code/controller/LSTM/standard/ntm_hidden_gate_vector.vhd
+touch code/controller/LSTM/standard/ntm_input_gate_vector.vhd
+touch code/controller/LSTM/standard/ntm_output_gate_vector.vhd
+touch code/controller/LSTM/standard/ntm_state_gate_vector.vhd
+touch code/controller/transformer/components/ntm_masked_multi_head_attention.vhd
+touch code/controller/transformer/components/ntm_masked_scaled_dot_product_attention.vhd
+touch code/controller/transformer/components/ntm_multi_head_attention.vhd
+touch code/controller/transformer/components/ntm_scaled_dot_product_attention.vhd
+touch code/controller/transformer/fnn/ntm_fnn.vhd
+touch code/controller/transformer/functions/ntm_layer_norm.vhd
+touch code/controller/transformer/functions/ntm_positional_encoding.vhd
+touch code/controller/transformer/inputs/ntm_inputs_vector.vhd
+touch code/controller/transformer/inputs/ntm_keys_vector.vhd
+touch code/controller/transformer/inputs/ntm_queries_vector.vhd
+touch code/controller/transformer/inputs/ntm_values_vector.vhd
+touch code/controller/transformer/lstm/ntm_activation_gate_vector.vhd
+touch code/controller/transformer/lstm/ntm_forget_gate_vector.vhd
+touch code/controller/transformer/lstm/ntm_hidden_gate_vector.vhd
+touch code/controller/transformer/lstm/ntm_input_gate_vector.vhd
+touch code/controller/transformer/lstm/ntm_lstm.vhd
+touch code/controller/transformer/lstm/ntm_output_gate_vector.vhd
+touch code/controller/transformer/lstm/ntm_state_gate_vector.vhd
+touch code/controller/transformer/top/ntm_controller.vhd
+touch code/controller/transformer/top/ntm_decoder.vhd
+touch code/controller/transformer/top/ntm_encoder.vhd
+touch code/dnc/memory/dnc_addressing.vhd
+touch code/dnc/memory/dnc_allocation_weighting.vhd
+touch code/dnc/memory/dnc_backward_weighting.vhd
+touch code/dnc/memory/dnc_content_based_addressing.vhd
+touch code/dnc/memory/dnc_forward_weighting.vhd
+touch code/dnc/memory/dnc_memory_matrix.vhd
+touch code/dnc/memory/dnc_memory_retention_vector.vhd
+touch code/dnc/memory/dnc_precedence_weighting.vhd
+touch code/dnc/memory/dnc_read_content_weighting.vhd
+touch code/dnc/memory/dnc_read_vectors.vhd
+touch code/dnc/memory/dnc_read_weighting.vhd
+touch code/dnc/memory/dnc_sort_vector.vhd
+touch code/dnc/memory/dnc_temporal_link_matrix.vhd
+touch code/dnc/memory/dnc_usage_vector.vhd
+touch code/dnc/memory/dnc_write_content_weighting.vhd
+touch code/dnc/memory/dnc_write_weighting.vhd
+touch code/dnc/read_heads/dnc_read_heads.vhd
+touch code/dnc/top/dnc_interface_matrix.vhd
+touch code/dnc/top/dnc_interface_vector.vhd
+touch code/dnc/top/dnc_output_vector.vhd
+touch code/dnc/top/dnc_top.vhd
+touch code/dnc/write_heads/dnc_write_heads.vhd
+touch code/intro/ntm_intro_adder.vhd
+touch code/math/algebra/matrix/ntm_matrix_convolution.vhd
+touch code/math/algebra/matrix/ntm_matrix_inverse.vhd
+touch code/math/algebra/matrix/ntm_matrix_multiplication.vhd
+touch code/math/algebra/matrix/ntm_matrix_product.vhd
+touch code/math/algebra/matrix/ntm_matrix_summation.vhd
+touch code/math/algebra/matrix/ntm_matrix_transpose.vhd
+touch code/math/algebra/matrix/ntm_matrix_vector_convolution.vhd
+touch code/math/algebra/matrix/ntm_matrix_vector_product.vhd
+touch code/math/algebra/matrix/ntm_transpose_vector_product.vhd
+touch code/math/algebra/tensor/ntm_tensor_convolution.vhd
+touch code/math/algebra/tensor/ntm_tensor_inverse.vhd
+touch code/math/algebra/tensor/ntm_tensor_matrix_convolution.vhd
+touch code/math/algebra/tensor/ntm_tensor_matrix_product.vhd
+touch code/math/algebra/tensor/ntm_tensor_multiplication.vhd
+touch code/math/algebra/tensor/ntm_tensor_product.vhd
+touch code/math/algebra/tensor/ntm_tensor_summation.vhd
+touch code/math/algebra/tensor/ntm_tensor_transpose.vhd
+touch code/math/algebra/vector/ntm_dot_product.vhd
+touch code/math/algebra/vector/ntm_vector_convolution.vhd
+touch code/math/algebra/vector/ntm_vector_cosine_similarity.vhd
+touch code/math/algebra/vector/ntm_vector_module.vhd
+touch code/math/algebra/vector/ntm_vector_multiplication.vhd
+touch code/math/algebra/vector/ntm_vector_summation.vhd
+touch code/math/calculus/matrix/ntm_matrix_differentiation.vhd
+touch code/math/calculus/matrix/ntm_matrix_integration.vhd
+touch code/math/calculus/matrix/ntm_matrix_softmax.vhd
+touch code/math/calculus/tensor/ntm_tensor_differentiation.vhd
+touch code/math/calculus/tensor/ntm_tensor_integration.vhd
+touch code/math/calculus/tensor/ntm_tensor_softmax.vhd
+touch code/math/calculus/vector/ntm_vector_differentiation.vhd
+touch code/math/calculus/vector/ntm_vector_integration.vhd
+touch code/math/calculus/vector/ntm_vector_softmax.vhd
+touch code/math/function/matrix/ntm_matrix_logistic_function.vhd
+touch code/math/function/matrix/ntm_matrix_oneplus_function.vhd
+touch code/math/function/scalar/ntm_scalar_logistic_function.vhd
+touch code/math/function/scalar/ntm_scalar_oneplus_function.vhd
+touch code/math/function/vector/ntm_vector_logistic_function.vhd
+touch code/math/function/vector/ntm_vector_oneplus_function.vhd
+touch code/math/series/matrix/ntm_matrix_cosh_function.vhd
+touch code/math/series/matrix/ntm_matrix_exponentiator_function.vhd
+touch code/math/series/matrix/ntm_matrix_logarithm_function.vhd
+touch code/math/series/matrix/ntm_matrix_power_function.vhd
+touch code/math/series/matrix/ntm_matrix_sinh_function.vhd
+touch code/math/series/matrix/ntm_matrix_sqrt_function.vhd
+touch code/math/series/matrix/ntm_matrix_tanh_function.vhd
+touch code/math/series/scalar/ntm_scalar_cosh_function.vhd
+touch code/math/series/scalar/ntm_scalar_exponentiator_function.vhd
+touch code/math/series/scalar/ntm_scalar_logarithm_function.vhd
+touch code/math/series/scalar/ntm_scalar_power_function.vhd
+touch code/math/series/scalar/ntm_scalar_sinh_function.vhd
+touch code/math/series/scalar/ntm_scalar_sqrt_function.vhd
+touch code/math/series/scalar/ntm_scalar_tanh_function.vhd
+touch code/math/series/vector/ntm_vector_cosh_function.vhd
+touch code/math/series/vector/ntm_vector_exponentiator_function.vhd
+touch code/math/series/vector/ntm_vector_logarithm_function.vhd
+touch code/math/series/vector/ntm_vector_power_function.vhd
+touch code/math/series/vector/ntm_vector_sinh_function.vhd
+touch code/math/series/vector/ntm_vector_sqrt_function.vhd
+touch code/math/series/vector/ntm_vector_tanh_function.vhd
+touch code/ntm/memory/ntm_addressing.vhd
+touch code/ntm/memory/ntm_content_based_addressing.vhd
+touch code/ntm/read_heads/ntm_reading.vhd
+touch code/ntm/top/ntm_interface_matrix.vhd
+touch code/ntm/top/ntm_interface_vector.vhd
+touch code/ntm/top/ntm_output_vector.vhd
+touch code/ntm/top/ntm_top.vhd
+touch code/ntm/write_heads/ntm_erasing.vhd
+touch code/ntm/write_heads/ntm_writing.vhd
+touch code/pkg/dnc_core_pkg.vhd
+touch code/pkg/ntm_arithmetic_pkg.vhd
+touch code/pkg/ntm_core_pkg.vhd
+touch code/pkg/ntm_fnn_controller_pkg.vhd
+touch code/pkg/ntm_intro_pkg.vhd
+touch code/pkg/ntm_lstm_controller_pkg.vhd
+touch code/pkg/ntm_math_pkg.vhd
+touch code/pkg/ntm_state_pkg.vhd
+touch code/state/feedback/ntm_state_matrix_feedforward.vhd
+touch code/state/feedback/ntm_state_matrix_input.vhd
+touch code/state/feedback/ntm_state_matrix_output.vhd
+touch code/state/feedback/ntm_state_matrix_state.vhd
+touch code/state/outputs/ntm_state_vector_output.vhd
+touch code/state/outputs/ntm_state_vector_state.vhd
+touch code/state/top/ntm_state_top.vhd
+touch code/trainer/differentiation/model_matrix_controller_differentiation.vhd
+touch code/trainer/differentiation/model_vector_controller_differentiation.vhd
+touch code/trainer/FNN/ntm_trainer.vhd
+touch code/trainer/LSTM/ntm_activation_trainer.vhd
+touch code/trainer/LSTM/ntm_forget_trainer.vhd
+touch code/trainer/LSTM/ntm_input_trainer.vhd
+touch code/trainer/LSTM/ntm_output_trainer.vhd

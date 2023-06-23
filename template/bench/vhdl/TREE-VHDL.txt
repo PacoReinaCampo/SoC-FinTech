@@ -1,0 +1,325 @@
+code
+├── baremetal
+│   ├── design
+│   │   ├── classes
+│   │   │   ├── philosophers
+│   │   │   │   └── accelerator_philosophers_testbench.vhd
+│   │   │   ├── soldiers
+│   │   │   │   └── accelerator_soldiers_testbench.vhd
+│   │   │   └── workers
+│   │   │       └── accelerator_workers_testbench.vhd
+│   │   └── computing
+│   │       ├── advanced_computer_architecture
+│   │       │   ├── multi_processor_system_on_chip
+│   │       │   │   └── multi_processor_system_on_chip_testbench.vhd
+│   │       │   ├── processing_unit
+│   │       │   │   ├── mimd_testbench.vhd
+│   │       │   │   ├── misd_testbench.vhd
+│   │       │   │   ├── simd_testbench.vhd
+│   │       │   │   └── sisd_testbench.vhd
+│   │       │   └── system_on_chip
+│   │       │       ├── bus_on_chip_testbench.vhd
+│   │       │       └── network_on_chip_testbench.vhd
+│   │       ├── computer_architecture
+│   │       │   ├── harvard_architecture
+│   │       │   │   ├── or1k
+│   │       │   │   │   ├── alu_testbench.vhd
+│   │       │   │   │   ├── control_unit_testbench.vhd
+│   │       │   │   │   ├── io_unit_testbench.vhd
+│   │       │   │   │   └── memory_unit_testbench.vhd
+│   │       │   │   └── riscv
+│   │       │   │       ├── alu_testbench.vhd
+│   │       │   │       ├── control_unit_testbench.vhd
+│   │       │   │       ├── io_unit_testbench.vhd
+│   │       │   │       └── memory_unit_testbench.vhd
+│   │       │   └── von_neumann_architecture
+│   │       │       ├── msp430
+│   │       │       │   ├── alu_testbench.vhd
+│   │       │       │   ├── control_unit_testbench.vhd
+│   │       │       │   ├── io_unit_testbench.vhd
+│   │       │       │   └── memory_unit_testbench.vhd
+│   │       │       └── riscv
+│   │       │           ├── alu_testbench.vhd
+│   │       │           ├── control_unit_testbench.vhd
+│   │       │           ├── io_unit_testbench.vhd
+│   │       │           └── memory_unit_testbench.vhd
+│   │       ├── information
+│   │       │   ├── bit
+│   │       │   │   └── bit_testbench.vhd
+│   │       │   ├── combinational_logic
+│   │       │   │   ├── arithmetic_circuits_testbench.vhd
+│   │       │   │   ├── arithmetic_circuits.vhd
+│   │       │   │   ├── logic_circuits_testbench.vhd
+│   │       │   │   └── logic_circuits.vhd
+│   │       │   ├── finite_state_machine
+│   │       │   │   └── finite_state_machine_testbench.vhd
+│   │       │   ├── logic_gate
+│   │       │   │   ├── and_gate_testbench.vhd
+│   │       │   │   ├── nand_gate_testbench.vhd
+│   │       │   │   ├── nor_gate_testbench.vhd
+│   │       │   │   ├── not_gate_testbench.vhd
+│   │       │   │   ├── or_gate_testbench.vhd
+│   │       │   │   ├── xnor_gate_testbench.vhd
+│   │       │   │   ├── xor_gate_testbench.vhd
+│   │       │   │   └── yes_gate_testbench.vhd
+│   │       │   └── pushdown_automaton
+│   │       │       └── pushdown_automaton_testbench.vhd
+│   │       ├── neural_network
+│   │       │   ├── feedforward_neural_network
+│   │       │   │   └── feedforward_neural_network_testbench.vhd
+│   │       │   ├── long_short_term_memory_neural_network
+│   │       │   │   └── long_short_term_memory_neural_network_testbench.vhd
+│   │       │   └── transformer_neural_network
+│   │       │       └── transformer_neural_network_testbench.vhd
+│   │       └── turing_machine
+│   │           ├── differentiable_neural_computer
+│   │           │   ├── feedforward_differentiable_neural_computer_testbench.vhd
+│   │           │   ├── lstm_differentiable_neural_computer_testbench.vhd
+│   │           │   └── transformer_differentiable_neural_computer_testbench.vhd
+│   │           └── neural_turing_machine
+│   │               ├── feedforward_neural_turing_machine_testbench.vhd
+│   │               ├── lstm_neural_turing_machine_testbench.vhd
+│   │               └── transformer_neural_turing_machine_testbench.vhd
+│   └── model
+│       ├── classes
+│       │   ├── philosophers
+│       │   │   └── ntm_philosophers_testbench.vhd
+│       │   ├── soldiers
+│       │   │   └── ntm_soldiers_testbench.vhd
+│       │   └── workers
+│       │       └── ntm_workers_testbench.vhd
+│       └── computing
+│           ├── advanced_computer_architecture
+│           │   ├── multi_processor_system_on_chip
+│           │   │   └── multi_processor_system_on_chip_testbench.vhd
+│           │   ├── processing_unit
+│           │   │   ├── mimd_testbench.vhd
+│           │   │   ├── misd_testbench.vhd
+│           │   │   ├── simd_testbench.vhd
+│           │   │   └── sisd_testbench.vhd
+│           │   └── system_on_chip
+│           │       ├── bus_on_chip_testbench.vhd
+│           │       └── network_on_chip_testbench.vhd
+│           ├── computer_architecture
+│           │   ├── harvard_architecture
+│           │   │   ├── or1k
+│           │   │   │   ├── alu_testbench.vhd
+│           │   │   │   ├── control_unit_testbench.vhd
+│           │   │   │   ├── io_unit_testbench.vhd
+│           │   │   │   └── memory_unit_testbench.vhd
+│           │   │   └── riscv
+│           │   │       ├── alu_testbench.vhd
+│           │   │       ├── control_unit_testbench.vhd
+│           │   │       ├── io_unit_testbench.vhd
+│           │   │       └── memory_unit_testbench.vhd
+│           │   └── von_neumann_architecture
+│           │       ├── msp430
+│           │       │   ├── alu_testbench.vhd
+│           │       │   ├── control_unit_testbench.vhd
+│           │       │   ├── io_unit_testbench.vhd
+│           │       │   └── memory_unit_testbench.vhd
+│           │       └── riscv
+│           │           ├── alu_testbench.vhd
+│           │           ├── control_unit_testbench.vhd
+│           │           ├── io_unit_testbench.vhd
+│           │           └── memory_unit_testbench.vhd
+│           ├── information
+│           │   ├── bit
+│           │   │   └── bit_testbench.vhd
+│           │   ├── combinational_logic
+│           │   │   ├── arithmetic_circuits_testbench.vhd
+│           │   │   ├── arithmetic_circuits.vhd
+│           │   │   ├── logic_circuits_testbench.vhd
+│           │   │   └── logic_circuits.vhd
+│           │   ├── finite_state_machine
+│           │   │   └── finite_state_machine_testbench.vhd
+│           │   ├── logic_gate
+│           │   │   ├── and_gate_testbench.vhd
+│           │   │   ├── nand_gate_testbench.vhd
+│           │   │   ├── nor_gate_testbench.vhd
+│           │   │   ├── not_gate_testbench.vhd
+│           │   │   ├── or_gate_testbench.vhd
+│           │   │   ├── xnor_gate_testbench.vhd
+│           │   │   ├── xor_gate_testbench.vhd
+│           │   │   └── yes_gate_testbench.vhd
+│           │   └── pushdown_automaton
+│           │       └── pushdown_automaton_testbench.vhd
+│           ├── neural_network
+│           │   ├── feedforward_neural_network
+│           │   │   └── feedforward_neural_network_testbench.vhd
+│           │   ├── long_short_term_memory_neural_network
+│           │   │   └── long_short_term_memory_neural_network_testbench.vhd
+│           │   └── transformer_neural_network
+│           │       └── transformer_neural_network_testbench.vhd
+│           └── turing_machine
+│               ├── differentiable_neural_computer
+│               │   ├── feedforward_differentiable_neural_computer_testbench.vhd
+│               │   ├── lstm_differentiable_neural_computer_testbench.vhd
+│               │   └── transformer_differentiable_neural_computer_testbench.vhd
+│               └── neural_turing_machine
+│                   ├── feedforward_neural_turing_machine_testbench.vhd
+│                   ├── lstm_neural_turing_machine_testbench.vhd
+│                   └── transformer_neural_turing_machine_testbench.vhd
+└── tests
+    ├── design
+    │   ├── classes
+    │   │   ├── philosophers
+    │   │   │   └── accelerator_philosophers_testbench.vhd
+    │   │   ├── soldiers
+    │   │   │   └── accelerator_soldiers_testbench.vhd
+    │   │   └── workers
+    │   │       └── accelerator_workers_testbench.vhd
+    │   └── computing
+    │       ├── advanced_computer_architecture
+    │       │   ├── multi_processor_system_on_chip
+    │       │   │   └── multi_processor_system_on_chip_testbench.vhd
+    │       │   ├── processing_unit
+    │       │   │   ├── mimd_testbench.vhd
+    │       │   │   ├── misd_testbench.vhd
+    │       │   │   ├── simd_testbench.vhd
+    │       │   │   └── sisd_testbench.vhd
+    │       │   └── system_on_chip
+    │       │       ├── bus_on_chip_testbench.vhd
+    │       │       └── network_on_chip_testbench.vhd
+    │       ├── computer_architecture
+    │       │   ├── harvard_architecture
+    │       │   │   ├── or1k
+    │       │   │   │   ├── alu_testbench.vhd
+    │       │   │   │   ├── control_unit_testbench.vhd
+    │       │   │   │   ├── io_unit_testbench.vhd
+    │       │   │   │   └── memory_unit_testbench.vhd
+    │       │   │   └── riscv
+    │       │   │       ├── alu_testbench.vhd
+    │       │   │       ├── control_unit_testbench.vhd
+    │       │   │       ├── io_unit_testbench.vhd
+    │       │   │       └── memory_unit_testbench.vhd
+    │       │   └── von_neumann_architecture
+    │       │       ├── msp430
+    │       │       │   ├── alu_testbench.vhd
+    │       │       │   ├── control_unit_testbench.vhd
+    │       │       │   ├── io_unit_testbench.vhd
+    │       │       │   └── memory_unit_testbench.vhd
+    │       │       └── riscv
+    │       │           ├── alu_testbench.vhd
+    │       │           ├── control_unit_testbench.vhd
+    │       │           ├── io_unit_testbench.vhd
+    │       │           └── memory_unit_testbench.vhd
+    │       ├── information
+    │       │   ├── bit
+    │       │   │   └── bit_testbench.vhd
+    │       │   ├── combinational_logic
+    │       │   │   ├── arithmetic_circuits_testbench.vhd
+    │       │   │   ├── arithmetic_circuits.vhd
+    │       │   │   ├── logic_circuits_testbench.vhd
+    │       │   │   └── logic_circuits.vhd
+    │       │   ├── finite_state_machine
+    │       │   │   └── finite_state_machine_testbench.vhd
+    │       │   ├── logic_gate
+    │       │   │   ├── and_gate_testbench.vhd
+    │       │   │   ├── nand_gate_testbench.vhd
+    │       │   │   ├── nor_gate_testbench.vhd
+    │       │   │   ├── not_gate_testbench.vhd
+    │       │   │   ├── or_gate_testbench.vhd
+    │       │   │   ├── xnor_gate_testbench.vhd
+    │       │   │   ├── xor_gate_testbench.vhd
+    │       │   │   └── yes_gate_testbench.vhd
+    │       │   └── pushdown_automaton
+    │       │       └── pushdown_automaton_testbench.vhd
+    │       ├── neural_network
+    │       │   ├── feedforward_neural_network
+    │       │   │   └── feedforward_neural_network_testbench.vhd
+    │       │   ├── long_short_term_memory_neural_network
+    │       │   │   └── long_short_term_memory_neural_network_testbench.vhd
+    │       │   └── transformer_neural_network
+    │       │       └── transformer_neural_network_testbench.vhd
+    │       └── turing_machine
+    │           ├── differentiable_neural_computer
+    │           │   ├── feedforward_differentiable_neural_computer_testbench.vhd
+    │           │   ├── lstm_differentiable_neural_computer_testbench.vhd
+    │           │   └── transformer_differentiable_neural_computer_testbench.vhd
+    │           └── neural_turing_machine
+    │               ├── feedforward_neural_turing_machine_testbench.vhd
+    │               ├── lstm_neural_turing_machine_testbench.vhd
+    │               └── transformer_neural_turing_machine_testbench.vhd
+    └── model
+        ├── classes
+        │   ├── philosophers
+        │   │   └── ntm_philosophers_testbench.vhd
+        │   ├── soldiers
+        │   │   └── ntm_soldiers_testbench.vhd
+        │   └── workers
+        │       └── ntm_workers_testbench.vhd
+        └── computing
+            ├── advanced_computer_architecture
+            │   ├── multi_processor_system_on_chip
+            │   │   └── multi_processor_system_on_chip_testbench.vhd
+            │   ├── processing_unit
+            │   │   ├── mimd_testbench.vhd
+            │   │   ├── misd_testbench.vhd
+            │   │   ├── simd_testbench.vhd
+            │   │   └── sisd_testbench.vhd
+            │   └── system_on_chip
+            │       ├── bus_on_chip_testbench.vhd
+            │       └── network_on_chip_testbench.vhd
+            ├── computer_architecture
+            │   ├── harvard_architecture
+            │   │   ├── or1k
+            │   │   │   ├── alu_testbench.vhd
+            │   │   │   ├── control_unit_testbench.vhd
+            │   │   │   ├── io_unit_testbench.vhd
+            │   │   │   └── memory_unit_testbench.vhd
+            │   │   └── riscv
+            │   │       ├── alu_testbench.vhd
+            │   │       ├── control_unit_testbench.vhd
+            │   │       ├── io_unit_testbench.vhd
+            │   │       └── memory_unit_testbench.vhd
+            │   └── von_neumann_architecture
+            │       ├── msp430
+            │       │   ├── alu_testbench.vhd
+            │       │   ├── control_unit_testbench.vhd
+            │       │   ├── io_unit_testbench.vhd
+            │       │   └── memory_unit_testbench.vhd
+            │       └── riscv
+            │           ├── alu_testbench.vhd
+            │           ├── control_unit_testbench.vhd
+            │           ├── io_unit_testbench.vhd
+            │           └── memory_unit_testbench.vhd
+            ├── information
+            │   ├── bit
+            │   │   └── bit_testbench.vhd
+            │   ├── combinational_logic
+            │   │   ├── arithmetic_circuits_testbench.vhd
+            │   │   ├── arithmetic_circuits.vhd
+            │   │   ├── logic_circuits_testbench.vhd
+            │   │   └── logic_circuits.vhd
+            │   ├── finite_state_machine
+            │   │   └── finite_state_machine_testbench.vhd
+            │   ├── logic_gate
+            │   │   ├── and_gate_testbench.vhd
+            │   │   ├── nand_gate_testbench.vhd
+            │   │   ├── nor_gate_testbench.vhd
+            │   │   ├── not_gate_testbench.vhd
+            │   │   ├── or_gate_testbench.vhd
+            │   │   ├── xnor_gate_testbench.vhd
+            │   │   ├── xor_gate_testbench.vhd
+            │   │   └── yes_gate_testbench.vhd
+            │   └── pushdown_automaton
+            │       └── pushdown_automaton_testbench.vhd
+            ├── neural_network
+            │   ├── feedforward_neural_network
+            │   │   └── feedforward_neural_network_testbench.vhd
+            │   ├── long_short_term_memory_neural_network
+            │   │   └── long_short_term_memory_neural_network_testbench.vhd
+            │   └── transformer_neural_network
+            │       └── transformer_neural_network_testbench.vhd
+            └── turing_machine
+                ├── differentiable_neural_computer
+                │   ├── feedforward_differentiable_neural_computer_testbench.vhd
+                │   ├── lstm_differentiable_neural_computer_testbench.vhd
+                │   └── transformer_differentiable_neural_computer_testbench.vhd
+                └── neural_turing_machine
+                    ├── feedforward_neural_turing_machine_testbench.vhd
+                    ├── lstm_neural_turing_machine_testbench.vhd
+                    └── transformer_neural_turing_machine_testbench.vhd
+
+122 directories, 200 files
