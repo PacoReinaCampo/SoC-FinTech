@@ -1,11 +1,11 @@
 code
 ├── classes
 │   ├── philosophers
-│   │   └── accelerator_philosophers.sv
+│   │   └── ntm_philosophers.sv
 │   ├── soldiers
-│   │   └── accelerator_soldiers.sv
+│   │   └── ntm_soldiers.sv
 │   └── workers
-│       └── accelerator_workers.sv
+│       └── ntm_workers.sv
 ├── computing
 │   ├── advanced_computer_architecture
 │   │   ├── multi_processor_system_on_chip
@@ -62,9 +62,9 @@ code
 │           └── transformer_neural_turing_machine.sv
 └── pkg
     ├── classes
-    │   ├── accelerator_philosophers_pkg.sv
-    │   ├── accelerator_soldiers_pkg.sv
-    │   └── accelerator_workers_pkg.sv
+    │   ├── ntm_philosophers_pkg.sv
+    │   ├── ntm_soldiers_pkg.sv
+    │   └── ntm_workers_pkg.sv
     └── computing
         └── state_pkg.sv
 

@@ -45,9 +45,9 @@ use ieee.numeric_std.all;
 use ieee.math_real.all;
 use ieee.float_pkg.all;
 
-use work.accelerator_template_pkg.all;
+use work.ntm_template_pkg.all;
 
-entity accelerator_template is
+entity ntm_template is
   generic (
     DATA_SIZE    : integer := 64;
     CONTROL_SIZE : integer := 64
@@ -69,7 +69,7 @@ entity accelerator_template is
     );
 end entity;
 
-architecture accelerator_template_architecture of accelerator_template is
+architecture ntm_template_architecture of ntm_template is
 
   ------------------------------------------------------------------------------
   -- Types

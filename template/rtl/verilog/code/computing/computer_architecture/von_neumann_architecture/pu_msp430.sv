@@ -37,7 +37,7 @@
 // Author(s):
 //   Paco Reina Campo <pacoreinacampo@queenfield.tech>
 
-module accelerator_template #(
+module ntm_template #(
   parameter DATA_SIZE    = 64,
   parameter CONTROL_SIZE = 64
 ) (
