@@ -46,7 +46,7 @@ use work.accelerator_arithmetic_pkg.all;
 use work.accelerator_math_pkg.all;
 use work.accelerator_linear_controller_pkg.all;
 
-entity accelerator_controller is
+entity accelerator_linear is
   generic (
     DATA_SIZE    : integer := 64;
     CONTROL_SIZE : integer := 4
@@ -89,7 +89,7 @@ entity accelerator_controller is
     );
 end entity;
 
-architecture accelerator_controller_architecture of accelerator_controller is
+architecture accelerator_linear_architecture of accelerator_linear is
 
   ------------------------------------------------------------------------------
   -- Functionality
@@ -141,14 +141,14 @@ architecture accelerator_controller_architecture of accelerator_controller is
   -- Ops
 
   -- W(l;x)·x(t;x)
-  type controller_matrix_vector_product_fsm is (
-    STARTER_MATRIX_VECTOR_PRODUCT_STATE,  -- STEP 0
-    ENABLER_MATRIX_VECTOR_PRODUCT_STATE,  -- STEP 1
-    INPUT_I_MATRIX_VECTOR_PRODUCT_STATE,  -- STEP 2
-    INPUT_J_MATRIX_VECTOR_PRODUCT_STATE,  -- STEP 3
-    CLEAN_I_MATRIX_VECTOR_PRODUCT_STATE,  -- STEP 4
-    CLEAN_J_MATRIX_VECTOR_PRODUCT_STATE,  -- STEP 5
-    OUTPUT_I_MATRIX_VECTOR_PRODUCT_STATE  -- STEP 6
+  type controller_matrix_vector_convolution_fsm is (
+    STARTER_MATRIX_VECTOR_CONVOLUTION_STATE,  -- STEP 0
+    ENABLER_MATRIX_VECTOR_CONVOLUTION_STATE,  -- STEP 1
+    INPUT_I_MATRIX_VECTOR_CONVOLUTION_STATE,  -- STEP 2
+    INPUT_J_MATRIX_VECTOR_CONVOLUTION_STATE,  -- STEP 3
+    CLEAN_I_MATRIX_VECTOR_CONVOLUTION_STATE,  -- STEP 4
+    CLEAN_J_MATRIX_VECTOR_CONVOLUTION_STATE,  -- STEP 5
+    OUTPUT_I_MATRIX_VECTOR_CONVOLUTION_STATE  -- STEP 6
     );
 
   -- b(l)
@@ -187,7 +187,7 @@ architecture accelerator_controller_architecture of accelerator_controller is
   signal controller_x_in_fsm_int : controller_x_in_fsm;
 
   -- Ops
-  signal controller_matrix_vector_product_fsm_int : controller_matrix_vector_product_fsm;
+  signal controller_matrix_vector_convolution_fsm_int : controller_matrix_vector_convolution_fsm;
   signal controller_vector_float_adder_fsm_int    : controller_vector_float_adder_fsm;
   signal controller_vector_logistic_fsm_int       : controller_vector_logistic_fsm;
 
@@ -216,8 +216,8 @@ architecture accelerator_controller_architecture of accelerator_controller is
   signal index_x_x_in_loop : std_logic_vector(CONTROL_SIZE-1 downto 0);
 
   -- Ops
-  signal index_i_matrix_vector_product_loop : std_logic_vector(CONTROL_SIZE-1 downto 0);
-  signal index_j_matrix_vector_product_loop : std_logic_vector(CONTROL_SIZE-1 downto 0);
+  signal index_i_matrix_vector_convolution_loop : std_logic_vector(CONTROL_SIZE-1 downto 0);
+  signal index_j_matrix_vector_convolution_loop : std_logic_vector(CONTROL_SIZE-1 downto 0);
 
   signal index_vector_float_adder_loop : std_logic_vector(CONTROL_SIZE-1 downto 0);
 
@@ -234,7 +234,7 @@ architecture accelerator_controller_architecture of accelerator_controller is
   signal data_x_in_enable_int : std_logic;
 
   -- Ops
-  signal data_matrix_vector_product_enable_int : std_logic;
+  signal data_matrix_vector_convolution_enable_int : std_logic;
   signal data_vector_float_adder_enable_int    : std_logic;
   signal data_vector_logistic_enable_int       : std_logic;
 
@@ -256,27 +256,27 @@ architecture accelerator_controller_architecture of accelerator_controller is
   signal data_b_in_vector_float_adder : std_logic_vector(DATA_SIZE-1 downto 0);
   signal data_out_vector_float_adder  : std_logic_vector(DATA_SIZE-1 downto 0);
 
-  -- MATRIX VECTOR PRODUCT
+  -- MATRIX VECTOR CONVOLUTION
   -- CONTROL
-  signal start_matrix_vector_product : std_logic;
-  signal ready_matrix_vector_product : std_logic;
+  signal start_matrix_vector_convolution : std_logic;
+  signal ready_matrix_vector_convolution : std_logic;
 
-  signal data_a_in_i_enable_matrix_vector_product : std_logic;
-  signal data_a_in_j_enable_matrix_vector_product : std_logic;
-  signal data_b_in_enable_matrix_vector_product   : std_logic;
+  signal data_a_in_i_enable_matrix_vector_convolution : std_logic;
+  signal data_a_in_j_enable_matrix_vector_convolution : std_logic;
+  signal data_b_in_enable_matrix_vector_convolution   : std_logic;
 
-  signal data_i_enable_matrix_vector_product : std_logic;
-  signal data_j_enable_matrix_vector_product : std_logic;
+  signal data_i_enable_matrix_vector_convolution : std_logic;
+  signal data_j_enable_matrix_vector_convolution : std_logic;
 
-  signal data_out_enable_matrix_vector_product : std_logic;
+  signal data_out_enable_matrix_vector_convolution : std_logic;
 
   -- DATA
-  signal size_a_i_in_matrix_vector_product : std_logic_vector(CONTROL_SIZE-1 downto 0);
-  signal size_a_j_in_matrix_vector_product : std_logic_vector(CONTROL_SIZE-1 downto 0);
-  signal size_b_in_matrix_vector_product   : std_logic_vector(CONTROL_SIZE-1 downto 0);
-  signal data_a_in_matrix_vector_product   : std_logic_vector(DATA_SIZE-1 downto 0);
-  signal data_b_in_matrix_vector_product   : std_logic_vector(DATA_SIZE-1 downto 0);
-  signal data_out_matrix_vector_product    : std_logic_vector(DATA_SIZE-1 downto 0);
+  signal size_a_i_in_matrix_vector_convolution : std_logic_vector(CONTROL_SIZE-1 downto 0);
+  signal size_a_j_in_matrix_vector_convolution : std_logic_vector(CONTROL_SIZE-1 downto 0);
+  signal size_b_in_matrix_vector_convolution   : std_logic_vector(CONTROL_SIZE-1 downto 0);
+  signal data_a_in_matrix_vector_convolution   : std_logic_vector(DATA_SIZE-1 downto 0);
+  signal data_b_in_matrix_vector_convolution   : std_logic_vector(DATA_SIZE-1 downto 0);
+  signal data_out_matrix_vector_convolution    : std_logic_vector(DATA_SIZE-1 downto 0);
 
   -- VECTOR LOGISTIC
   -- CONTROL
@@ -301,10 +301,10 @@ begin
   -- h(t;l) = sigmoid(W(l;x)·x(t;x) + b(l))
 
   -- W(l;x)·x(t;x)
-  --   vector_one_operation_int = matrix_vector_product_fsm(W, x) [data_w_in_enable_int, data_x_in_enable_int]
+  --   vector_one_operation_int = matrix_vector_convolution_fsm(W, x) [data_w_in_enable_int, data_x_in_enable_int]
 
   -- b(l)
-  --   vector_two_operation_int = vector_float_adder_fsm(vector_one_operation_int, b) [data_matrix_vector_product_enable_int, data_b_in_enable_int]
+  --   vector_two_operation_int = vector_float_adder_fsm(vector_one_operation_int, b) [data_matrix_vector_convolution_enable_int, data_b_in_enable_int]
 
   -- logistic(h(t;l))
   --   vector_three_operation_int = vector_logistic_fsm(vector_two_operation_int) [data_vector_float_adder_enable_int]
@@ -578,169 +578,169 @@ begin
   -- OPS CONTROL
 
   -- W(l;x)·x(t;x)
-  matrix_vector_product_fsm : process(CLK, RST)
+  matrix_vector_convolution_fsm : process(CLK, RST)
   begin
     if (RST = '0') then
       -- Control Internal
-      start_matrix_vector_product <= '0';
+      start_matrix_vector_convolution <= '0';
 
-      data_a_in_i_enable_matrix_vector_product <= '0';
-      data_a_in_j_enable_matrix_vector_product <= '0';
-      data_b_in_enable_matrix_vector_product   <= '0';
+      data_a_in_i_enable_matrix_vector_convolution <= '0';
+      data_a_in_j_enable_matrix_vector_convolution <= '0';
+      data_b_in_enable_matrix_vector_convolution   <= '0';
 
-      data_matrix_vector_product_enable_int <= '0';
+      data_matrix_vector_convolution_enable_int <= '0';
 
-      index_i_matrix_vector_product_loop <= ZERO_CONTROL;
-      index_j_matrix_vector_product_loop <= ZERO_CONTROL;
+      index_i_matrix_vector_convolution_loop <= ZERO_CONTROL;
+      index_j_matrix_vector_convolution_loop <= ZERO_CONTROL;
 
       -- Data Internal
-      size_a_i_in_matrix_vector_product <= ZERO_CONTROL;
-      size_a_j_in_matrix_vector_product <= ZERO_CONTROL;
-      size_b_in_matrix_vector_product   <= ZERO_CONTROL;
+      size_a_i_in_matrix_vector_convolution <= ZERO_CONTROL;
+      size_a_j_in_matrix_vector_convolution <= ZERO_CONTROL;
+      size_b_in_matrix_vector_convolution   <= ZERO_CONTROL;
 
-      data_a_in_matrix_vector_product <= ZERO_DATA;
-      data_b_in_matrix_vector_product <= ZERO_DATA;
+      data_a_in_matrix_vector_convolution <= ZERO_DATA;
+      data_b_in_matrix_vector_convolution <= ZERO_DATA;
 
     elsif (rising_edge(CLK)) then
 
-      case controller_matrix_vector_product_fsm_int is
-        when STARTER_MATRIX_VECTOR_PRODUCT_STATE =>  -- STEP 0
+      case controller_matrix_vector_convolution_fsm_int is
+        when STARTER_MATRIX_VECTOR_CONVOLUTION_STATE =>  -- STEP 0
           -- Control Internal
-          start_matrix_vector_product <= '0';
+          start_matrix_vector_convolution <= '0';
 
-          data_a_in_i_enable_matrix_vector_product <= '0';
-          data_a_in_j_enable_matrix_vector_product <= '0';
-          data_b_in_enable_matrix_vector_product   <= '0';
+          data_a_in_i_enable_matrix_vector_convolution <= '0';
+          data_a_in_j_enable_matrix_vector_convolution <= '0';
+          data_b_in_enable_matrix_vector_convolution   <= '0';
 
           -- Data Internal
-          data_a_in_matrix_vector_product <= ZERO_DATA;
-          data_b_in_matrix_vector_product <= ZERO_DATA;
+          data_a_in_matrix_vector_convolution <= ZERO_DATA;
+          data_b_in_matrix_vector_convolution <= ZERO_DATA;
 
           if (START = '1') then
             -- Control Internal
-            index_i_matrix_vector_product_loop <= ZERO_CONTROL;
-            index_j_matrix_vector_product_loop <= ZERO_CONTROL;
+            index_i_matrix_vector_convolution_loop <= ZERO_CONTROL;
+            index_j_matrix_vector_convolution_loop <= ZERO_CONTROL;
 
-            data_matrix_vector_product_enable_int <= '0';
+            data_matrix_vector_convolution_enable_int <= '0';
 
             -- FSM Control
-            controller_matrix_vector_product_fsm_int <= ENABLER_MATRIX_VECTOR_PRODUCT_STATE;
+            controller_matrix_vector_convolution_fsm_int <= ENABLER_MATRIX_VECTOR_CONVOLUTION_STATE;
           end if;
 
-        when ENABLER_MATRIX_VECTOR_PRODUCT_STATE =>  -- STEP 1
+        when ENABLER_MATRIX_VECTOR_CONVOLUTION_STATE =>  -- STEP 1
 
           if (data_w_in_enable_int = '1' and data_x_in_enable_int = '1') then
-            if (unsigned(index_i_matrix_vector_product_loop) = unsigned(ZERO_CONTROL) and unsigned(index_j_matrix_vector_product_loop) = unsigned(ZERO_CONTROL)) then
+            if (unsigned(index_i_matrix_vector_convolution_loop) = unsigned(ZERO_CONTROL) and unsigned(index_j_matrix_vector_convolution_loop) = unsigned(ZERO_CONTROL)) then
               -- Control Internal
-              start_matrix_vector_product <= '1';
+              start_matrix_vector_convolution <= '1';
 
               -- Data Inputs
-              size_a_i_in_matrix_vector_product <= SIZE_L_IN;
-              size_a_j_in_matrix_vector_product <= SIZE_X_IN;
-              size_b_in_matrix_vector_product   <= SIZE_X_IN;
+              size_a_i_in_matrix_vector_convolution <= SIZE_L_IN;
+              size_a_j_in_matrix_vector_convolution <= SIZE_X_IN;
+              size_b_in_matrix_vector_convolution   <= SIZE_X_IN;
             end if;
 
             -- FSM Control
-            controller_matrix_vector_product_fsm_int <= INPUT_I_MATRIX_VECTOR_PRODUCT_STATE;
+            controller_matrix_vector_convolution_fsm_int <= INPUT_I_MATRIX_VECTOR_CONVOLUTION_STATE;
           end if;
 
-        when INPUT_I_MATRIX_VECTOR_PRODUCT_STATE =>  -- STEP 2
+        when INPUT_I_MATRIX_VECTOR_CONVOLUTION_STATE =>  -- STEP 2
 
-          if (data_i_enable_matrix_vector_product = '1' and data_j_enable_matrix_vector_product = '1') then
+          if (data_i_enable_matrix_vector_convolution = '1' and data_j_enable_matrix_vector_convolution = '1') then
             -- Data Inputs
-            data_a_in_matrix_vector_product <= matrix_w_in_int(to_integer(unsigned(index_i_matrix_vector_product_loop)), to_integer(unsigned(index_j_matrix_vector_product_loop)));
-            data_b_in_matrix_vector_product <= vector_x_in_int(to_integer(unsigned(index_i_matrix_vector_product_loop)));
+            data_a_in_matrix_vector_convolution <= matrix_w_in_int(to_integer(unsigned(index_i_matrix_vector_convolution_loop)), to_integer(unsigned(index_j_matrix_vector_convolution_loop)));
+            data_b_in_matrix_vector_convolution <= vector_x_in_int(to_integer(unsigned(index_i_matrix_vector_convolution_loop)));
 
             -- Control Internal
-            data_a_in_i_enable_matrix_vector_product <= '1';
-            data_a_in_j_enable_matrix_vector_product <= '1';
-            data_b_in_enable_matrix_vector_product   <= '1';
+            data_a_in_i_enable_matrix_vector_convolution <= '1';
+            data_a_in_j_enable_matrix_vector_convolution <= '1';
+            data_b_in_enable_matrix_vector_convolution   <= '1';
 
             -- FSM Control
-            controller_matrix_vector_product_fsm_int <= CLEAN_J_MATRIX_VECTOR_PRODUCT_STATE;
+            controller_matrix_vector_convolution_fsm_int <= CLEAN_J_MATRIX_VECTOR_CONVOLUTION_STATE;
           end if;
 
           -- Control Internal
-          start_matrix_vector_product <= '0';
+          start_matrix_vector_convolution <= '0';
 
-        when INPUT_J_MATRIX_VECTOR_PRODUCT_STATE =>  -- STEP 6
+        when INPUT_J_MATRIX_VECTOR_CONVOLUTION_STATE =>  -- STEP 6
 
-          if (data_j_enable_matrix_vector_product = '1') then
+          if (data_j_enable_matrix_vector_convolution = '1') then
             -- Data Inputs
-            data_a_in_matrix_vector_product <= matrix_w_in_int(to_integer(unsigned(index_i_matrix_vector_product_loop)), to_integer(unsigned(index_j_matrix_vector_product_loop)));
+            data_a_in_matrix_vector_convolution <= matrix_w_in_int(to_integer(unsigned(index_i_matrix_vector_convolution_loop)), to_integer(unsigned(index_j_matrix_vector_convolution_loop)));
 
             -- Control Internal
-            data_a_in_j_enable_matrix_vector_product <= '1';
+            data_a_in_j_enable_matrix_vector_convolution <= '1';
 
             -- FSM Control
-            if (unsigned(index_j_matrix_vector_product_loop) = unsigned(SIZE_X_IN)-unsigned(ONE_CONTROL)) then
-              controller_matrix_vector_product_fsm_int <= CLEAN_I_MATRIX_VECTOR_PRODUCT_STATE;
+            if (unsigned(index_j_matrix_vector_convolution_loop) = unsigned(SIZE_X_IN)-unsigned(ONE_CONTROL)) then
+              controller_matrix_vector_convolution_fsm_int <= CLEAN_I_MATRIX_VECTOR_CONVOLUTION_STATE;
             else
-              controller_matrix_vector_product_fsm_int <= CLEAN_J_MATRIX_VECTOR_PRODUCT_STATE;
+              controller_matrix_vector_convolution_fsm_int <= CLEAN_J_MATRIX_VECTOR_CONVOLUTION_STATE;
             end if;
           end if;
 
-        when CLEAN_I_MATRIX_VECTOR_PRODUCT_STATE =>  -- STEP 3
+        when CLEAN_I_MATRIX_VECTOR_CONVOLUTION_STATE =>  -- STEP 3
 
-          if ((unsigned(index_i_matrix_vector_product_loop) = unsigned(SIZE_L_IN)-unsigned(ONE_CONTROL)) and (unsigned(index_j_matrix_vector_product_loop) = unsigned(SIZE_X_IN)-unsigned(ONE_CONTROL))) then
+          if ((unsigned(index_i_matrix_vector_convolution_loop) = unsigned(SIZE_L_IN)-unsigned(ONE_CONTROL)) and (unsigned(index_j_matrix_vector_convolution_loop) = unsigned(SIZE_X_IN)-unsigned(ONE_CONTROL))) then
             -- Control Internal
-            index_i_matrix_vector_product_loop <= ZERO_CONTROL;
-            index_j_matrix_vector_product_loop <= ZERO_CONTROL;
+            index_i_matrix_vector_convolution_loop <= ZERO_CONTROL;
+            index_j_matrix_vector_convolution_loop <= ZERO_CONTROL;
 
             -- FSM Control
-            controller_matrix_vector_product_fsm_int <= OUTPUT_I_MATRIX_VECTOR_PRODUCT_STATE;
-          elsif ((unsigned(index_i_matrix_vector_product_loop) < unsigned(SIZE_L_IN)-unsigned(ONE_CONTROL)) and (unsigned(index_j_matrix_vector_product_loop) = unsigned(SIZE_X_IN)-unsigned(ONE_CONTROL))) then
+            controller_matrix_vector_convolution_fsm_int <= OUTPUT_I_MATRIX_VECTOR_CONVOLUTION_STATE;
+          elsif ((unsigned(index_i_matrix_vector_convolution_loop) < unsigned(SIZE_L_IN)-unsigned(ONE_CONTROL)) and (unsigned(index_j_matrix_vector_convolution_loop) = unsigned(SIZE_X_IN)-unsigned(ONE_CONTROL))) then
             -- Control Internal
-            index_i_matrix_vector_product_loop <= std_logic_vector(unsigned(index_i_matrix_vector_product_loop) + unsigned(ONE_CONTROL));
-            index_j_matrix_vector_product_loop <= ZERO_CONTROL;
+            index_i_matrix_vector_convolution_loop <= std_logic_vector(unsigned(index_i_matrix_vector_convolution_loop) + unsigned(ONE_CONTROL));
+            index_j_matrix_vector_convolution_loop <= ZERO_CONTROL;
 
             -- FSM Control
-            controller_matrix_vector_product_fsm_int <= INPUT_I_MATRIX_VECTOR_PRODUCT_STATE;
+            controller_matrix_vector_convolution_fsm_int <= INPUT_I_MATRIX_VECTOR_CONVOLUTION_STATE;
           end if;
 
           -- Control Internal
-          data_a_in_i_enable_matrix_vector_product <= '0';
-          data_a_in_j_enable_matrix_vector_product <= '0';
-          data_b_in_enable_matrix_vector_product   <= '0';
+          data_a_in_i_enable_matrix_vector_convolution <= '0';
+          data_a_in_j_enable_matrix_vector_convolution <= '0';
+          data_b_in_enable_matrix_vector_convolution   <= '0';
 
-        when CLEAN_J_MATRIX_VECTOR_PRODUCT_STATE =>  -- STEP 4
+        when CLEAN_J_MATRIX_VECTOR_CONVOLUTION_STATE =>  -- STEP 4
 
-          if (unsigned(index_j_matrix_vector_product_loop) < unsigned(SIZE_X_IN)-unsigned(ONE_CONTROL)) then
+          if (unsigned(index_j_matrix_vector_convolution_loop) < unsigned(SIZE_X_IN)-unsigned(ONE_CONTROL)) then
             -- Control Internal
-            index_j_matrix_vector_product_loop <= std_logic_vector(unsigned(index_j_matrix_vector_product_loop) + unsigned(ONE_CONTROL));
+            index_j_matrix_vector_convolution_loop <= std_logic_vector(unsigned(index_j_matrix_vector_convolution_loop) + unsigned(ONE_CONTROL));
 
             -- FSM Control
-            controller_matrix_vector_product_fsm_int <= INPUT_J_MATRIX_VECTOR_PRODUCT_STATE;
+            controller_matrix_vector_convolution_fsm_int <= INPUT_J_MATRIX_VECTOR_CONVOLUTION_STATE;
           end if;
 
           -- Control Internal
-          data_a_in_i_enable_matrix_vector_product <= '0';
-          data_a_in_j_enable_matrix_vector_product <= '0';
-          data_b_in_enable_matrix_vector_product   <= '0';
+          data_a_in_i_enable_matrix_vector_convolution <= '0';
+          data_a_in_j_enable_matrix_vector_convolution <= '0';
+          data_b_in_enable_matrix_vector_convolution   <= '0';
 
-        when OUTPUT_I_MATRIX_VECTOR_PRODUCT_STATE =>  -- STEP 5
+        when OUTPUT_I_MATRIX_VECTOR_CONVOLUTION_STATE =>  -- STEP 5
 
-          if (data_out_enable_matrix_vector_product = '1') then
-            if (unsigned(index_i_matrix_vector_product_loop) = unsigned(SIZE_L_IN)-unsigned(ONE_CONTROL)) then
+          if (data_out_enable_matrix_vector_convolution = '1') then
+            if (unsigned(index_i_matrix_vector_convolution_loop) = unsigned(SIZE_L_IN)-unsigned(ONE_CONTROL)) then
               -- Control Internal
-              index_i_matrix_vector_product_loop <= ZERO_CONTROL;
+              index_i_matrix_vector_convolution_loop <= ZERO_CONTROL;
 
-              data_matrix_vector_product_enable_int <= '1';
+              data_matrix_vector_convolution_enable_int <= '1';
 
               -- FSM Control
-              controller_matrix_vector_product_fsm_int <= STARTER_MATRIX_VECTOR_PRODUCT_STATE;
+              controller_matrix_vector_convolution_fsm_int <= STARTER_MATRIX_VECTOR_CONVOLUTION_STATE;
             else
               -- Control Internal
-              index_i_matrix_vector_product_loop <= std_logic_vector(unsigned(index_i_matrix_vector_product_loop) + unsigned(ONE_CONTROL));
+              index_i_matrix_vector_convolution_loop <= std_logic_vector(unsigned(index_i_matrix_vector_convolution_loop) + unsigned(ONE_CONTROL));
             end if;
 
             -- Data Internal
-            vector_one_operation_int(to_integer(unsigned(index_i_matrix_vector_product_loop))) <= data_out_matrix_vector_product;
+            vector_one_operation_int(to_integer(unsigned(index_i_matrix_vector_convolution_loop))) <= data_out_matrix_vector_convolution;
           end if;
 
         when others =>
           -- FSM Control
-          controller_matrix_vector_product_fsm_int <= STARTER_MATRIX_VECTOR_PRODUCT_STATE;
+          controller_matrix_vector_convolution_fsm_int <= STARTER_MATRIX_VECTOR_CONVOLUTION_STATE;
       end case;
     end if;
   end process;
@@ -793,7 +793,7 @@ begin
 
         when ENABLER_VECTOR_FLOAT_ADDER_STATE =>  -- STEP 1
 
-          if (data_matrix_vector_product_enable_int = '1' and data_b_in_enable_int = '1') then
+          if (data_matrix_vector_convolution_enable_int = '1' and data_b_in_enable_int = '1') then
             if (unsigned(index_vector_float_adder_loop) = unsigned(ZERO_CONTROL)) then
               -- Control Internal
               start_vector_float_adder <= '1';
@@ -1060,8 +1060,8 @@ begin
       DATA_OUT  => data_out_vector_float_adder
       );
 
-  -- MATRIX VECTOR PRODUCT
-  matrix_vector_product : accelerator_matrix_vector_product
+  -- MATRIX VECTOR CONVOLUTION
+  matrix_vector_convolution : accelerator_matrix_vector_convolution
     generic map (
       DATA_SIZE    => DATA_SIZE,
       CONTROL_SIZE => CONTROL_SIZE
@@ -1072,25 +1072,25 @@ begin
       RST => RST,
 
       -- CONTROL
-      START => start_matrix_vector_product,
-      READY => ready_matrix_vector_product,
+      START => start_matrix_vector_convolution,
+      READY => ready_matrix_vector_convolution,
 
-      DATA_A_IN_I_ENABLE => data_a_in_i_enable_matrix_vector_product,
-      DATA_A_IN_J_ENABLE => data_a_in_j_enable_matrix_vector_product,
-      DATA_B_IN_ENABLE   => data_b_in_enable_matrix_vector_product,
+      DATA_A_IN_I_ENABLE => data_a_in_i_enable_matrix_vector_convolution,
+      DATA_A_IN_J_ENABLE => data_a_in_j_enable_matrix_vector_convolution,
+      DATA_B_IN_ENABLE   => data_b_in_enable_matrix_vector_convolution,
 
-      DATA_I_ENABLE => data_i_enable_matrix_vector_product,
-      DATA_J_ENABLE => data_j_enable_matrix_vector_product,
+      DATA_I_ENABLE => data_i_enable_matrix_vector_convolution,
+      DATA_J_ENABLE => data_j_enable_matrix_vector_convolution,
 
-      DATA_OUT_ENABLE => data_out_enable_matrix_vector_product,
+      DATA_OUT_ENABLE => data_out_enable_matrix_vector_convolution,
 
       -- DATA
-      SIZE_A_I_IN => size_a_i_in_matrix_vector_product,
-      SIZE_A_J_IN => size_a_j_in_matrix_vector_product,
-      SIZE_B_IN   => size_b_in_matrix_vector_product,
-      DATA_A_IN   => data_a_in_matrix_vector_product,
-      DATA_B_IN   => data_b_in_matrix_vector_product,
-      DATA_OUT    => data_out_matrix_vector_product
+      SIZE_A_I_IN => size_a_i_in_matrix_vector_convolution,
+      SIZE_A_J_IN => size_a_j_in_matrix_vector_convolution,
+      SIZE_B_IN   => size_b_in_matrix_vector_convolution,
+      DATA_A_IN   => data_a_in_matrix_vector_convolution,
+      DATA_B_IN   => data_b_in_matrix_vector_convolution,
+      DATA_OUT    => data_out_matrix_vector_convolution
       );
 
   -- VECTOR LOGISTIC
