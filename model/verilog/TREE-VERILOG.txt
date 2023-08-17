@@ -125,7 +125,8 @@ code
 │   │   │   ├── model_matrix_summation.sv
 │   │   │   ├── model_matrix_transpose.sv
 │   │   │   ├── model_matrix_vector_convolution.sv
-│   │   │   └── model_matrix_vector_product.sv
+│   │   │   ├── model_matrix_vector_product.sv
+│   │   │   └── model_transpose_vector_product.sv
 │   │   ├── tensor
 │   │   │   ├── model_tensor_convolution.sv
 │   │   │   ├── model_tensor_inverse.sv
@@ -139,8 +140,7 @@ code
 │   │       ├── model_vector_cosine_similarity.sv
 │   │       ├── model_vector_module.sv
 │   │       ├── model_vector_multiplication.sv
-│   │       ├── model_vector_summation.sv
-│   │       └── model_vector_transpose.sv
+│   │       └── model_vector_summation.sv
 │   ├── calculus
 │   │   ├── matrix
 │   │   │   ├── model_matrix_differentiation.sv
@@ -186,10 +186,12 @@ code
 ├── pkg
 │   ├── model_arithmetic_pkg.sv
 │   ├── model_fnn_controller_pkg.sv
+│   ├── model_linear_controller_pkg.sv
 │   ├── model_lstm_controller_pkg.sv
 │   ├── model_math_pkg.sv
 │   ├── model_ntm_core_pkg.sv
-│   └── model_state_pkg.sv
+│   ├── model_state_pkg.sv
+│   └── model_transformer_controller_pkg.sv
 ├── state
 │   ├── feedback
 │   │   ├── model_state_matrix_feedforward.sv
@@ -208,8 +210,8 @@ code
 │       └── model_state_top.sv
 ├── trainer
 │   ├── differentiation
-│   │   ├── model_matrix_controller_differentiation.sv
-│   │   └── model_vector_controller_differentiation.sv
+│   │   ├── model_trainer_matrix_differentiation.sv
+│   │   └── model_trainer_vector_differentiation.sv
 │   ├── FNN
 │   │   └── model_trainer.sv
 │   ├── linear
@@ -249,4 +251,4 @@ code
         ├── model_decoder.sv
         └── model_encoder.sv
 
-74 directories, 175 files
+74 directories, 177 files
