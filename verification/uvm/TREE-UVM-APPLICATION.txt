@@ -336,48 +336,6 @@ application
 │           └── ntm_vector_mean
 │               ├── ntm_design.sv
 │               └── ntm_testbench.sv
-├── ntm
-│   ├── memory
-│   │   ├── ntm_addressing
-│   │   │   ├── ntm_design.sv
-│   │   │   └── ntm_testbench.sv
-│   │   ├── ntm_matrix_content_based_addressing
-│   │   │   ├── ntm_design.sv
-│   │   │   └── ntm_testbench.sv
-│   │   └── ntm_vector_content_based_addressing
-│   │       ├── ntm_design.sv
-│   │       └── ntm_testbench.sv
-│   ├── read_heads
-│   │   └── ntm_reading
-│   │       ├── ntm_design.sv
-│   │       └── ntm_testbench.sv
-│   ├── top
-│   │   ├── ntm_interface_matrix
-│   │   │   ├── ntm_design.sv
-│   │   │   └── ntm_testbench.sv
-│   │   ├── ntm_interface_top
-│   │   │   ├── ntm_design.sv
-│   │   │   └── ntm_testbench.sv
-│   │   ├── ntm_interface_vector
-│   │   │   ├── ntm_design.sv
-│   │   │   └── ntm_testbench.sv
-│   │   ├── ntm_output_vector
-│   │   │   ├── ntm_design.sv
-│   │   │   └── ntm_testbench.sv
-│   │   └── ntm_top
-│   │       ├── ntm_design.sv
-│   │       └── ntm_testbench.sv
-│   ├── trained
-│   │   └── ntm_trained_top
-│   │       ├── ntm_design.sv
-│   │       └── ntm_testbench.sv
-│   └── write_heads
-│       ├── ntm_erasing
-│       │   ├── ntm_design.sv
-│       │   └── ntm_testbench.sv
-│       └── ntm_writing
-│           ├── ntm_design.sv
-│           └── ntm_testbench.sv
 ├── state
 │   ├── feedback
 │   │   ├── ntm_state_matrix_feedforward
@@ -576,4 +534,4 @@ application
             ├── ntm_design.sv
             └── ntm_testbench.sv
 
-232 directories, 344 files
+214 directories, 320 files

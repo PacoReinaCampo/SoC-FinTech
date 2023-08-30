@@ -437,60 +437,6 @@ library
 │               ├── ntm_model_pkg.vhd
 │               ├── ntm_model.vhd
 │               └── ntm_testbench.vhd
-├── ntm
-│   ├── memory
-│   │   ├── ntm_addressing
-│   │   │   ├── ntm_model_pkg.vhd
-│   │   │   ├── ntm_model.vhd
-│   │   │   └── ntm_testbench.vhd
-│   │   ├── ntm_matrix_content_based_addressing
-│   │   │   ├── ntm_model_pkg.vhd
-│   │   │   ├── ntm_model.vhd
-│   │   │   └── ntm_testbench.vhd
-│   │   └── ntm_vector_content_based_addressing
-│   │       ├── ntm_model_pkg.vhd
-│   │       ├── ntm_model.vhd
-│   │       └── ntm_testbench.vhd
-│   ├── read_heads
-│   │   └── ntm_reading
-│   │       ├── ntm_model_pkg.vhd
-│   │       ├── ntm_model.vhd
-│   │       └── ntm_testbench.vhd
-│   ├── top
-│   │   ├── ntm_interface_matrix
-│   │   │   ├── ntm_model_pkg.vhd
-│   │   │   ├── ntm_model.vhd
-│   │   │   └── ntm_testbench.vhd
-│   │   ├── ntm_interface_top
-│   │   │   ├── ntm_model_pkg.vhd
-│   │   │   ├── ntm_model.vhd
-│   │   │   └── ntm_testbench.vhd
-│   │   ├── ntm_interface_vector
-│   │   │   ├── ntm_model_pkg.vhd
-│   │   │   ├── ntm_model.vhd
-│   │   │   └── ntm_testbench.vhd
-│   │   ├── ntm_output_vector
-│   │   │   ├── ntm_model_pkg.vhd
-│   │   │   ├── ntm_model.vhd
-│   │   │   └── ntm_testbench.vhd
-│   │   └── ntm_top
-│   │       ├── ntm_model_pkg.vhd
-│   │       ├── ntm_model.vhd
-│   │       └── ntm_testbench.vhd
-│   ├── trained
-│   │   └── ntm_trained_top
-│   │       ├── ntm_model_pkg.vhd
-│   │       ├── ntm_model.vhd
-│   │       └── ntm_testbench.vhd
-│   └── write_heads
-│       ├── ntm_erasing
-│       │   ├── ntm_model_pkg.vhd
-│       │   ├── ntm_model.vhd
-│       │   └── ntm_testbench.vhd
-│       └── ntm_writing
-│           ├── ntm_model_pkg.vhd
-│           ├── ntm_model.vhd
-│           └── ntm_testbench.vhd
 ├── state
 │   ├── feedback
 │   │   ├── ntm_state_matrix_feedforward
@@ -748,4 +694,4 @@ library
             ├── ntm_model.vhd
             └── ntm_testbench.vhd
 
-232 directories, 516 files
+214 directories, 480 files
