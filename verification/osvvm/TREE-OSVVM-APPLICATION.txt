@@ -336,48 +336,6 @@ application
 │           └── ntm_vector_mean
 │               ├── ntm_design_pkg.vhd
 │               └── ntm_design.vhd
-├── ntm
-│   ├── memory
-│   │   ├── ntm_addressing
-│   │   │   ├── ntm_design_pkg.vhd
-│   │   │   └── ntm_design.vhd
-│   │   ├── ntm_matrix_content_based_addressing
-│   │   │   ├── ntm_design_pkg.vhd
-│   │   │   └── ntm_design.vhd
-│   │   └── ntm_vector_content_based_addressing
-│   │       ├── ntm_design_pkg.vhd
-│   │       └── ntm_design.vhd
-│   ├── read_heads
-│   │   └── ntm_reading
-│   │       ├── ntm_design_pkg.vhd
-│   │       └── ntm_design.vhd
-│   ├── top
-│   │   ├── ntm_interface_matrix
-│   │   │   ├── ntm_design_pkg.vhd
-│   │   │   └── ntm_design.vhd
-│   │   ├── ntm_interface_top
-│   │   │   ├── ntm_design_pkg.vhd
-│   │   │   └── ntm_design.vhd
-│   │   ├── ntm_interface_vector
-│   │   │   ├── ntm_design_pkg.vhd
-│   │   │   └── ntm_design.vhd
-│   │   ├── ntm_output_vector
-│   │   │   ├── ntm_design_pkg.vhd
-│   │   │   └── ntm_design.vhd
-│   │   └── ntm_top
-│   │       ├── ntm_design_pkg.vhd
-│   │       └── ntm_design.vhd
-│   ├── trained
-│   │   └── ntm_trained_top
-│   │       ├── ntm_design_pkg.vhd
-│   │       └── ntm_design.vhd
-│   └── write_heads
-│       ├── ntm_erasing
-│       │   ├── ntm_design_pkg.vhd
-│       │   └── ntm_design.vhd
-│       └── ntm_writing
-│           ├── ntm_design_pkg.vhd
-│           └── ntm_design.vhd
 ├── state
 │   ├── feedback
 │   │   ├── ntm_state_matrix_feedforward
@@ -576,4 +534,4 @@ application
             ├── ntm_design_pkg.vhd
             └── ntm_design.vhd
 
-232 directories, 344 files
+214 directories, 320 files
