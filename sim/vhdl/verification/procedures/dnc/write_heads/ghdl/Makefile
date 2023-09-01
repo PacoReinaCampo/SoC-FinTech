@@ -79,9 +79,9 @@ build:
 
 	ghdl -a --std=08 ../../../../../../../rtl/vhdl/code/dnc/write_heads/accelerator_write_heads.vhd
 
-	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/baremetal/design/dnc/write_heads/accelerator_write_heads_pkg.vhd
-	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/baremetal/design/dnc/write_heads/accelerator_write_heads_stimulus.vhd
-	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/baremetal/design/dnc/write_heads/accelerator_write_heads_testbench.vhd
+	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/procedures/design/dnc/write_heads/accelerator_write_heads_pkg.vhd
+	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/procedures/design/dnc/write_heads/accelerator_write_heads_stimulus.vhd
+	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/procedures/design/dnc/write_heads/accelerator_write_heads_testbench.vhd
 
 simulate:
 	ghdl -m --std=08 accelerator_write_heads_testbench

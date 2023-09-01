@@ -95,6 +95,6 @@ vhdl2008 work ../../../../../../../rtl/vhdl/code/dnc/memory/accelerator_write_co
 vhdl2008 work ../../../../../../../rtl/vhdl/code/dnc/memory/accelerator_write_weighting.vhd
 vhdl2008 work ../../../../../../../rtl/vhdl/code/dnc/memory/accelerator_addressing.vhd
 
-vhdl2008 work ../../../../../../../bench/vhdl/code/baremetal/design/dnc/memory/accelerator_memory_pkg.vhd
-vhdl2008 work ../../../../../../../bench/vhdl/code/baremetal/design/dnc/memory/accelerator_memory_stimulus.vhd
-vhdl2008 work ../../../../../../../bench/vhdl/code/baremetal/design/dnc/memory/accelerator_memory_testbench.vhd
+vhdl2008 work ../../../../../../../bench/vhdl/code/procedures/design/dnc/memory/accelerator_memory_pkg.vhd
+vhdl2008 work ../../../../../../../bench/vhdl/code/procedures/design/dnc/memory/accelerator_memory_stimulus.vhd
+vhdl2008 work ../../../../../../../bench/vhdl/code/procedures/design/dnc/memory/accelerator_memory_testbench.vhd

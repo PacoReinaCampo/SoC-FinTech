@@ -75,6 +75,6 @@
 ../../../../../../../rtl/verilog/code/dnc/write_heads/accelerator_write_strength.sv
 ../../../../../../../rtl/verilog/code/dnc/write_heads/accelerator_write_vector.sv
 
-../../../../../../../bench/verilog/code/baremetal/design/dnc/write_heads/accelerator_write_heads_pkg.sv
-../../../../../../../bench/verilog/code/baremetal/design/dnc/write_heads/accelerator_write_heads_stimulus.sv
-../../../../../../../bench/verilog/code/baremetal/design/dnc/write_heads/accelerator_write_heads_testbench.sv
+../../../../../../../bench/verilog/code/procedures/design/dnc/write_heads/accelerator_write_heads_pkg.sv
+../../../../../../../bench/verilog/code/procedures/design/dnc/write_heads/accelerator_write_heads_stimulus.sv
+../../../../../../../bench/verilog/code/procedures/design/dnc/write_heads/accelerator_write_heads_testbench.sv

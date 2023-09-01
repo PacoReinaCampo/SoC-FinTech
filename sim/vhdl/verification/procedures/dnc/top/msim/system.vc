@@ -123,6 +123,6 @@
 ../../../../../../../rtl/vhdl/code/dnc/top/accelerator_output_vector.vhd
 ../../../../../../../rtl/vhdl/code/dnc/top/accelerator_interface_vector.vhd
 
-../../../../../../../bench/vhdl/code/baremetal/design/dnc/top/accelerator_top_pkg.vhd
-../../../../../../../bench/vhdl/code/baremetal/design/dnc/top/accelerator_top_stimulus.vhd
-../../../../../../../bench/vhdl/code/baremetal/design/dnc/top/accelerator_top_testbench.vhd
+../../../../../../../bench/vhdl/code/procedures/design/dnc/top/accelerator_top_pkg.vhd
+../../../../../../../bench/vhdl/code/procedures/design/dnc/top/accelerator_top_stimulus.vhd
+../../../../../../../bench/vhdl/code/procedures/design/dnc/top/accelerator_top_testbench.vhd

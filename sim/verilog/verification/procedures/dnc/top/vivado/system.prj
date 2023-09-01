@@ -121,6 +121,6 @@ verilog work ../../../../../../../rtl/verilog/code/dnc/top/accelerator_top.sv
 verilog work ../../../../../../../rtl/verilog/code/dnc/top/accelerator_output_vector.sv
 verilog work ../../../../../../../rtl/verilog/code/dnc/top/accelerator_interface_vector.sv
 
-verilog work ../../../../../../../bench/verilog/code/baremetal/design/dnc/top/accelerator_top_pkg.sv
-verilog work ../../../../../../../bench/verilog/code/baremetal/design/dnc/top/accelerator_top_stimulus.sv
-verilog work ../../../../../../../bench/verilog/code/baremetal/design/dnc/top/accelerator_top_testbench.sv
+verilog work ../../../../../../../bench/verilog/code/procedures/design/dnc/top/accelerator_top_pkg.sv
+verilog work ../../../../../../../bench/verilog/code/procedures/design/dnc/top/accelerator_top_stimulus.sv
+verilog work ../../../../../../../bench/verilog/code/procedures/design/dnc/top/accelerator_top_testbench.sv

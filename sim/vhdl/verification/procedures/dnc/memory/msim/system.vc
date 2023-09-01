@@ -101,6 +101,6 @@
 ../../../../../../../rtl/vhdl/code/dnc/memory/accelerator_write_weighting.vhd
 ../../../../../../../rtl/vhdl/code/dnc/memory/accelerator_addressing.vhd
 
-../../../../../../../bench/vhdl/code/baremetal/design/dnc/memory/accelerator_memory_pkg.vhd
-../../../../../../../bench/vhdl/code/baremetal/design/dnc/memory/accelerator_memory_stimulus.vhd
-../../../../../../../bench/vhdl/code/baremetal/design/dnc/memory/accelerator_memory_testbench.vhd
+../../../../../../../bench/vhdl/code/procedures/design/dnc/memory/accelerator_memory_pkg.vhd
+../../../../../../../bench/vhdl/code/procedures/design/dnc/memory/accelerator_memory_stimulus.vhd
+../../../../../../../bench/vhdl/code/procedures/design/dnc/memory/accelerator_memory_testbench.vhd

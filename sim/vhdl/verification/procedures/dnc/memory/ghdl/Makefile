@@ -94,9 +94,9 @@ build:
 	ghdl -a --std=08 ../../../../../../../rtl/vhdl/code/dnc/memory/accelerator_write_weighting.vhd
 	ghdl -a --std=08 ../../../../../../../rtl/vhdl/code/dnc/memory/accelerator_addressing.vhd
 
-	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/baremetal/design/dnc/memory/accelerator_memory_pkg.vhd
-	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/baremetal/design/dnc/memory/accelerator_memory_stimulus.vhd
-	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/baremetal/design/dnc/memory/accelerator_memory_testbench.vhd
+	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/procedures/design/dnc/memory/accelerator_memory_pkg.vhd
+	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/procedures/design/dnc/memory/accelerator_memory_stimulus.vhd
+	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/procedures/design/dnc/memory/accelerator_memory_testbench.vhd
 
 simulate:
 	ghdl -m --std=08 accelerator_memory_testbench

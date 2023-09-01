@@ -80,6 +80,6 @@ vhdl2008 work ../../../../../../../rtl/vhdl/code/math/calculus/tensor/accelerato
 
 vhdl2008 work ../../../../../../../rtl/vhdl/code/dnc/write_heads/accelerator_write_heads.vhd
 
-vhdl2008 work ../../../../../../../bench/vhdl/code/baremetal/design/dnc/write_heads/accelerator_write_heads_pkg.vhd
-vhdl2008 work ../../../../../../../bench/vhdl/code/baremetal/design/dnc/write_heads/accelerator_write_heads_stimulus.vhd
-vhdl2008 work ../../../../../../../bench/vhdl/code/baremetal/design/dnc/write_heads/accelerator_write_heads_testbench.vhd
+vhdl2008 work ../../../../../../../bench/vhdl/code/procedures/design/dnc/write_heads/accelerator_write_heads_pkg.vhd
+vhdl2008 work ../../../../../../../bench/vhdl/code/procedures/design/dnc/write_heads/accelerator_write_heads_stimulus.vhd
+vhdl2008 work ../../../../../../../bench/vhdl/code/procedures/design/dnc/write_heads/accelerator_write_heads_testbench.vhd

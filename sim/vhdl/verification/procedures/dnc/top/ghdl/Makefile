@@ -116,9 +116,9 @@ build:
 	ghdl -a --std=08 ../../../../../../../rtl/vhdl/code/dnc/top/accelerator_output_vector.vhd
 	ghdl -a --std=08 ../../../../../../../rtl/vhdl/code/dnc/top/accelerator_interface_vector.vhd
 
-	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/baremetal/design/dnc/top/accelerator_top_pkg.vhd
-	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/baremetal/design/dnc/top/accelerator_top_stimulus.vhd
-	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/baremetal/design/dnc/top/accelerator_top_testbench.vhd
+	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/procedures/design/dnc/top/accelerator_top_pkg.vhd
+	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/procedures/design/dnc/top/accelerator_top_stimulus.vhd
+	ghdl -a --std=08 ../../../../../../../bench/vhdl/code/procedures/design/dnc/top/accelerator_top_testbench.vhd
 
 simulate:
 	ghdl -m --std=08 accelerator_top_testbench
