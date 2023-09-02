@@ -134,24 +134,6 @@ library
 │       └── vector
 │           ├── ntm_vector_deviation.c
 │           └── ntm_vector_mean.c
-├── ntm
-│   ├── memory
-│   │   ├── ntm_addressing.c
-│   │   ├── ntm_matrix_content_based_addressing.c
-│   │   └── ntm_vector_content_based_addressing.c
-│   ├── read_heads
-│   │   └── ntm_reading.c
-│   ├── top
-│   │   ├── ntm_interface_matrix.c
-│   │   ├── ntm_interface_top.c
-│   │   ├── ntm_interface_vector.c
-│   │   ├── ntm_output_vector.c
-│   │   └── ntm_top.c
-│   ├── trained
-│   │   └── ntm_trained_top.c
-│   └── write_heads
-│       ├── ntm_erasing.c
-│       └── ntm_writing.c
 ├── state
 │   ├── feedback
 │   │   ├── ntm_state_matrix_feedforward.c
@@ -232,4 +214,4 @@ library
         ├── ntm_decoder.c
         └── ntm_encoder.c
 
-60 directories, 172 files
+54 directories, 160 files

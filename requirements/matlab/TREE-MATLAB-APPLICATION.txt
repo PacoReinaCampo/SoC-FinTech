@@ -134,24 +134,6 @@ application
 │       └── vector
 │           ├── ntm_vector_deviation_test.m
 │           └── ntm_vector_mean_test.m
-├── ntm
-│   ├── memory
-│   │   ├── ntm_addressing_test.m
-│   │   ├── ntm_matrix_content_based_addressing_test.m
-│   │   └── ntm_vector_content_based_addressing_test.m
-│   ├── read_heads
-│   │   └── ntm_reading_test.m
-│   ├── top
-│   │   ├── ntm_interface_matrix_test.m
-│   │   ├── ntm_interface_top_test.m
-│   │   ├── ntm_interface_vector_test.m
-│   │   ├── ntm_output_vector_test.m
-│   │   └── ntm_top_test.m
-│   ├── trained
-│   │   └── ntm_trained_top_test.m
-│   └── write_heads
-│       ├── ntm_erasing_test.m
-│       └── ntm_writing_test.m
 ├── state
 │   ├── feedback
 │   │   ├── ntm_state_matrix_feedforward_test.m
@@ -232,4 +214,4 @@ application
         ├── ntm_decoder_test.m
         └── ntm_encoder_test.m
 
-60 directories, 172 files
+54 directories, 160 files

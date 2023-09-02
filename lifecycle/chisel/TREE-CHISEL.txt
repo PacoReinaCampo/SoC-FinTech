@@ -90,24 +90,6 @@ library
 │       │   └── ntm_scalar_statitics.scala
 │       └── vector
 │           └── ntm_vector_statitics.scala
-├── ntm
-│   ├── memory
-│   │   ├── ntm_addressing.scala
-│   │   ├── ntm_matrix_content_based_addressing.scala
-│   │   └── ntm_vector_content_based_addressing.scala
-│   ├── read_heads
-│   │   └── ntm_reading.scala
-│   ├── top
-│   │   ├── ntm_interface_matrix.scala
-│   │   ├── ntm_interface_top.scala
-│   │   ├── ntm_interface_vector.scala
-│   │   ├── ntm_output_vector.scala
-│   │   └── ntm_top.scala
-│   ├── trained
-│   │   └── ntm_trained_top.scala
-│   └── write_heads
-│       ├── ntm_erasing.scala
-│       └── ntm_writing.scala
 ├── state
 │   ├── feedback
 │   │   └── ntm_state_feedback.scala
@@ -184,4 +166,4 @@ library
         ├── ntm_decoder.scala
         └── ntm_encoder.scala
 
-60 directories, 124 files
+54 directories, 112 files

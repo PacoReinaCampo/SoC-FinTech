@@ -110,25 +110,6 @@ library
 │       │   └── ScalarMathStatitics.go
 │       └── VectorMathStatitics
 │           └── VectorMathStatitics.go
-├── ntm
-│   ├── memory
-│   │   ├── ntm_addressing.go
-│   │   ├── ntm_matrix_content_based_addressing.go
-│   │   └── ntm_vector_content_based_addressing.go
-│   ├── ntm.go
-│   ├── read_heads
-│   │   └── ntm_reading.go
-│   ├── top
-│   │   ├── ntm_interface_matrix.go
-│   │   ├── ntm_interface_top.go
-│   │   ├── ntm_interface_vector.go
-│   │   ├── ntm_output_vector.go
-│   │   └── ntm_top.go
-│   ├── trained
-│   │   └── ntm_trained_top.go
-│   └── write_heads
-│       ├── ntm_erasing.go
-│       └── ntm_writing.go
 ├── state
 │   ├── feedback
 │   │   ├── ntm_state_matrix_feedforward.go
@@ -209,4 +190,4 @@ library
         ├── ntm_decoder.go
         └── ntm_encoder.go
 
-60 directories, 149 files
+54 directories, 136 files
