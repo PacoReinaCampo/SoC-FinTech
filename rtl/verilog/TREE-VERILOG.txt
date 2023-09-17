@@ -98,40 +98,6 @@ code
 │           ├── accelerator_input_gate_vector.sv
 │           ├── accelerator_output_gate_vector.sv
 │           └── accelerator_state_gate_vector.sv
-├── dnc
-│   ├── memory
-│   │   ├── accelerator_addressing.sv
-│   │   ├── accelerator_allocation_weighting.sv
-│   │   ├── accelerator_backward_weighting.sv
-│   │   ├── accelerator_content_based_addressing.sv
-│   │   ├── accelerator_forward_weighting.sv
-│   │   ├── accelerator_memory_matrix.sv
-│   │   ├── accelerator_memory_retention_vector.sv
-│   │   ├── accelerator_precedence_weighting.sv
-│   │   ├── accelerator_read_content_weighting.sv
-│   │   ├── accelerator_read_vectors.sv
-│   │   ├── accelerator_read_weighting.sv
-│   │   ├── accelerator_sort_vector.sv
-│   │   ├── accelerator_temporal_link_matrix.sv
-│   │   ├── accelerator_usage_vector.sv
-│   │   ├── accelerator_write_content_weighting.sv
-│   │   └── accelerator_write_weighting.sv
-│   ├── read_heads
-│   │   ├── accelerator_free_gates.sv
-│   │   ├── accelerator_read_keys.sv
-│   │   ├── accelerator_read_modes.sv
-│   │   └── accelerator_read_strengths.sv
-│   ├── top
-│   │   ├── accelerator_interface_vector.sv
-│   │   ├── accelerator_output_vector.sv
-│   │   └── accelerator_top.sv
-│   └── write_heads
-│       ├── accelerator_allocation_gate.sv
-│       ├── accelerator_erase_vector.sv
-│       ├── accelerator_write_gate.sv
-│       ├── accelerator_write_key.sv
-│       ├── accelerator_write_strength.sv
-│       └── accelerator_write_vector.sv
 ├── math
 │   ├── algebra
 │   │   ├── matrix
@@ -200,13 +166,28 @@ code
 │           ├── accelerator_vector_logarithm_function.sv
 │           ├── accelerator_vector_sinh_function.sv
 │           └── accelerator_vector_tanh_function.sv
+├── ntm
+│   ├── memory
+│   │   ├── accelerator_addressing.sv
+│   │   └── accelerator_content_based_addressing.sv
+│   ├── read_heads
+│   │   └── accelerator_reading.sv
+│   ├── top
+│   │   ├── accelerator_interface_vector.sv
+│   │   ├── accelerator_output_vector.sv
+│   │   └── accelerator_top.sv
+│   └── write_heads
+│       ├── accelerator_erasing.sv
+│       └── accelerator_writing.sv
 ├── pkg
-│   ├── accelerator_arithmetic_pkg.sv
-│   ├── accelerator_core_pkg.sv
-│   ├── accelerator_fnn_controller_pkg.sv
-│   ├── accelerator_lstm_controller_pkg.sv
-│   ├── accelerator_math_pkg.sv
-│   └── accelerator_state_pkg.sv
+│   ├── accelerator_arithmetic_verilog_pkg.sv
+│   ├── accelerator_core_verilog_pkg.sv
+│   ├── accelerator_fnn_controller_verilog_pkg.sv
+│   ├── accelerator_linear_controller_verilog_pkg.sv
+│   ├── accelerator_lstm_controller_verilog_pkg.sv
+│   ├── accelerator_math_verilog_pkg.sv
+│   ├── accelerator_state_verilog_pkg.sv
+│   └── accelerator_transformer_controller_verilog_pkg.sv
 ├── state
 │   ├── feedback
 │   │   ├── accelerator_state_matrix_feedforward.sv
@@ -266,4 +247,4 @@ code
         ├── accelerator_decoder.sv
         └── accelerator_encoder.sv
 
-79 directories, 187 files
+79 directories, 168 files

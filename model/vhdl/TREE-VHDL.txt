@@ -81,33 +81,6 @@ code
 │           ├── model_input_gate_vector.vhd
 │           ├── model_output_gate_vector.vhd
 │           └── model_state_gate_vector.vhd
-├── dnc
-│   ├── memory
-│   │   ├── model_addressing.vhd
-│   │   ├── model_allocation_weighting.vhd
-│   │   ├── model_backward_weighting.vhd
-│   │   ├── model_content_based_addressing.vhd
-│   │   ├── model_forward_weighting.vhd
-│   │   ├── model_memory_matrix.vhd
-│   │   ├── model_memory_retention_vector.vhd
-│   │   ├── model_precedence_weighting.vhd
-│   │   ├── model_read_content_weighting.vhd
-│   │   ├── model_read_vectors.vhd
-│   │   ├── model_read_weighting.vhd
-│   │   ├── model_sort_vector.vhd
-│   │   ├── model_temporal_link_matrix.vhd
-│   │   ├── model_usage_vector.vhd
-│   │   ├── model_write_content_weighting.vhd
-│   │   └── model_write_weighting.vhd
-│   ├── read_heads
-│   │   └── model_read_heads.vhd
-│   ├── top
-│   │   ├── model_interface_matrix.vhd
-│   │   ├── model_interface_vector.vhd
-│   │   ├── model_output_vector.vhd
-│   │   └── model_top.vhd
-│   └── write_heads
-│       └── model_write_heads.vhd
 ├── math
 │   ├── algebra
 │   │   ├── matrix
@@ -176,15 +149,29 @@ code
 │           ├── model_vector_logarithm_function.vhd
 │           ├── model_vector_sinh_function.vhd
 │           └── model_vector_tanh_function.vhd
+├── ntm
+│   ├── memory
+│   │   ├── model_addressing.vhd
+│   │   └── model_content_based_addressing.vhd
+│   ├── read_heads
+│   │   └── model_reading.vhd
+│   ├── top
+│   │   ├── model_interface_matrix.vhd
+│   │   ├── model_interface_vector.vhd
+│   │   ├── model_output_vector.vhd
+│   │   └── model_top.vhd
+│   └── write_heads
+│       ├── model_erasing.vhd
+│       └── model_writing.vhd
 ├── pkg
-│   ├── model_arithmetic_pkg.vhd
-│   ├── model_fnn_controller_pkg.vhd
-│   ├── model_linear_controller_pkg.vhd
-│   ├── model_lstm_controller_pkg.vhd
-│   ├── model_math_pkg.vhd
-│   ├── model_ntm_core_pkg.vhd
-│   ├── model_state_pkg.vhd
-│   └── model_transformer_controller_pkg.vhd
+│   ├── model_arithmetic_vhdl_pkg.vhd
+│   ├── model_fnn_controller_vhdl_pkg.vhd
+│   ├── model_linear_controller_vhdl_pkg.vhd
+│   ├── model_lstm_controller_vhdl_pkg.vhd
+│   ├── model_math_vhdl_pkg.vhd
+│   ├── model_ntm_core_vhdl_pkg.vhd
+│   ├── model_state_vhdl_pkg.vhd
+│   └── model_transformer_controller_vhdl_pkg.vhd
 ├── state
 │   ├── feedback
 │   │   ├── model_state_matrix_feedforward.vhd
@@ -244,4 +231,4 @@ code
         ├── model_decoder.vhd
         └── model_encoder.vhd
 
-74 directories, 170 files
+74 directories, 157 files
