@@ -43,33 +43,6 @@ library
 │           ├── ntm_input_gate_vector.c
 │           ├── ntm_output_gate_vector.c
 │           └── ntm_state_gate_vector.c
-├── dnc
-│   ├── memory
-│   │   ├── dnc_addressing.c
-│   │   ├── dnc_allocation_weighting.c
-│   │   ├── dnc_backward_weighting.c
-│   │   ├── dnc_forward_weighting.c
-│   │   ├── dnc_matrix_content_based_addressing.c
-│   │   ├── dnc_memory_matrix.c
-│   │   ├── dnc_memory_retention_vector.c
-│   │   ├── dnc_precedence_weighting.c
-│   │   ├── dnc_read_content_weighting.c
-│   │   ├── dnc_read_vectors.c
-│   │   ├── dnc_read_weighting.c
-│   │   ├── dnc_sort_vector.c
-│   │   ├── dnc_temporal_link_matrix.c
-│   │   ├── dnc_usage_vector.c
-│   │   ├── dnc_vector_content_based_addressing.c
-│   │   ├── dnc_write_content_weighting.c
-│   │   └── dnc_write_weighting.c
-│   ├── top
-│   │   ├── dnc_interface_matrix.c
-│   │   ├── dnc_interface_top.c
-│   │   ├── dnc_interface_vector.c
-│   │   ├── dnc_output_vector.c
-│   │   └── dnc_top.c
-│   └── trained
-│       └── dnc_trained_top.c
 ├── math
 │   ├── algebra
 │   │   ├── matrix
@@ -134,6 +107,24 @@ library
 │       └── vector
 │           ├── ntm_vector_deviation.c
 │           └── ntm_vector_mean.c
+├── ntm
+│   ├── memory
+│   │   ├── ntm_addressing.c
+│   │   ├── ntm_matrix_content_based_addressing.c
+│   │   └── ntm_vector_content_based_addressing.c
+│   ├── read_heads
+│   │   └── ntm_reading.c
+│   ├── top
+│   │   ├── ntm_interface_matrix.c
+│   │   ├── ntm_interface_top.c
+│   │   ├── ntm_interface_vector.c
+│   │   ├── ntm_output_vector.c
+│   │   └── ntm_top.c
+│   ├── trained
+│   │   └── ntm_trained_top.c
+│   └── write_heads
+│       ├── ntm_erasing.c
+│       └── ntm_writing.c
 ├── state
 │   ├── feedback
 │   │   ├── ntm_state_matrix_feedforward.c
@@ -214,4 +205,4 @@ library
         ├── ntm_decoder.c
         └── ntm_encoder.c
 
-54 directories, 160 files
+56 directories, 149 files

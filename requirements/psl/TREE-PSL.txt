@@ -43,33 +43,6 @@ library
 │           ├── ntm_input_gate_vector.psl
 │           ├── ntm_output_gate_vector.psl
 │           └── ntm_state_gate_vector.psl
-├── dnc
-│   ├── memory
-│   │   ├── dnc_addressing.psl
-│   │   ├── dnc_allocation_weighting.psl
-│   │   ├── dnc_backward_weighting.psl
-│   │   ├── dnc_forward_weighting.psl
-│   │   ├── dnc_matrix_content_based_addressing.psl
-│   │   ├── dnc_memory_matrix.psl
-│   │   ├── dnc_memory_retention_vector.psl
-│   │   ├── dnc_precedence_weighting.psl
-│   │   ├── dnc_read_content_weighting.psl
-│   │   ├── dnc_read_vectors.psl
-│   │   ├── dnc_read_weighting.psl
-│   │   ├── dnc_sort_vector.psl
-│   │   ├── dnc_temporal_link_matrix.psl
-│   │   ├── dnc_usage_vector.psl
-│   │   ├── dnc_vector_content_based_addressing.psl
-│   │   ├── dnc_write_content_weighting.psl
-│   │   └── dnc_write_weighting.psl
-│   ├── top
-│   │   ├── dnc_interface_matrix.psl
-│   │   ├── dnc_interface_top.psl
-│   │   ├── dnc_interface_vector.psl
-│   │   ├── dnc_output_vector.psl
-│   │   └── dnc_top.psl
-│   └── trained
-│       └── dnc_trained_top.psl
 ├── math
 │   ├── algebra
 │   │   ├── matrix
@@ -134,6 +107,24 @@ library
 │       └── vector
 │           ├── ntm_vector_deviation.psl
 │           └── ntm_vector_mean.psl
+├── ntm
+│   ├── memory
+│   │   ├── ntm_addressing.psl
+│   │   ├── ntm_matrix_content_based_addressing.psl
+│   │   └── ntm_vector_content_based_addressing.psl
+│   ├── read_heads
+│   │   └── ntm_reading.psl
+│   ├── top
+│   │   ├── ntm_interface_matrix.psl
+│   │   ├── ntm_interface_top.psl
+│   │   ├── ntm_interface_vector.psl
+│   │   ├── ntm_output_vector.psl
+│   │   └── ntm_top.psl
+│   ├── trained
+│   │   └── ntm_trained_top.psl
+│   └── write_heads
+│       ├── ntm_erasing.psl
+│       └── ntm_writing.psl
 ├── state
 │   ├── feedback
 │   │   ├── ntm_state_matrix_feedforward.psl
@@ -214,4 +205,4 @@ library
         ├── ntm_decoder.psl
         └── ntm_encoder.psl
 
-54 directories, 160 files
+56 directories, 149 files

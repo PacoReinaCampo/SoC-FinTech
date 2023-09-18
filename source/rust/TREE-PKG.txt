@@ -16,10 +16,6 @@ library
 │   └── LSTM
 │       ├── convolutional
 │       └── standard
-├── dnc
-│   ├── memory
-│   ├── top
-│   └── trained
 ├── math
 │   ├── algebra
 │   │   └── src
@@ -55,6 +51,12 @@ library
 │           │   └── mod.rs
 │           └── vector
 │               └── mod.rs
+├── ntm
+│   ├── memory
+│   ├── read_heads
+│   ├── top
+│   ├── trained
+│   └── write_heads
 ├── state
 │   └── src
 │       ├── feedback
@@ -80,4 +82,4 @@ library
     ├── inputs
     └── top
 
-60 directories, 20 files
+62 directories, 20 files

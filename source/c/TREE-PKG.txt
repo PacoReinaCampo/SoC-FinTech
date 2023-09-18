@@ -13,11 +13,6 @@ library
 │   └── LSTM
 │       ├── convolutional
 │       └── standard
-├── dnc
-│   ├── dnc.h
-│   ├── memory
-│   ├── top
-│   └── trained
 ├── math
 │   ├── algebra
 │   │   ├── ntm_math_algebra.h
@@ -40,6 +35,13 @@ library
 │       ├── matrix
 │       ├── scalar
 │       └── vector
+├── ntm
+│   ├── ntm.h
+│   ├── memory
+│   ├── read_heads
+│   ├── top
+│   ├── trained
+│   └── write_heads
 ├── state
 │   ├── ntm_state.h
 │   ├── feedback
@@ -63,4 +65,4 @@ library
     ├── inputs
     └── top
 
-54 directories, 9 files
+56 directories, 9 files
