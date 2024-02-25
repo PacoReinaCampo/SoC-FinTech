@@ -44,9 +44,11 @@
 
 # Remove Submodule
 git rm -rf soc-ntm
+git rm -rf soc-dsa
 
 # Update Submodule
 git submodule update --init --recursive --remote
 
 # Add Submodule
 git submodule add --force https://github.com/PacoReinaCampo/SoC-NTM.git soc-ntm
+git submodule add --force https://github.com/PacoReinaCampo/MPSoC-DSA.git soc-dsa
