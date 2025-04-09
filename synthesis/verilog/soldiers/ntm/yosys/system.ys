@@ -126,38 +126,38 @@ read_verilog -sv ../../../../rtl/verilog/math/function/matrix/ntm_matrix_softmax
 read_verilog -sv ../../../../rtl/verilog/math/function/matrix/ntm_matrix_summation_function.sv
 read_verilog -sv ../../../../rtl/verilog/math/function/matrix/ntm_matrix_tanh_function.sv
 
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/read_heads/dnc_free_gates.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/read_heads/dnc_read_keys.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/read_heads/dnc_read_strengths.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/read_heads/dnc_free_gates.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/read_heads/dnc_read_keys.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/read_heads/dnc_read_strengths.sv
 
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/write_heads/dnc_allocation_gate.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/write_heads/dnc_erase_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/write_heads/dnc_write_gate.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/write_heads/dnc_write_key.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/write_heads/dnc_write_strength.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/write_heads/dnc_write_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_allocation_gate.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_erase_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_write_gate.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_write_key.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_write_strength.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_write_vector.sv
 
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_content_based_addressing.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_allocation_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_backward_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_forward_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_memory_matrix.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_memory_retention_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_precedence_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_read_content_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_read_vectors.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_read_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_sort_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_temporal_link_matrix.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_usage_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_write_content_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_write_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/memory/dnc_addressing.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_content_based_addressing.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_allocation_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_backward_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_forward_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_memory_matrix.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_memory_retention_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_precedence_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_read_content_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_read_vectors.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_read_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_sort_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_temporal_link_matrix.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_usage_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_write_content_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_write_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_addressing.sv
 
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/top/dnc_top.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/top/dnc_output_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/top/dnc_read_interface_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/DNC/top/dnc_write_interface_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/dnc_top.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/dnc_output_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/dnc_read_interface_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/dnc_write_interface_vector.sv
 
 read_verilog -sv dnc_top_synthesis.sv
 
