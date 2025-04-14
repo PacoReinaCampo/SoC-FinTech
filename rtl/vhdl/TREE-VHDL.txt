@@ -200,6 +200,33 @@ code
 │   │       ├── accelerator_controller.vhd
 │   │       ├── accelerator_decoder.vhd
 │   │       └── accelerator_encoder.vhd
+│   ├── dnc
+│   │   ├── memory
+│   │   │   ├── accelerator_addressing.vhd
+│   │   │   ├── accelerator_allocation_weighting.vhd
+│   │   │   ├── accelerator_backward_weighting.vhd
+│   │   │   ├── accelerator_content_based_addressing.vhd
+│   │   │   ├── accelerator_forward_weighting.vhd
+│   │   │   ├── accelerator_memory_matrix.vhd
+│   │   │   ├── accelerator_memory_retention_vector.vhd
+│   │   │   ├── accelerator_precedence_weighting.vhd
+│   │   │   ├── accelerator_sort_vector.vhd
+│   │   │   ├── accelerator_temporal_link_matrix.vhd
+│   │   │   └── accelerator_usage_vector.vhd
+│   │   ├── read_heads
+│   │   │   ├── accelerator_read_content_weighting.vhd
+│   │   │   ├── accelerator_read_heads.vhd
+│   │   │   ├── accelerator_read_vectors.vhd
+│   │   │   └── accelerator_read_weighting.vhd
+│   │   ├── top
+│   │   │   ├── accelerator_interface_matrix.vhd
+│   │   │   ├── accelerator_interface_vector.vhd
+│   │   │   ├── accelerator_output_vector.vhd
+│   │   │   └── accelerator_top.vhd
+│   │   └── write_heads
+│   │       ├── accelerator_write_content_weighting.vhd
+│   │       ├── accelerator_write_heads.vhd
+│   │       └── accelerator_write_weighting.vhd
 │   ├── fnn
 │   │   ├── convolutional
 │   │   │   └── accelerator_controller.vhd
@@ -275,4 +302,4 @@ code
     └── pnn
         └── accelerator_trainer.vhd
 
-81 directories, 194 files
+86 directories, 216 files
