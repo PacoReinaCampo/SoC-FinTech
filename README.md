@@ -3,4 +3,4 @@
 
 ![QueenField](../main/icon.jpg)
 
-**FinTech with a SoC-NTM verified with UVM/OSVVM/FV**
+**FinTech with a SoC-{ANN/DNC/NTM} verified with UVM/OSVVM/FV**
