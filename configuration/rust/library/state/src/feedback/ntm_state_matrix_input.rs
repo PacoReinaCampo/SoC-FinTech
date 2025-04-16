@@ -44,13 +44,13 @@
 
 extern crate arithmetic;
 
-extern crate math_algebra;
+extern crate algebra;
 
 use arithmetic::matrix::ntm_matrix_adder::*;
 use arithmetic::matrix::ntm_matrix_subtrator::*;
 
-use math_algebra::matrix::ntm_matrix_inverse::*;
-use math_algebra::matrix::ntm_matrix_product::*;
+use algebra::matrix::ntm_matrix_inverse::*;
+use algebra::matrix::ntm_matrix_product::*;
 
 pub fn ntm_matrix_eye(SIZE_I_IN: usize, SIZE_J_IN: usize) -> Vec<Vec<f64>> {
     // Eye Matrix
