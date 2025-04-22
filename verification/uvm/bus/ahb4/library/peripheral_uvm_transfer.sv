@@ -2,7 +2,7 @@
 // peripheral_uvm transfer enums, parameters, and events
 ////////////////////////////////////////////////////////////////////////////////
 
-import peripheral_ahb3_pkg::*;
+import peripheral_ahb4_pkg::*;
 
 typedef enum {
   NOP,

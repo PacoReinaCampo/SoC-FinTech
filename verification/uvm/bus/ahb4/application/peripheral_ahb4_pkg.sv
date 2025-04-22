@@ -38,7 +38,7 @@
 // Author(s):
 //   Paco Reina Campo <pacoreinacampo@queenfield.tech>
 
-package peripheral_ahb3_pkg;
+package peripheral_ahb4_pkg;
 
   localparam HADDR_SIZE = 32;
   localparam HDATA_SIZE = 32;

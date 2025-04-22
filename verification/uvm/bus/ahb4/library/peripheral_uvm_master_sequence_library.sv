@@ -2,7 +2,7 @@
 // SEQUENCE: ubus_base_sequence
 ////////////////////////////////////////////////////////////////////////////////
 
-import peripheral_ahb3_pkg::*;
+import peripheral_ahb4_pkg::*;
 
 // This sequence raises/drops objections in the pre/post_body so that root
 // sequences raise objections but subsequences do not.

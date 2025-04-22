@@ -2,7 +2,7 @@
 // SEQUENCE: incr_read_byte_seq
 ////////////////////////////////////////////////////////////////////////////////
 
-import peripheral_ahb3_pkg::*;
+import peripheral_ahb4_pkg::*;
 
 class incr_read_byte_seq extends ubus_base_sequence;
 

@@ -1,4 +1,4 @@
-import peripheral_ahb3_pkg::*;
+import peripheral_ahb4_pkg::*;
 
 interface peripheral_uvm_if;
 
