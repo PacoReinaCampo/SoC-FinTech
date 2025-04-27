@@ -32,13 +32,13 @@ touch code/architecture/pu/ahb4/accelerator_pu_ahb4.vhd
 touch code/architecture/pu/apb4/accelerator_pu_apb4.vhd
 touch code/architecture/pu/axi4/accelerator_pu_axi4.vhd
 touch code/architecture/pu/bb/accelerator_pu_bb.vhd
-touch code/architecture/pu/biu/accelerator_pu_biu.vhd
+touch code/architecture/pu/tl/accelerator_pu_tl.vhd
 touch code/architecture/pu/wb/accelerator_pu_wb.vhd
 touch code/architecture/soc/ahb4/accelerator_soc_ahb4.vhd
 touch code/architecture/soc/apb4/accelerator_soc_apb4.vhd
 touch code/architecture/soc/axi4/accelerator_soc_axi4.vhd
 touch code/architecture/soc/bb/accelerator_soc_bb.vhd
-touch code/architecture/soc/biu/accelerator_soc_biu.vhd
+touch code/architecture/soc/tl/accelerator_soc_tl.vhd
 touch code/architecture/soc/wb/accelerator_soc_wb.vhd
 touch code/arithmetic/definition/matrix/accelerator_matrix_float_adder.vhd
 touch code/arithmetic/definition/matrix/accelerator_matrix_float_divider.vhd
