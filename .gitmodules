@@ -1,6 +1,6 @@
-[submodule "soc-ntm"]
-	path = soc-ntm
-	url = https://github.com/PacoReinaCampo/SoC-NTM.git
-[submodule "soc-dsa"]
-	path = soc-dsa
-	url = https://github.com/PacoReinaCampo/MPSoC-DSA.git
+[submodule "soc-dv"]
+	path = soc-dv
+	url = https://github.com/PacoReinaCampo/SoC-DV.git
+[submodule "soc-rtos"]
+	path = soc-rtos
+	url = https://github.com/PacoReinaCampo/SoC-RTOS.git
