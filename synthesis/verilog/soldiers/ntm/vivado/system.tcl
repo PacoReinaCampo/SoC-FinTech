@@ -42,125 +42,125 @@
 ##                                                                               ##
 ###################################################################################
 
-read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/scalar/ntm_scalar_integer_adder.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/scalar/ntm_scalar_integer_multiplier.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/scalar/ntm_scalar_integer_divider.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/scalar/accelerator_scalar_integer_adder.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/scalar/accelerator_scalar_integer_multiplier.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/scalar/accelerator_scalar_integer_divider.sv
 
-read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/vector/ntm_vector_integer_adder.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/vector/ntm_vector_integer_multiplier.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/vector/ntm_vector_integer_divider.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/vector/accelerator_vector_integer_adder.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/vector/accelerator_vector_integer_multiplier.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/vector/accelerator_vector_integer_divider.sv
 
-read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/matrix/ntm_matrix_integer_adder.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/matrix/ntm_matrix_integer_multiplier.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/matrix/ntm_matrix_integer_divider.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/matrix/accelerator_matrix_integer_adder.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/matrix/accelerator_matrix_integer_multiplier.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/integer/matrix/accelerator_matrix_integer_divider.sv
 
-read_verilog -sv ../../../../rtl/verilog/arithmetic/float/scalar/ntm_scalar_adder.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/float/scalar/ntm_scalar_multiplier.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/float/scalar/ntm_scalar_divider.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/float/scalar/accelerator_scalar_adder.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/float/scalar/accelerator_scalar_multiplier.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/float/scalar/accelerator_scalar_divider.sv
 
-read_verilog -sv ../../../../rtl/verilog/arithmetic/float/vector/ntm_vector_adder.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/float/vector/ntm_vector_multiplier.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/float/vector/ntm_vector_divider.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/float/vector/accelerator_vector_adder.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/float/vector/accelerator_vector_multiplier.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/float/vector/accelerator_vector_divider.sv
 
-read_verilog -sv ../../../../rtl/verilog/arithmetic/float/matrix/ntm_matrix_adder.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/float/matrix/ntm_matrix_multiplier.sv
-read_verilog -sv ../../../../rtl/verilog/arithmetic/float/matrix/ntm_matrix_divider.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/float/matrix/accelerator_matrix_adder.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/float/matrix/accelerator_matrix_multiplier.sv
+read_verilog -sv ../../../../rtl/verilog/arithmetic/float/matrix/accelerator_matrix_divider.sv
 
-read_verilog -sv ../../../../rtl/verilog/algebra/ntm_matrix_product.sv
-read_verilog -sv ../../../../rtl/verilog/algebra/ntm_tensor_transpose.sv
-read_verilog -sv ../../../../rtl/verilog/algebra/ntm_matrix_transpose.sv
-read_verilog -sv ../../../../rtl/verilog/algebra/ntm_scalar_product.sv
-read_verilog -sv ../../../../rtl/verilog/algebra/ntm_tensor_product.sv
+read_verilog -sv ../../../../rtl/verilog/algebra/accelerator_matrix_product.sv
+read_verilog -sv ../../../../rtl/verilog/algebra/accelerator_tensor_transpose.sv
+read_verilog -sv ../../../../rtl/verilog/algebra/accelerator_matrix_transpose.sv
+read_verilog -sv ../../../../rtl/verilog/algebra/accelerator_scalar_product.sv
+read_verilog -sv ../../../../rtl/verilog/algebra/accelerator_tensor_product.sv
 
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_exponentiator.sv
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_convolution_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_cosh_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_cosine_similarity_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_differentiation_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_logistic_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_multiplication_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_oneplus_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_sinh_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_softmax_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_summation_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/scalar/ntm_scalar_tanh_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_exponentiator.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_convolution_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_cosh_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_cosine_similarity_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_differentiation_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_logistic_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_multiplication_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_oneplus_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_sinh_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_softmax_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_summation_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/scalar/accelerator_scalar_tanh_function.sv
 
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_exponentiator.sv
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_convolution_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_cosh_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_cosine_similarity_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_differentiation_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_logistic_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_multiplication_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_oneplus_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_sinh_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_softmax_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_summation_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/vector/ntm_vector_tanh_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_exponentiator.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_convolution_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_cosh_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_cosine_similarity_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_differentiation_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_logistic_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_multiplication_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_oneplus_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_sinh_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_softmax_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_summation_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/vector/accelerator_vector_tanh_function.sv
 
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_exponentiator.sv
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_convolution_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_cosh_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_cosine_similarity_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_differentiation_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_logistic_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_multiplication_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_oneplus_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_sinh_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_softmax_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_summation_function.sv
-read_verilog -sv ../../../../rtl/verilog/math/matrix/ntm_matrix_tanh_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_exponentiator.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_convolution_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_cosh_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_cosine_similarity_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_differentiation_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_logistic_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_multiplication_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_oneplus_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_sinh_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_softmax_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_summation_function.sv
+read_verilog -sv ../../../../rtl/verilog/math/matrix/accelerator_matrix_tanh_function.sv
 
-read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/ntm_controller.sv
-read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/ntm_activation_gate_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/ntm_activation_trainer.sv
-read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/ntm_forget_gate_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/ntm_forget_trainer.sv
-read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/ntm_hidden_gate_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/ntm_input_gate_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/ntm_input_trainer.sv
-read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/ntm_output_gate_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/ntm_output_trainer.sv
-read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/ntm_state_gate_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/accelerator_controller.sv
+read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/accelerator_activation_gate_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/accelerator_activation_trainer.sv
+read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/accelerator_forget_gate_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/accelerator_forget_trainer.sv
+read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/accelerator_hidden_gate_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/accelerator_input_gate_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/accelerator_input_trainer.sv
+read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/accelerator_output_gate_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/accelerator_output_trainer.sv
+read_verilog -sv ../../../../rtl/verilog/nn/lstm/convolutional/accelerator_state_gate_vector.sv
 
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/read_heads/dnc_free_gates.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/read_heads/dnc_read_keys.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/read_heads/dnc_read_strengths.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/read_heads/accelerator_free_gates.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/read_heads/accelerator_read_keys.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/read_heads/accelerator_read_strengths.sv
 
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_allocation_gate.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_erase_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_write_gate.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_write_key.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_write_strength.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/dnc_write_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/accelerator_allocation_gate.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/accelerator_erase_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/accelerator_write_gate.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/accelerator_write_key.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/accelerator_write_strength.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/write_heads/accelerator_write_vector.sv
 
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_content_based_addressing.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_allocation_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_backward_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_forward_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_memory_matrix.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_memory_retention_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_precedence_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_read_content_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_read_vectors.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_read_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_sort_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_temporal_link_matrix.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_usage_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_write_content_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_write_weighting.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/dnc_addressing.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_content_based_addressing.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_allocation_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_backward_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_forward_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_memory_matrix.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_memory_retention_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_precedence_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_read_content_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_read_vectors.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_read_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_sort_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_temporal_link_matrix.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_usage_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_write_content_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_write_weighting.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/memory/accelerator_addressing.sv
 
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/dnc_top.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/dnc_output_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/dnc_read_interface_vector.sv
-read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/dnc_write_interface_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/accelerator_top.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/accelerator_output_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/accelerator_read_interface_vector.sv
+read_verilog -sv ../../../../rtl/verilog/nn/dnc/top/accelerator_write_interface_vector.sv
 
-read_verilog -sv dnc_top_synthesis.sv
+read_verilog -sv accelerator_top_synthesis.sv
 
 read_xdc system.xdc
 
-synth_design -part xc7z020-clg484-1 -include_dirs ../../../../rtl/verilog/pkg -top dnc_top_synthesis
+synth_design -part xc7z020-clg484-1 -include_dirs ../../../../rtl/verilog/pkg -top accelerator_top_synthesis
 
 opt_design
 place_design

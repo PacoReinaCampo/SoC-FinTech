@@ -47,11 +47,11 @@ use Ada.Text_IO;
 
 with System.Assertions;
 
-with ntm_size;
-use ntm_size;
+with accelerator_size;
+use accelerator_size;
 
-with ntm_state_feedback;
-use ntm_state_feedback;
+with accelerator_state_feedback;
+use accelerator_state_feedback;
 
 procedure test_state_feedback is
 
@@ -74,7 +74,7 @@ procedure test_state_feedback is
 
 begin
 
-  ntm_state_feedback.ntm_state_matrix_feedforward (
+  accelerator_state_feedback.accelerator_state_matrix_feedforward (
   -- Inputs
     data_d_in => data_d_in,
     data_k_in => data_k_in,
@@ -97,7 +97,7 @@ begin
     New_Line;
   end loop;
 
-  ntm_state_feedback.ntm_state_matrix_input (
+  accelerator_state_feedback.accelerator_state_matrix_input (
     -- Inputs
     data_b_in => data_b_in,
     data_d_in => data_d_in,
@@ -121,7 +121,7 @@ begin
     New_Line;
   end loop;
 
-  ntm_state_feedback.ntm_state_matrix_output (
+  accelerator_state_feedback.accelerator_state_matrix_output (
     -- Inputs
     data_a_in => data_a_in,
     data_b_in => data_b_in,
@@ -147,7 +147,7 @@ begin
     New_Line;
   end loop;
 
-  ntm_state_feedback.ntm_state_matrix_state (
+  accelerator_state_feedback.accelerator_state_matrix_state (
     -- Inputs
     data_a_in => data_a_in,
     data_b_in => data_b_in,

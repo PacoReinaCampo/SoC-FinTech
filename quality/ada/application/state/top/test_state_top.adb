@@ -47,11 +47,11 @@ use Ada.Text_IO;
 
 with System.Assertions;
 
-with ntm_size;
-use ntm_size;
+with accelerator_size;
+use accelerator_size;
 
-with ntm_state_top;
-use ntm_state_top;
+with accelerator_state_top;
+use accelerator_state_top;
 
 procedure test_state_top is
 
@@ -80,7 +80,7 @@ procedure test_state_top is
 
 begin
 
-  ntm_state_top.ntm_state_matrix (
+  accelerator_state_top.accelerator_state_matrix (
     -- Inputs
     data_a_in => data_a_in,
     data_b_in => data_b_in,

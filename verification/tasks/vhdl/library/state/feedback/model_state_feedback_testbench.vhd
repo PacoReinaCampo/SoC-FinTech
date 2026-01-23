@@ -57,21 +57,21 @@ entity model_state_feedback_testbench is
     R : std_logic_vector(DATA_SIZE-1 downto 0) := std_logic_vector(to_unsigned(64, DATA_SIZE));  -- i in 0 to R-1
 
     -- FUNCTIONALITY
-    ENABLE_NTM_MATRIX_STATE_TEST   : boolean := false;
-    ENABLE_NTM_MATRIX_STATE_CASE_0 : boolean := false;
-    ENABLE_NTM_MATRIX_STATE_CASE_1 : boolean := false;
+    ENABLE_ACCELERATOR_MATRIX_STATE_TEST   : boolean := false;
+    ENABLE_ACCELERATOR_MATRIX_STATE_CASE_0 : boolean := false;
+    ENABLE_ACCELERATOR_MATRIX_STATE_CASE_1 : boolean := false;
 
-    ENABLE_NTM_MATRIX_INPUT_TEST   : boolean := false;
-    ENABLE_NTM_MATRIX_INPUT_CASE_0 : boolean := false;
-    ENABLE_NTM_MATRIX_INPUT_CASE_1 : boolean := false;
+    ENABLE_ACCELERATOR_MATRIX_INPUT_TEST   : boolean := false;
+    ENABLE_ACCELERATOR_MATRIX_INPUT_CASE_0 : boolean := false;
+    ENABLE_ACCELERATOR_MATRIX_INPUT_CASE_1 : boolean := false;
 
-    ENABLE_NTM_MATRIX_OUTPUT_TEST   : boolean := false;
-    ENABLE_NTM_MATRIX_OUTPUT_CASE_0 : boolean := false;
-    ENABLE_NTM_MATRIX_OUTPUT_CASE_1 : boolean := false;
+    ENABLE_ACCELERATOR_MATRIX_OUTPUT_TEST   : boolean := false;
+    ENABLE_ACCELERATOR_MATRIX_OUTPUT_CASE_0 : boolean := false;
+    ENABLE_ACCELERATOR_MATRIX_OUTPUT_CASE_1 : boolean := false;
 
-    ENABLE_NTM_MATRIX_FEEDFORWARD_TEST   : boolean := false;
-    ENABLE_NTM_MATRIX_FEEDFORWARD_CASE_0 : boolean := false;
-    ENABLE_NTM_MATRIX_FEEDFORWARD_CASE_1 : boolean := false
+    ENABLE_ACCELERATOR_MATRIX_FEEDFORWARD_TEST   : boolean := false;
+    ENABLE_ACCELERATOR_MATRIX_FEEDFORWARD_CASE_0 : boolean := false;
+    ENABLE_ACCELERATOR_MATRIX_FEEDFORWARD_CASE_1 : boolean := false
     );
 end model_state_feedback_testbench;
 
@@ -267,162 +267,162 @@ begin
 
       -- MATRIX STATE
       -- CONTROL
-      NTM_MATRIX_STATE_START => start_matrix_state,
-      NTM_MATRIX_STATE_READY => ready_matrix_state,
+      ACCELERATOR_MATRIX_STATE_START => start_matrix_state,
+      ACCELERATOR_MATRIX_STATE_READY => ready_matrix_state,
 
-      NTM_MATRIX_STATE_DATA_A_IN_I_ENABLE => data_a_in_i_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_A_IN_J_ENABLE => data_a_in_j_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_B_IN_I_ENABLE => data_b_in_i_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_B_IN_J_ENABLE => data_b_in_j_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_C_IN_I_ENABLE => data_c_in_i_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_C_IN_J_ENABLE => data_c_in_j_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_D_IN_I_ENABLE => data_d_in_i_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_D_IN_J_ENABLE => data_d_in_j_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_A_IN_I_ENABLE => data_a_in_i_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_A_IN_J_ENABLE => data_a_in_j_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_B_IN_I_ENABLE => data_b_in_i_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_B_IN_J_ENABLE => data_b_in_j_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_C_IN_I_ENABLE => data_c_in_i_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_C_IN_J_ENABLE => data_c_in_j_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_D_IN_I_ENABLE => data_d_in_i_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_D_IN_J_ENABLE => data_d_in_j_enable_matrix_state,
 
-      NTM_MATRIX_STATE_DATA_A_I_ENABLE => data_a_i_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_A_J_ENABLE => data_a_j_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_B_I_ENABLE => data_b_i_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_B_J_ENABLE => data_b_j_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_C_I_ENABLE => data_c_i_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_C_J_ENABLE => data_c_j_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_D_I_ENABLE => data_d_i_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_D_J_ENABLE => data_d_j_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_A_I_ENABLE => data_a_i_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_A_J_ENABLE => data_a_j_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_B_I_ENABLE => data_b_i_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_B_J_ENABLE => data_b_j_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_C_I_ENABLE => data_c_i_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_C_J_ENABLE => data_c_j_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_D_I_ENABLE => data_d_i_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_D_J_ENABLE => data_d_j_enable_matrix_state,
 
-      NTM_MATRIX_STATE_DATA_K_IN_I_ENABLE => data_k_in_i_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_K_IN_J_ENABLE => data_k_in_j_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_K_IN_I_ENABLE => data_k_in_i_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_K_IN_J_ENABLE => data_k_in_j_enable_matrix_state,
 
-      NTM_MATRIX_STATE_DATA_K_I_ENABLE => data_k_i_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_K_J_ENABLE => data_k_j_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_K_I_ENABLE => data_k_i_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_K_J_ENABLE => data_k_j_enable_matrix_state,
 
-      NTM_MATRIX_STATE_DATA_A_OUT_I_ENABLE => data_a_out_i_enable_matrix_state,
-      NTM_MATRIX_STATE_DATA_A_OUT_J_ENABLE => data_a_out_j_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_A_OUT_I_ENABLE => data_a_out_i_enable_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_A_OUT_J_ENABLE => data_a_out_j_enable_matrix_state,
 
       -- DATA
-      NTM_MATRIX_STATE_SIZE_A_I_IN => size_a_in_i_matrix_state,
-      NTM_MATRIX_STATE_SIZE_A_J_IN => size_a_in_j_matrix_state,
-      NTM_MATRIX_STATE_SIZE_B_I_IN => size_b_in_i_matrix_state,
-      NTM_MATRIX_STATE_SIZE_B_J_IN => size_b_in_j_matrix_state,
-      NTM_MATRIX_STATE_SIZE_C_I_IN => size_c_in_i_matrix_state,
-      NTM_MATRIX_STATE_SIZE_C_J_IN => size_c_in_j_matrix_state,
-      NTM_MATRIX_STATE_SIZE_D_I_IN => size_d_in_i_matrix_state,
-      NTM_MATRIX_STATE_SIZE_D_J_IN => size_d_in_j_matrix_state,
+      ACCELERATOR_MATRIX_STATE_SIZE_A_I_IN => size_a_in_i_matrix_state,
+      ACCELERATOR_MATRIX_STATE_SIZE_A_J_IN => size_a_in_j_matrix_state,
+      ACCELERATOR_MATRIX_STATE_SIZE_B_I_IN => size_b_in_i_matrix_state,
+      ACCELERATOR_MATRIX_STATE_SIZE_B_J_IN => size_b_in_j_matrix_state,
+      ACCELERATOR_MATRIX_STATE_SIZE_C_I_IN => size_c_in_i_matrix_state,
+      ACCELERATOR_MATRIX_STATE_SIZE_C_J_IN => size_c_in_j_matrix_state,
+      ACCELERATOR_MATRIX_STATE_SIZE_D_I_IN => size_d_in_i_matrix_state,
+      ACCELERATOR_MATRIX_STATE_SIZE_D_J_IN => size_d_in_j_matrix_state,
 
-      NTM_MATRIX_STATE_DATA_A_IN => data_a_in_matrix_state,
-      NTM_MATRIX_STATE_DATA_B_IN => data_b_in_matrix_state,
-      NTM_MATRIX_STATE_DATA_C_IN => data_c_in_matrix_state,
-      NTM_MATRIX_STATE_DATA_D_IN => data_d_in_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_A_IN => data_a_in_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_B_IN => data_b_in_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_C_IN => data_c_in_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_D_IN => data_d_in_matrix_state,
 
-      NTM_MATRIX_STATE_DATA_K_IN => data_k_in_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_K_IN => data_k_in_matrix_state,
 
-      NTM_MATRIX_STATE_DATA_A_OUT => data_a_out_matrix_state,
+      ACCELERATOR_MATRIX_STATE_DATA_A_OUT => data_a_out_matrix_state,
 
       -- MATRIX INPUT
       -- CONTROL
-      NTM_MATRIX_INPUT_START => start_matrix_input,
-      NTM_MATRIX_INPUT_READY => ready_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_START => start_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_READY => ready_matrix_input,
 
-      NTM_MATRIX_INPUT_DATA_B_IN_I_ENABLE => data_b_in_i_enable_matrix_input,
-      NTM_MATRIX_INPUT_DATA_B_IN_J_ENABLE => data_b_in_j_enable_matrix_input,
-      NTM_MATRIX_INPUT_DATA_D_IN_I_ENABLE => data_d_in_i_enable_matrix_input,
-      NTM_MATRIX_INPUT_DATA_D_IN_J_ENABLE => data_d_in_j_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_B_IN_I_ENABLE => data_b_in_i_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_B_IN_J_ENABLE => data_b_in_j_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_D_IN_I_ENABLE => data_d_in_i_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_D_IN_J_ENABLE => data_d_in_j_enable_matrix_input,
 
-      NTM_MATRIX_INPUT_DATA_B_I_ENABLE => data_b_i_enable_matrix_input,
-      NTM_MATRIX_INPUT_DATA_B_J_ENABLE => data_b_j_enable_matrix_input,
-      NTM_MATRIX_INPUT_DATA_D_I_ENABLE => data_d_i_enable_matrix_input,
-      NTM_MATRIX_INPUT_DATA_D_J_ENABLE => data_d_j_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_B_I_ENABLE => data_b_i_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_B_J_ENABLE => data_b_j_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_D_I_ENABLE => data_d_i_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_D_J_ENABLE => data_d_j_enable_matrix_input,
 
-      NTM_MATRIX_INPUT_DATA_K_IN_I_ENABLE => data_k_in_i_enable_matrix_input,
-      NTM_MATRIX_INPUT_DATA_K_IN_J_ENABLE => data_k_in_j_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_K_IN_I_ENABLE => data_k_in_i_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_K_IN_J_ENABLE => data_k_in_j_enable_matrix_input,
 
-      NTM_MATRIX_INPUT_DATA_K_I_ENABLE => data_k_i_enable_matrix_input,
-      NTM_MATRIX_INPUT_DATA_K_J_ENABLE => data_k_j_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_K_I_ENABLE => data_k_i_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_K_J_ENABLE => data_k_j_enable_matrix_input,
 
-      NTM_MATRIX_INPUT_DATA_B_OUT_I_ENABLE => data_b_out_i_enable_matrix_input,
-      NTM_MATRIX_INPUT_DATA_B_OUT_J_ENABLE => data_b_out_j_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_B_OUT_I_ENABLE => data_b_out_i_enable_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_B_OUT_J_ENABLE => data_b_out_j_enable_matrix_input,
 
       -- DATA
-      NTM_MATRIX_INPUT_SIZE_B_I_IN => size_b_in_i_matrix_input,
-      NTM_MATRIX_INPUT_SIZE_B_J_IN => size_b_in_j_matrix_input,
-      NTM_MATRIX_INPUT_SIZE_D_I_IN => size_d_in_i_matrix_input,
-      NTM_MATRIX_INPUT_SIZE_D_J_IN => size_d_in_j_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_SIZE_B_I_IN => size_b_in_i_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_SIZE_B_J_IN => size_b_in_j_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_SIZE_D_I_IN => size_d_in_i_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_SIZE_D_J_IN => size_d_in_j_matrix_input,
 
-      NTM_MATRIX_INPUT_DATA_B_IN => data_b_in_matrix_input,
-      NTM_MATRIX_INPUT_DATA_D_IN => data_d_in_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_B_IN => data_b_in_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_D_IN => data_d_in_matrix_input,
 
-      NTM_MATRIX_INPUT_DATA_K_IN => data_k_in_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_K_IN => data_k_in_matrix_input,
 
-      NTM_MATRIX_INPUT_DATA_B_OUT => data_b_out_matrix_input,
+      ACCELERATOR_MATRIX_INPUT_DATA_B_OUT => data_b_out_matrix_input,
 
       -- MATRIX OUTPUT
       -- CONTROL
-      NTM_MATRIX_OUTPUT_START => start_matrix_output,
-      NTM_MATRIX_OUTPUT_READY => ready_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_START => start_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_READY => ready_matrix_output,
 
-      NTM_MATRIX_OUTPUT_DATA_C_IN_I_ENABLE => data_c_in_i_enable_matrix_output,
-      NTM_MATRIX_OUTPUT_DATA_C_IN_J_ENABLE => data_c_in_j_enable_matrix_output,
-      NTM_MATRIX_OUTPUT_DATA_D_IN_I_ENABLE => data_d_in_i_enable_matrix_output,
-      NTM_MATRIX_OUTPUT_DATA_D_IN_J_ENABLE => data_d_in_j_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_C_IN_I_ENABLE => data_c_in_i_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_C_IN_J_ENABLE => data_c_in_j_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_D_IN_I_ENABLE => data_d_in_i_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_D_IN_J_ENABLE => data_d_in_j_enable_matrix_output,
 
-      NTM_MATRIX_OUTPUT_DATA_C_I_ENABLE => data_c_i_enable_matrix_output,
-      NTM_MATRIX_OUTPUT_DATA_C_J_ENABLE => data_c_j_enable_matrix_output,
-      NTM_MATRIX_OUTPUT_DATA_D_I_ENABLE => data_d_i_enable_matrix_output,
-      NTM_MATRIX_OUTPUT_DATA_D_J_ENABLE => data_d_j_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_C_I_ENABLE => data_c_i_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_C_J_ENABLE => data_c_j_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_D_I_ENABLE => data_d_i_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_D_J_ENABLE => data_d_j_enable_matrix_output,
 
-      NTM_MATRIX_OUTPUT_DATA_K_IN_I_ENABLE => data_k_in_i_enable_matrix_output,
-      NTM_MATRIX_OUTPUT_DATA_K_IN_J_ENABLE => data_k_in_j_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_K_IN_I_ENABLE => data_k_in_i_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_K_IN_J_ENABLE => data_k_in_j_enable_matrix_output,
 
-      NTM_MATRIX_OUTPUT_DATA_K_I_ENABLE => data_k_i_enable_matrix_output,
-      NTM_MATRIX_OUTPUT_DATA_K_J_ENABLE => data_k_j_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_K_I_ENABLE => data_k_i_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_K_J_ENABLE => data_k_j_enable_matrix_output,
 
-      NTM_MATRIX_OUTPUT_DATA_C_OUT_I_ENABLE => data_c_out_i_enable_matrix_output,
-      NTM_MATRIX_OUTPUT_DATA_C_OUT_J_ENABLE => data_c_out_j_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_C_OUT_I_ENABLE => data_c_out_i_enable_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_C_OUT_J_ENABLE => data_c_out_j_enable_matrix_output,
 
       -- DATA
-      NTM_MATRIX_OUTPUT_SIZE_C_I_IN => size_c_in_i_matrix_output,
-      NTM_MATRIX_OUTPUT_SIZE_C_J_IN => size_c_in_j_matrix_output,
-      NTM_MATRIX_OUTPUT_SIZE_D_I_IN => size_d_in_i_matrix_output,
-      NTM_MATRIX_OUTPUT_SIZE_D_J_IN => size_d_in_j_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_SIZE_C_I_IN => size_c_in_i_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_SIZE_C_J_IN => size_c_in_j_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_SIZE_D_I_IN => size_d_in_i_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_SIZE_D_J_IN => size_d_in_j_matrix_output,
 
-      NTM_MATRIX_OUTPUT_DATA_C_IN => data_c_in_matrix_output,
-      NTM_MATRIX_OUTPUT_DATA_D_IN => data_d_in_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_C_IN => data_c_in_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_D_IN => data_d_in_matrix_output,
 
-      NTM_MATRIX_OUTPUT_DATA_K_IN => data_k_in_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_K_IN => data_k_in_matrix_output,
 
-      NTM_MATRIX_OUTPUT_DATA_C_OUT => data_c_out_matrix_output,
+      ACCELERATOR_MATRIX_OUTPUT_DATA_C_OUT => data_c_out_matrix_output,
 
       -- MATRIX FEEDFORWARD
       -- CONTROL
-      NTM_MATRIX_FEEDFORWARD_START => start_matrix_feedforward,
-      NTM_MATRIX_FEEDFORWARD_READY => ready_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_START => start_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_READY => ready_matrix_feedforward,
 
-      NTM_MATRIX_FEEDFORWARD_DATA_D_IN_I_ENABLE => data_d_in_i_enable_matrix_feedforward,
-      NTM_MATRIX_FEEDFORWARD_DATA_D_IN_J_ENABLE => data_d_in_j_enable_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_D_IN_I_ENABLE => data_d_in_i_enable_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_D_IN_J_ENABLE => data_d_in_j_enable_matrix_feedforward,
 
-      NTM_MATRIX_FEEDFORWARD_DATA_D_I_ENABLE => data_d_i_enable_matrix_feedforward,
-      NTM_MATRIX_FEEDFORWARD_DATA_D_J_ENABLE => data_d_j_enable_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_D_I_ENABLE => data_d_i_enable_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_D_J_ENABLE => data_d_j_enable_matrix_feedforward,
 
-      NTM_MATRIX_FEEDFORWARD_DATA_K_IN_I_ENABLE => data_k_in_i_enable_matrix_feedforward,
-      NTM_MATRIX_FEEDFORWARD_DATA_K_IN_J_ENABLE => data_k_in_j_enable_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_K_IN_I_ENABLE => data_k_in_i_enable_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_K_IN_J_ENABLE => data_k_in_j_enable_matrix_feedforward,
 
-      NTM_MATRIX_FEEDFORWARD_DATA_K_I_ENABLE => data_k_i_enable_matrix_feedforward,
-      NTM_MATRIX_FEEDFORWARD_DATA_K_J_ENABLE => data_k_j_enable_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_K_I_ENABLE => data_k_i_enable_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_K_J_ENABLE => data_k_j_enable_matrix_feedforward,
 
-      NTM_MATRIX_FEEDFORWARD_DATA_D_OUT_I_ENABLE => data_d_out_i_matrix_feedforward,
-      NTM_MATRIX_FEEDFORWARD_DATA_D_OUT_J_ENABLE => data_d_out_j_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_D_OUT_I_ENABLE => data_d_out_i_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_D_OUT_J_ENABLE => data_d_out_j_matrix_feedforward,
 
       -- DATA
-      NTM_MATRIX_FEEDFORWARD_SIZE_D_I_IN => size_d_in_i_matrix_feedforward,
-      NTM_MATRIX_FEEDFORWARD_SIZE_D_J_IN => size_d_in_j_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_SIZE_D_I_IN => size_d_in_i_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_SIZE_D_J_IN => size_d_in_j_matrix_feedforward,
 
-      NTM_MATRIX_FEEDFORWARD_DATA_D_IN => data_d_in_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_D_IN => data_d_in_matrix_feedforward,
 
-      NTM_MATRIX_FEEDFORWARD_DATA_K_IN => data_k_in_matrix_feedforward,
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_K_IN => data_k_in_matrix_feedforward,
 
-      NTM_MATRIX_FEEDFORWARD_DATA_D_OUT => data_d_out_matrix_feedforward
+      ACCELERATOR_MATRIX_FEEDFORWARD_DATA_D_OUT => data_d_out_matrix_feedforward
       );
 
   -- MATRIX STATE
-  model_state_matrix_state_test : if (ENABLE_NTM_MATRIX_STATE_TEST) generate
+  model_state_matrix_state_test : if (ENABLE_ACCELERATOR_MATRIX_STATE_TEST) generate
     state_matrix_state : model_state_matrix_state
       generic map (
         DATA_SIZE    => DATA_SIZE,
@@ -486,7 +486,7 @@ begin
   end generate model_state_matrix_state_test;
 
   -- MATRIX INPUT
-  model_state_matrix_input_test : if (ENABLE_NTM_MATRIX_INPUT_TEST) generate
+  model_state_matrix_input_test : if (ENABLE_ACCELERATOR_MATRIX_INPUT_TEST) generate
     state_matrix_input : model_state_matrix_input
       generic map (
         DATA_SIZE    => DATA_SIZE,
@@ -536,7 +536,7 @@ begin
   end generate model_state_matrix_input_test;
 
   -- MATRIX OUTPUT
-  model_state_matrix_output_test : if (ENABLE_NTM_MATRIX_OUTPUT_TEST) generate
+  model_state_matrix_output_test : if (ENABLE_ACCELERATOR_MATRIX_OUTPUT_TEST) generate
     state_matrix_output : model_state_matrix_output
       generic map (
         DATA_SIZE    => DATA_SIZE,
@@ -586,7 +586,7 @@ begin
   end generate model_state_matrix_output_test;
 
   -- MATRIX FEEDFORWARD
-  model_state_matrix_feedforward_test : if (ENABLE_NTM_MATRIX_FEEDFORWARD_TEST) generate
+  model_state_matrix_feedforward_test : if (ENABLE_ACCELERATOR_MATRIX_FEEDFORWARD_TEST) generate
     state_matrix_feedforward : model_state_matrix_feedforward
       generic map (
         DATA_SIZE    => DATA_SIZE,

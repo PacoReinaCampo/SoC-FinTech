@@ -44,17 +44,17 @@
 
 import numpy as np
 
-from feedback import ntm_state_matrix_feedforward as state_matrix_feedforward
-from feedback import ntm_state_matrix_input as state_matrix_input
-from feedback import ntm_state_matrix_output as state_matrix_output
-from feedback import ntm_state_matrix_state as state_matrix_state
+from feedback import accelerator_state_matrix_feedforward as state_matrix_feedforward
+from feedback import accelerator_state_matrix_input as state_matrix_input
+from feedback import accelerator_state_matrix_output as state_matrix_output
+from feedback import accelerator_state_matrix_state as state_matrix_state
 
 def test_state_matrix_feedforward():
 
   data_k_in = np.random.rand(3,3)
   data_d_in = np.random.rand(3,3)
 
-  np.testing.assert_array_equal(state_matrix_feedforward.ntm_state_matrix_feedforward(data_k_in, data_d_in), state_matrix_feedforward.ntm_state_matrix_feedforward(data_k_in, data_d_in))
+  np.testing.assert_array_equal(state_matrix_feedforward.accelerator_state_matrix_feedforward(data_k_in, data_d_in), state_matrix_feedforward.accelerator_state_matrix_feedforward(data_k_in, data_d_in))
 
 def test_state_matrix_input():
 
@@ -62,7 +62,7 @@ def test_state_matrix_input():
   data_b_in = np.random.rand(3,3)
   data_d_in = np.random.rand(3,3)
 
-  np.testing.assert_array_equal(state_matrix_input.ntm_state_matrix_input(data_k_in, data_b_in, data_d_in), state_matrix_input.ntm_state_matrix_input(data_k_in, data_b_in, data_d_in))
+  np.testing.assert_array_equal(state_matrix_input.accelerator_state_matrix_input(data_k_in, data_b_in, data_d_in), state_matrix_input.accelerator_state_matrix_input(data_k_in, data_b_in, data_d_in))
 
 def test_state_matrix_output():
 
@@ -70,7 +70,7 @@ def test_state_matrix_output():
   data_c_in = np.random.rand(3,3)
   data_d_in = np.random.rand(3,3)
 
-  np.testing.assert_array_equal(state_matrix_output.ntm_state_matrix_output(data_k_in, data_c_in, data_d_in), state_matrix_output.ntm_state_matrix_output(data_k_in, data_c_in, data_d_in))
+  np.testing.assert_array_equal(state_matrix_output.accelerator_state_matrix_output(data_k_in, data_c_in, data_d_in), state_matrix_output.accelerator_state_matrix_output(data_k_in, data_c_in, data_d_in))
 
 def test_state_matrix_state():
 
@@ -80,7 +80,7 @@ def test_state_matrix_state():
   data_c_in = np.random.rand(3,3)
   data_d_in = np.random.rand(3,3)
 
-  np.testing.assert_array_equal(state_matrix_state.ntm_state_matrix_state(data_k_in, data_a_in, data_b_in, data_c_in, data_d_in), state_matrix_state.ntm_state_matrix_state(data_k_in, data_a_in, data_b_in, data_c_in, data_d_in))
+  np.testing.assert_array_equal(state_matrix_state.accelerator_state_matrix_state(data_k_in, data_a_in, data_b_in, data_c_in, data_d_in), state_matrix_state.accelerator_state_matrix_state(data_k_in, data_a_in, data_b_in, data_c_in, data_d_in))
 
 
 #test_state_matrix_feedforward()

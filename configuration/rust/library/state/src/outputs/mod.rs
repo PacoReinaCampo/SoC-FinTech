@@ -42,5 +42,5 @@
 //                                                                               //
 ///////////////////////////////////////////////////////////////////////////////////
 
-pub mod ntm_state_vector_output;
-pub mod ntm_state_vector_state;
+pub mod accelerator_state_vector_output;
+pub mod accelerator_state_vector_state;

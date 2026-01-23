@@ -47,11 +47,11 @@ use Ada.Text_IO;
 
 with System.Assertions;
 
-with ntm_size;
-use ntm_size;
+with accelerator_size;
+use accelerator_size;
 
-with ntm_state_outputs;
-use ntm_state_outputs;
+with accelerator_state_outputs;
+use accelerator_state_outputs;
 
 procedure test_state_outputs is
 
@@ -80,7 +80,7 @@ procedure test_state_outputs is
 
 begin
 
-  ntm_state_outputs.ntm_state_vector_output (
+  accelerator_state_outputs.accelerator_state_vector_output (
     -- Inputs
     data_a_in => data_a_in,
     data_b_in => data_b_in,
@@ -110,7 +110,7 @@ begin
     Put(float'Image(data_y_out(i)));
   end loop;
 
-  ntm_state_outputs.ntm_state_vector_state (
+  accelerator_state_outputs.accelerator_state_vector_state (
     -- Inputs
     data_a_in => data_a_in,
     data_b_in => data_b_in,

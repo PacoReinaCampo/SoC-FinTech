@@ -6,7 +6,7 @@ add wave -noupdate /model_write_heads_pkg/MONITOR_TEST
 add wave -noupdate /model_write_heads_pkg/MONITOR_CASE
 
 add wave -noupdate -divider {=========================================}
-add wave -noupdate -divider {NTM WRITE GATE TEST}
+add wave -noupdate -divider {ACCELERATOR WRITE GATE TEST}
 add wave -noupdate -divider {=========================================}
 
 add wave -noupdate /model_write_heads_testbench/model_write_gate_test/write_gate/CLK

@@ -46,6 +46,6 @@
 # State-Outputs Sources
 #####################################################################
 
-SOURCES_OUTPUTS =	../../../library/state/ntm_state.hpp \
-			../../../library/state/outputs/ntm_state_vector_output.cpp \
-			../../../library/state/outputs/ntm_state_vector_state.cpp
+SOURCES_OUTPUTS =	../../../library/state/accelerator_state.hpp \
+			../../../library/state/outputs/accelerator_state_vector_output.cpp \
+			../../../library/state/outputs/accelerator_state_vector_state.cpp

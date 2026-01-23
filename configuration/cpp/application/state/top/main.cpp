@@ -46,7 +46,7 @@
 #include <iostream>
 #include <random>
 
-#include "../../../library/state/ntm_state.hpp"
+#include "../../../library/state/accelerator_state.hpp"
 
 using namespace std;
 
@@ -61,23 +61,23 @@ int main() {
 
   double data_out;
 
-  ntm_state_top state_top;
+  accelerator_state_top state_top;
 
   data_out = data_a_in + data_b_in;
 
-  assert(state_top.ntm_scalar_adder(data_a_in, data_b_in) == data_out);
+  assert(state_top.accelerator_scalar_adder(data_a_in, data_b_in) == data_out);
 
   data_out = data_a_in - data_b_in;
 
-  assert(state_top.ntm_scalar_subtract(data_a_in, data_b_in) == data_out);
+  assert(state_top.accelerator_scalar_subtract(data_a_in, data_b_in) == data_out);
 
   data_out = data_a_in * data_b_in;
 
-  assert(state_top.ntm_scalar_multiplier(data_a_in, data_b_in) == data_out);
+  assert(state_top.accelerator_scalar_multiplier(data_a_in, data_b_in) == data_out);
 
   data_out = data_a_in / data_b_in;
 
-  assert(state_top.ntm_scalar_divider(data_a_in, data_b_in) == data_out);
+  assert(state_top.accelerator_scalar_divider(data_a_in, data_b_in) == data_out);
 
   return 0;
 }

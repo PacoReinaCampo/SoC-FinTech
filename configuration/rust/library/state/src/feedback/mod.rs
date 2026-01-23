@@ -42,7 +42,7 @@
 //                                                                               //
 ///////////////////////////////////////////////////////////////////////////////////
 
-pub mod ntm_state_matrix_feedforward;
-//pub mod ntm_state_matrix_input;
-//pub mod ntm_state_matrix_output;
-//pub mod ntm_state_matrix_state;
+pub mod accelerator_state_matrix_feedforward;
+//pub mod accelerator_state_matrix_input;
+//pub mod accelerator_state_matrix_output;
+//pub mod accelerator_state_matrix_state;

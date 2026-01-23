@@ -196,7 +196,7 @@ begin
     if (STIMULUS_ACCELERATOR_STATE_TOP_TEST) then
 
       -------------------------------------------------------------------
-      MONITOR_TEST <= "STIMULUS_NTM_STATE_TOP_TEST                                           ";
+      MONITOR_TEST <= "STIMULUS_ACCELERATOR_STATE_TOP_TEST                                           ";
       -------------------------------------------------------------------
 
       if (STIMULUS_ACCELERATOR_STATE_TOP_CASE_0) then

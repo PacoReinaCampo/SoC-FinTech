@@ -6,7 +6,7 @@ add wave -noupdate /model_read_heads_pkg/MONITOR_TEST
 add wave -noupdate /model_read_heads_pkg/MONITOR_CASE
 
 add wave -noupdate -divider {=========================================}
-add wave -noupdate -divider {NTM READ KEYS TEST}
+add wave -noupdate -divider {ACCELERATOR READ KEYS TEST}
 add wave -noupdate -divider {=========================================}
 
 add wave -noupdate /model_read_heads_testbench/model_read_keys_test/read_keys/CLK

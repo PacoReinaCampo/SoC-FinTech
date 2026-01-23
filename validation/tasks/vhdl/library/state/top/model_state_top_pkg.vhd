@@ -109,9 +109,9 @@ package model_state_top_pkg is
   constant SCALAR_SAMPLE_B : std_logic_vector(DATA_SIZE-1 downto 0) := FLOAT_N_FOUR;
 
   -- FUNCTIONALITY
-  signal STIMULUS_NTM_STATE_TOP_TEST   : boolean := false;
-  signal STIMULUS_NTM_STATE_TOP_CASE_0 : boolean := false;
-  signal STIMULUS_NTM_STATE_TOP_CASE_1 : boolean := false;
+  signal STIMULUS_ACCELERATOR_STATE_TOP_TEST   : boolean := false;
+  signal STIMULUS_ACCELERATOR_STATE_TOP_CASE_0 : boolean := false;
+  signal STIMULUS_ACCELERATOR_STATE_TOP_CASE_1 : boolean := false;
 
   ------------------------------------------------------------------------------
   -- Components
@@ -136,52 +136,52 @@ package model_state_top_pkg is
       RST : out std_logic;
 
       -- CONTROL
-      NTM_STATE_TOP_START : out std_logic;
-      NTM_STATE_TOP_READY : in  std_logic;
+      ACCELERATOR_STATE_TOP_START : out std_logic;
+      ACCELERATOR_STATE_TOP_READY : in  std_logic;
 
-      NTM_STATE_TOP_DATA_A_IN_I_ENABLE : out std_logic;
-      NTM_STATE_TOP_DATA_A_IN_J_ENABLE : out std_logic;
-      NTM_STATE_TOP_DATA_B_IN_I_ENABLE : out std_logic;
-      NTM_STATE_TOP_DATA_B_IN_J_ENABLE : out std_logic;
-      NTM_STATE_TOP_DATA_C_IN_I_ENABLE : out std_logic;
-      NTM_STATE_TOP_DATA_C_IN_J_ENABLE : out std_logic;
-      NTM_STATE_TOP_DATA_D_IN_I_ENABLE : out std_logic;
-      NTM_STATE_TOP_DATA_D_IN_J_ENABLE : out std_logic;
+      ACCELERATOR_STATE_TOP_DATA_A_IN_I_ENABLE : out std_logic;
+      ACCELERATOR_STATE_TOP_DATA_A_IN_J_ENABLE : out std_logic;
+      ACCELERATOR_STATE_TOP_DATA_B_IN_I_ENABLE : out std_logic;
+      ACCELERATOR_STATE_TOP_DATA_B_IN_J_ENABLE : out std_logic;
+      ACCELERATOR_STATE_TOP_DATA_C_IN_I_ENABLE : out std_logic;
+      ACCELERATOR_STATE_TOP_DATA_C_IN_J_ENABLE : out std_logic;
+      ACCELERATOR_STATE_TOP_DATA_D_IN_I_ENABLE : out std_logic;
+      ACCELERATOR_STATE_TOP_DATA_D_IN_J_ENABLE : out std_logic;
 
-      NTM_STATE_TOP_DATA_K_IN_I_ENABLE : out std_logic;
-      NTM_STATE_TOP_DATA_K_IN_J_ENABLE : out std_logic;
+      ACCELERATOR_STATE_TOP_DATA_K_IN_I_ENABLE : out std_logic;
+      ACCELERATOR_STATE_TOP_DATA_K_IN_J_ENABLE : out std_logic;
 
-      NTM_STATE_TOP_DATA_K_I_ENABLE : in std_logic;
-      NTM_STATE_TOP_DATA_K_J_ENABLE : in std_logic;
+      ACCELERATOR_STATE_TOP_DATA_K_I_ENABLE : in std_logic;
+      ACCELERATOR_STATE_TOP_DATA_K_J_ENABLE : in std_logic;
 
-      NTM_STATE_TOP_DATA_U_IN_ENABLE : out std_logic;
+      ACCELERATOR_STATE_TOP_DATA_U_IN_ENABLE : out std_logic;
 
-      NTM_STATE_TOP_DATA_U_ENABLE : in std_logic;
+      ACCELERATOR_STATE_TOP_DATA_U_ENABLE : in std_logic;
 
-      NTM_STATE_TOP_DATA_Y_OUT_ENABLE : in std_logic;
+      ACCELERATOR_STATE_TOP_DATA_Y_OUT_ENABLE : in std_logic;
 
       -- DATA
-      NTM_STATE_TOP_LENGTH_K_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_LENGTH_K_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
 
-      NTM_STATE_TOP_SIZE_A_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-      NTM_STATE_TOP_SIZE_A_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-      NTM_STATE_TOP_SIZE_B_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-      NTM_STATE_TOP_SIZE_B_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-      NTM_STATE_TOP_SIZE_C_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-      NTM_STATE_TOP_SIZE_C_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-      NTM_STATE_TOP_SIZE_D_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-      NTM_STATE_TOP_SIZE_D_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_SIZE_A_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_SIZE_A_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_SIZE_B_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_SIZE_B_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_SIZE_C_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_SIZE_C_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_SIZE_D_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_SIZE_D_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
 
-      NTM_STATE_TOP_DATA_A_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
-      NTM_STATE_TOP_DATA_B_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
-      NTM_STATE_TOP_DATA_C_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
-      NTM_STATE_TOP_DATA_D_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_DATA_A_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_DATA_B_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_DATA_C_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_DATA_D_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
 
-      NTM_STATE_TOP_DATA_K_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_DATA_K_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
 
-      NTM_STATE_TOP_DATA_U_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+      ACCELERATOR_STATE_TOP_DATA_U_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
 
-      NTM_STATE_TOP_DATA_Y_OUT : in std_logic_vector(DATA_SIZE-1 downto 0)
+      ACCELERATOR_STATE_TOP_DATA_Y_OUT : in std_logic_vector(DATA_SIZE-1 downto 0)
       );
   end component;
 

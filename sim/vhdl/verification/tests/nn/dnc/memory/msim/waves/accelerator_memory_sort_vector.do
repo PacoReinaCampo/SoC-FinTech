@@ -6,7 +6,7 @@ add wave -noupdate /model_memory_pkg/MONITOR_TEST
 add wave -noupdate /model_memory_pkg/MONITOR_CASE
 
 add wave -noupdate -divider {=========================================}
-add wave -noupdate -divider {NTM VECTOR MODULE TEST}
+add wave -noupdate -divider {ACCELERATOR VECTOR MODULE TEST}
 add wave -noupdate -divider {=========================================}
 
 add wave -noupdate /model_memory_testbench/model_sort_vector_test/sort_vector/CLK

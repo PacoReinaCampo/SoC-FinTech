@@ -6,7 +6,7 @@ add wave -noupdate /model_read_heads_pkg/MONITOR_TEST
 add wave -noupdate /model_read_heads_pkg/MONITOR_CASE
 
 add wave -noupdate -divider {=========================================}
-add wave -noupdate -divider {NTM FREE GATES TEST}
+add wave -noupdate -divider {ACCELERATOR FREE GATES TEST}
 add wave -noupdate -divider {=========================================}
 
 add wave -noupdate /model_read_heads_testbench/model_free_gates_test/free_gates/CLK

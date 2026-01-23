@@ -57,13 +57,13 @@ entity model_state_outputs_testbench is
     R : std_logic_vector(DATA_SIZE-1 downto 0) := std_logic_vector(to_unsigned(64, DATA_SIZE));  -- i in 0 to R-1
 
     -- FUNCTIONALITY
-    ENABLE_NTM_VECTOR_STATE_TEST   : boolean := false;
-    ENABLE_NTM_VECTOR_STATE_CASE_0 : boolean := false;
-    ENABLE_NTM_VECTOR_STATE_CASE_1 : boolean := false;
+    ENABLE_ACCELERATOR_VECTOR_STATE_TEST   : boolean := false;
+    ENABLE_ACCELERATOR_VECTOR_STATE_CASE_0 : boolean := false;
+    ENABLE_ACCELERATOR_VECTOR_STATE_CASE_1 : boolean := false;
 
-    ENABLE_NTM_VECTOR_OUTPUT_TEST   : boolean := false;
-    ENABLE_NTM_VECTOR_OUTPUT_CASE_0 : boolean := false;
-    ENABLE_NTM_VECTOR_OUTPUT_CASE_1 : boolean := false
+    ENABLE_ACCELERATOR_VECTOR_OUTPUT_TEST   : boolean := false;
+    ENABLE_ACCELERATOR_VECTOR_OUTPUT_CASE_0 : boolean := false;
+    ENABLE_ACCELERATOR_VECTOR_OUTPUT_CASE_1 : boolean := false
     );
 end model_state_outputs_testbench;
 
@@ -245,123 +245,123 @@ begin
 
       -- VECTOR STATE
       -- CONTROL
-      NTM_VECTOR_STATE_START => start_vector_state,
-      NTM_VECTOR_STATE_READY => ready_vector_state,
+      ACCELERATOR_VECTOR_STATE_START => start_vector_state,
+      ACCELERATOR_VECTOR_STATE_READY => ready_vector_state,
 
-      NTM_VECTOR_STATE_DATA_A_IN_I_ENABLE => data_a_in_i_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_A_IN_J_ENABLE => data_a_in_j_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_B_IN_I_ENABLE => data_b_in_i_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_B_IN_J_ENABLE => data_b_in_j_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_C_IN_I_ENABLE => data_c_in_i_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_C_IN_J_ENABLE => data_c_in_j_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_D_IN_I_ENABLE => data_d_in_i_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_D_IN_J_ENABLE => data_d_in_j_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_A_IN_I_ENABLE => data_a_in_i_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_A_IN_J_ENABLE => data_a_in_j_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_B_IN_I_ENABLE => data_b_in_i_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_B_IN_J_ENABLE => data_b_in_j_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_C_IN_I_ENABLE => data_c_in_i_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_C_IN_J_ENABLE => data_c_in_j_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_D_IN_I_ENABLE => data_d_in_i_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_D_IN_J_ENABLE => data_d_in_j_enable_vector_state,
 
-      NTM_VECTOR_STATE_DATA_A_I_ENABLE => data_a_i_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_A_J_ENABLE => data_a_j_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_B_I_ENABLE => data_b_i_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_B_J_ENABLE => data_b_j_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_C_I_ENABLE => data_c_i_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_C_J_ENABLE => data_c_j_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_D_I_ENABLE => data_d_i_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_D_J_ENABLE => data_d_j_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_A_I_ENABLE => data_a_i_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_A_J_ENABLE => data_a_j_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_B_I_ENABLE => data_b_i_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_B_J_ENABLE => data_b_j_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_C_I_ENABLE => data_c_i_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_C_J_ENABLE => data_c_j_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_D_I_ENABLE => data_d_i_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_D_J_ENABLE => data_d_j_enable_vector_state,
 
-      NTM_VECTOR_STATE_DATA_K_IN_I_ENABLE => data_k_in_i_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_K_IN_J_ENABLE => data_k_in_j_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_K_IN_I_ENABLE => data_k_in_i_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_K_IN_J_ENABLE => data_k_in_j_enable_vector_state,
 
-      NTM_VECTOR_STATE_DATA_K_I_ENABLE => data_k_i_enable_vector_state,
-      NTM_VECTOR_STATE_DATA_K_J_ENABLE => data_k_j_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_K_I_ENABLE => data_k_i_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_K_J_ENABLE => data_k_j_enable_vector_state,
 
-      NTM_VECTOR_STATE_DATA_U_IN_ENABLE => data_u_in_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_U_IN_ENABLE => data_u_in_enable_vector_state,
 
-      NTM_VECTOR_STATE_DATA_U_ENABLE => data_u_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_U_ENABLE => data_u_enable_vector_state,
 
-      NTM_VECTOR_STATE_DATA_X_OUT_ENABLE => data_x_out_enable_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_X_OUT_ENABLE => data_x_out_enable_vector_state,
 
       -- DATA
-      NTM_VECTOR_STATE_LENGTH_K_IN => length_k_in_vector_state,
+      ACCELERATOR_VECTOR_STATE_LENGTH_K_IN => length_k_in_vector_state,
 
-      NTM_VECTOR_STATE_SIZE_A_I_IN => size_a_i_in_vector_state,
-      NTM_VECTOR_STATE_SIZE_A_J_IN => size_a_j_in_vector_state,
-      NTM_VECTOR_STATE_SIZE_B_I_IN => size_b_i_in_vector_state,
-      NTM_VECTOR_STATE_SIZE_B_J_IN => size_b_j_in_vector_state,
-      NTM_VECTOR_STATE_SIZE_C_I_IN => size_c_in_i_vector_state,
-      NTM_VECTOR_STATE_SIZE_C_J_IN => size_c_in_j_vector_state,
-      NTM_VECTOR_STATE_SIZE_D_I_IN => size_d_in_i_vector_state,
-      NTM_VECTOR_STATE_SIZE_D_J_IN => size_d_in_j_vector_state,
+      ACCELERATOR_VECTOR_STATE_SIZE_A_I_IN => size_a_i_in_vector_state,
+      ACCELERATOR_VECTOR_STATE_SIZE_A_J_IN => size_a_j_in_vector_state,
+      ACCELERATOR_VECTOR_STATE_SIZE_B_I_IN => size_b_i_in_vector_state,
+      ACCELERATOR_VECTOR_STATE_SIZE_B_J_IN => size_b_j_in_vector_state,
+      ACCELERATOR_VECTOR_STATE_SIZE_C_I_IN => size_c_in_i_vector_state,
+      ACCELERATOR_VECTOR_STATE_SIZE_C_J_IN => size_c_in_j_vector_state,
+      ACCELERATOR_VECTOR_STATE_SIZE_D_I_IN => size_d_in_i_vector_state,
+      ACCELERATOR_VECTOR_STATE_SIZE_D_J_IN => size_d_in_j_vector_state,
 
-      NTM_VECTOR_STATE_DATA_A_IN => data_a_in_vector_state,
-      NTM_VECTOR_STATE_DATA_B_IN => data_b_in_vector_state,
-      NTM_VECTOR_STATE_DATA_C_IN => data_c_in_vector_state,
-      NTM_VECTOR_STATE_DATA_D_IN => data_d_in_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_A_IN => data_a_in_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_B_IN => data_b_in_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_C_IN => data_c_in_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_D_IN => data_d_in_vector_state,
 
-      NTM_VECTOR_STATE_DATA_K_IN => data_k_in_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_K_IN => data_k_in_vector_state,
 
-      NTM_VECTOR_STATE_DATA_U_IN => data_u_in_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_U_IN => data_u_in_vector_state,
 
-      NTM_VECTOR_STATE_DATA_X_OUT => data_x_out_state_vector_state,
+      ACCELERATOR_VECTOR_STATE_DATA_X_OUT => data_x_out_state_vector_state,
 
       -- VECTOR OUTPUT
       -- CONTROL
-      NTM_VECTOR_OUTPUT_START => start_vector_output,
-      NTM_VECTOR_OUTPUT_READY => ready_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_START => start_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_READY => ready_vector_output,
 
-      NTM_VECTOR_OUTPUT_DATA_A_IN_I_ENABLE => data_a_in_i_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_A_IN_J_ENABLE => data_a_in_j_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_B_IN_I_ENABLE => data_b_in_i_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_B_IN_J_ENABLE => data_b_in_j_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_C_IN_I_ENABLE => data_c_in_i_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_C_IN_J_ENABLE => data_c_in_j_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_D_IN_I_ENABLE => data_d_in_i_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_D_IN_J_ENABLE => data_d_in_j_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_A_IN_I_ENABLE => data_a_in_i_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_A_IN_J_ENABLE => data_a_in_j_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_B_IN_I_ENABLE => data_b_in_i_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_B_IN_J_ENABLE => data_b_in_j_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_C_IN_I_ENABLE => data_c_in_i_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_C_IN_J_ENABLE => data_c_in_j_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_D_IN_I_ENABLE => data_d_in_i_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_D_IN_J_ENABLE => data_d_in_j_enable_vector_output,
 
-      NTM_VECTOR_OUTPUT_DATA_A_I_ENABLE => data_a_i_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_A_J_ENABLE => data_a_j_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_B_I_ENABLE => data_b_i_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_B_J_ENABLE => data_b_j_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_C_I_ENABLE => data_c_i_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_C_J_ENABLE => data_c_j_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_D_I_ENABLE => data_d_i_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_D_J_ENABLE => data_d_j_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_A_I_ENABLE => data_a_i_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_A_J_ENABLE => data_a_j_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_B_I_ENABLE => data_b_i_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_B_J_ENABLE => data_b_j_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_C_I_ENABLE => data_c_i_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_C_J_ENABLE => data_c_j_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_D_I_ENABLE => data_d_i_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_D_J_ENABLE => data_d_j_enable_vector_output,
 
-      NTM_VECTOR_OUTPUT_DATA_K_IN_I_ENABLE => data_k_in_i_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_K_IN_J_ENABLE => data_k_in_j_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_K_IN_I_ENABLE => data_k_in_i_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_K_IN_J_ENABLE => data_k_in_j_enable_vector_output,
 
-      NTM_VECTOR_OUTPUT_DATA_K_I_ENABLE => data_k_i_enable_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_K_J_ENABLE => data_k_j_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_K_I_ENABLE => data_k_i_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_K_J_ENABLE => data_k_j_enable_vector_output,
 
-      NTM_VECTOR_OUTPUT_DATA_U_IN_ENABLE => data_u_in_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_U_IN_ENABLE => data_u_in_enable_vector_output,
 
-      NTM_VECTOR_OUTPUT_DATA_U_ENABLE => data_u_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_U_ENABLE => data_u_enable_vector_output,
 
-      NTM_VECTOR_OUTPUT_DATA_Y_OUT_ENABLE => data_y_out_enable_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_Y_OUT_ENABLE => data_y_out_enable_vector_output,
 
       -- DATA
-      NTM_VECTOR_OUTPUT_LENGTH_K_IN => length_k_in_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_LENGTH_K_IN => length_k_in_vector_output,
 
-      NTM_VECTOR_OUTPUT_SIZE_A_I_IN => size_a_in_i_vector_output,
-      NTM_VECTOR_OUTPUT_SIZE_A_J_IN => size_a_in_j_vector_output,
-      NTM_VECTOR_OUTPUT_SIZE_B_I_IN => size_b_in_i_vector_output,
-      NTM_VECTOR_OUTPUT_SIZE_B_J_IN => size_b_in_j_vector_output,
-      NTM_VECTOR_OUTPUT_SIZE_C_I_IN => size_c_in_i_vector_output,
-      NTM_VECTOR_OUTPUT_SIZE_C_J_IN => size_c_in_j_vector_output,
-      NTM_VECTOR_OUTPUT_SIZE_D_I_IN => size_d_in_i_vector_output,
-      NTM_VECTOR_OUTPUT_SIZE_D_J_IN => size_d_in_j_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_SIZE_A_I_IN => size_a_in_i_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_SIZE_A_J_IN => size_a_in_j_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_SIZE_B_I_IN => size_b_in_i_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_SIZE_B_J_IN => size_b_in_j_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_SIZE_C_I_IN => size_c_in_i_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_SIZE_C_J_IN => size_c_in_j_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_SIZE_D_I_IN => size_d_in_i_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_SIZE_D_J_IN => size_d_in_j_vector_output,
 
-      NTM_VECTOR_OUTPUT_DATA_A_IN => data_a_in_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_B_IN => data_b_in_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_C_IN => data_c_in_vector_output,
-      NTM_VECTOR_OUTPUT_DATA_D_IN => data_d_in_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_A_IN => data_a_in_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_B_IN => data_b_in_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_C_IN => data_c_in_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_D_IN => data_d_in_vector_output,
 
-      NTM_VECTOR_OUTPUT_DATA_K_IN => data_k_in_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_K_IN => data_k_in_vector_output,
 
-      NTM_VECTOR_OUTPUT_DATA_U_IN => data_u_in_state_vector_output,
+      ACCELERATOR_VECTOR_OUTPUT_DATA_U_IN => data_u_in_state_vector_output,
 
-      NTM_VECTOR_OUTPUT_DATA_Y_OUT => data_y_out_state_vector_output
+      ACCELERATOR_VECTOR_OUTPUT_DATA_Y_OUT => data_y_out_state_vector_output
       );
 
   -- VECTOR STATE
-  model_state_vector_state_test : if (ENABLE_NTM_VECTOR_STATE_TEST) generate
+  model_state_vector_state_test : if (ENABLE_ACCELERATOR_VECTOR_STATE_TEST) generate
     state_vector_state : model_state_vector_state
       generic map (
         DATA_SIZE    => DATA_SIZE,
@@ -432,7 +432,7 @@ begin
   end generate model_state_vector_state_test;
 
   -- VECTOR OUTPUT
-  model_state_vector_output_test : if (ENABLE_NTM_VECTOR_OUTPUT_TEST) generate
+  model_state_vector_output_test : if (ENABLE_ACCELERATOR_VECTOR_OUTPUT_TEST) generate
     state_vector_output : model_state_vector_output
       generic map (
         DATA_SIZE    => DATA_SIZE,

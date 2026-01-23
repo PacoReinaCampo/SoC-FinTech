@@ -6,7 +6,7 @@ add wave -noupdate /model_write_heads_pkg/MONITOR_TEST
 add wave -noupdate /model_write_heads_pkg/MONITOR_CASE
 
 add wave -noupdate -divider {=========================================}
-add wave -noupdate -divider {NTM ERASE VECTOR TEST}
+add wave -noupdate -divider {ACCELERATOR ERASE VECTOR TEST}
 add wave -noupdate -divider {=========================================}
 
 add wave -noupdate /model_write_heads_testbench/model_erase_vector_test/erase_vector/CLK

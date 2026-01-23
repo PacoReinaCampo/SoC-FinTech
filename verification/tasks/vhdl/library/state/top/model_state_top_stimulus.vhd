@@ -65,52 +65,52 @@ entity model_state_top_stimulus is
     RST : out std_logic;
 
     -- CONTROL
-    NTM_STATE_TOP_START : out std_logic;
-    NTM_STATE_TOP_READY : in  std_logic;
+    ACCELERATOR_STATE_TOP_START : out std_logic;
+    ACCELERATOR_STATE_TOP_READY : in  std_logic;
 
-    NTM_STATE_TOP_DATA_A_IN_I_ENABLE : out std_logic;
-    NTM_STATE_TOP_DATA_A_IN_J_ENABLE : out std_logic;
-    NTM_STATE_TOP_DATA_B_IN_I_ENABLE : out std_logic;
-    NTM_STATE_TOP_DATA_B_IN_J_ENABLE : out std_logic;
-    NTM_STATE_TOP_DATA_C_IN_I_ENABLE : out std_logic;
-    NTM_STATE_TOP_DATA_C_IN_J_ENABLE : out std_logic;
-    NTM_STATE_TOP_DATA_D_IN_I_ENABLE : out std_logic;
-    NTM_STATE_TOP_DATA_D_IN_J_ENABLE : out std_logic;
+    ACCELERATOR_STATE_TOP_DATA_A_IN_I_ENABLE : out std_logic;
+    ACCELERATOR_STATE_TOP_DATA_A_IN_J_ENABLE : out std_logic;
+    ACCELERATOR_STATE_TOP_DATA_B_IN_I_ENABLE : out std_logic;
+    ACCELERATOR_STATE_TOP_DATA_B_IN_J_ENABLE : out std_logic;
+    ACCELERATOR_STATE_TOP_DATA_C_IN_I_ENABLE : out std_logic;
+    ACCELERATOR_STATE_TOP_DATA_C_IN_J_ENABLE : out std_logic;
+    ACCELERATOR_STATE_TOP_DATA_D_IN_I_ENABLE : out std_logic;
+    ACCELERATOR_STATE_TOP_DATA_D_IN_J_ENABLE : out std_logic;
 
-    NTM_STATE_TOP_DATA_K_IN_I_ENABLE : out std_logic;
-    NTM_STATE_TOP_DATA_K_IN_J_ENABLE : out std_logic;
+    ACCELERATOR_STATE_TOP_DATA_K_IN_I_ENABLE : out std_logic;
+    ACCELERATOR_STATE_TOP_DATA_K_IN_J_ENABLE : out std_logic;
 
-    NTM_STATE_TOP_DATA_K_I_ENABLE : in std_logic;
-    NTM_STATE_TOP_DATA_K_J_ENABLE : in std_logic;
+    ACCELERATOR_STATE_TOP_DATA_K_I_ENABLE : in std_logic;
+    ACCELERATOR_STATE_TOP_DATA_K_J_ENABLE : in std_logic;
 
-    NTM_STATE_TOP_DATA_U_IN_ENABLE : out std_logic;
+    ACCELERATOR_STATE_TOP_DATA_U_IN_ENABLE : out std_logic;
 
-    NTM_STATE_TOP_DATA_U_ENABLE : in std_logic;
+    ACCELERATOR_STATE_TOP_DATA_U_ENABLE : in std_logic;
 
-    NTM_STATE_TOP_DATA_Y_OUT_ENABLE : in std_logic;
+    ACCELERATOR_STATE_TOP_DATA_Y_OUT_ENABLE : in std_logic;
 
     -- DATA
-    NTM_STATE_TOP_LENGTH_K_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_LENGTH_K_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
 
-    NTM_STATE_TOP_SIZE_A_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-    NTM_STATE_TOP_SIZE_A_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-    NTM_STATE_TOP_SIZE_B_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-    NTM_STATE_TOP_SIZE_B_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-    NTM_STATE_TOP_SIZE_C_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-    NTM_STATE_TOP_SIZE_C_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-    NTM_STATE_TOP_SIZE_D_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
-    NTM_STATE_TOP_SIZE_D_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_SIZE_A_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_SIZE_A_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_SIZE_B_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_SIZE_B_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_SIZE_C_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_SIZE_C_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_SIZE_D_I_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_SIZE_D_J_IN : out std_logic_vector(CONTROL_SIZE-1 downto 0);
 
-    NTM_STATE_TOP_DATA_A_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
-    NTM_STATE_TOP_DATA_B_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
-    NTM_STATE_TOP_DATA_C_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
-    NTM_STATE_TOP_DATA_D_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_DATA_A_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_DATA_B_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_DATA_C_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_DATA_D_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
 
-    NTM_STATE_TOP_DATA_K_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_DATA_K_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
 
-    NTM_STATE_TOP_DATA_U_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
+    ACCELERATOR_STATE_TOP_DATA_U_IN : out std_logic_vector(DATA_SIZE-1 downto 0);
 
-    NTM_STATE_TOP_DATA_Y_OUT : in std_logic_vector(DATA_SIZE-1 downto 0)
+    ACCELERATOR_STATE_TOP_DATA_Y_OUT : in std_logic_vector(DATA_SIZE-1 downto 0)
     );
 end entity;
 
@@ -184,7 +184,7 @@ begin
   end process;
 
   -- FUNCTIONALITY
-  NTM_STATE_TOP_START <= start_int;
+  ACCELERATOR_STATE_TOP_START <= start_int;
 
   ------------------------------------------------------------------------------
   -- STIMULUS
@@ -193,46 +193,46 @@ begin
   main_test : process
   begin
 
-    if (STIMULUS_NTM_STATE_TOP_TEST) then
+    if (STIMULUS_ACCELERATOR_STATE_TOP_TEST) then
 
       -------------------------------------------------------------------
-      MONITOR_TEST <= "STIMULUS_NTM_STATE_TOP_TEST                                           ";
+      MONITOR_TEST <= "STIMULUS_ACCELERATOR_STATE_TOP_TEST                                           ";
       -------------------------------------------------------------------
 
-      if (STIMULUS_NTM_STATE_TOP_CASE_0) then
+      if (STIMULUS_ACCELERATOR_STATE_TOP_CASE_0) then
 
         -------------------------------------------------------------------
-        MONITOR_CASE <= "STIMULUS_NTM_STATE_TOP_CASE_0                                         ";
+        MONITOR_CASE <= "STIMULUS_ACCELERATOR_STATE_TOP_CASE_0                                         ";
         -------------------------------------------------------------------
 
-        NTM_STATE_TOP_SIZE_A_I_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_A_J_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_B_I_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_B_J_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_C_I_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_C_J_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_D_I_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_D_J_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_A_I_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_A_J_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_B_I_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_B_J_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_C_I_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_C_J_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_D_I_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_D_J_IN <= FOUR_CONTROL;
 
-        NTM_STATE_TOP_DATA_K_IN <= ZERO_DATA;
+        ACCELERATOR_STATE_TOP_DATA_K_IN <= ZERO_DATA;
       end if;
 
-      if (STIMULUS_NTM_STATE_TOP_CASE_1) then
+      if (STIMULUS_ACCELERATOR_STATE_TOP_CASE_1) then
 
         -------------------------------------------------------------------
-        MONITOR_CASE <= "STIMULUS_NTM_STATE_TOP_CASE_1                                         ";
+        MONITOR_CASE <= "STIMULUS_ACCELERATOR_STATE_TOP_CASE_1                                         ";
         -------------------------------------------------------------------
 
-        NTM_STATE_TOP_SIZE_A_I_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_A_J_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_B_I_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_B_J_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_C_I_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_C_J_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_D_I_IN <= FOUR_CONTROL;
-        NTM_STATE_TOP_SIZE_D_J_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_A_I_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_A_J_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_B_I_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_B_J_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_C_I_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_C_J_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_D_I_IN <= FOUR_CONTROL;
+        ACCELERATOR_STATE_TOP_SIZE_D_J_IN <= FOUR_CONTROL;
 
-        NTM_STATE_TOP_DATA_K_IN <= ZERO_DATA;
+        ACCELERATOR_STATE_TOP_DATA_K_IN <= ZERO_DATA;
       end if;
 
       wait for WORKING;

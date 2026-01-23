@@ -3,7 +3,7 @@ onerror {resume}
 quietly WaveActivateNextPane {} 0
 
 add wave -noupdate -divider {=========================================}
-add wave -noupdate -divider {NTM STANDARD LINEAR TEST}
+add wave -noupdate -divider {ACCELERATOR STANDARD LINEAR TEST}
 add wave -noupdate -divider {=========================================}
 
 add wave -noupdate /model_standard_linear_testbench/model_standard_linear_test/controller/CLK

@@ -57,9 +57,9 @@ entity model_state_top_testbench is
     R : std_logic_vector(DATA_SIZE-1 downto 0) := std_logic_vector(to_unsigned(64, DATA_SIZE));  -- i in 0 to R-1
 
     -- FUNCTIONALITY
-    ENABLE_NTM_STATE_TOP_TEST   : boolean := false;
-    ENABLE_NTM_STATE_TOP_CASE_0 : boolean := false;
-    ENABLE_NTM_STATE_TOP_CASE_1 : boolean := false
+    ENABLE_ACCELERATOR_STATE_TOP_TEST   : boolean := false;
+    ENABLE_ACCELERATOR_STATE_TOP_CASE_0 : boolean := false;
+    ENABLE_ACCELERATOR_STATE_TOP_CASE_1 : boolean := false
     );
 end model_state_top_testbench;
 
@@ -148,56 +148,56 @@ begin
       RST => RST,
 
       -- CONTROL
-      NTM_STATE_TOP_START => start_top,
-      NTM_STATE_TOP_READY => ready_top,
+      ACCELERATOR_STATE_TOP_START => start_top,
+      ACCELERATOR_STATE_TOP_READY => ready_top,
 
-      NTM_STATE_TOP_DATA_A_IN_I_ENABLE => data_a_i_in_enable_state_top,
-      NTM_STATE_TOP_DATA_A_IN_J_ENABLE => data_a_j_in_enable_state_top,
-      NTM_STATE_TOP_DATA_B_IN_I_ENABLE => data_b_i_in_enable_state_top,
-      NTM_STATE_TOP_DATA_B_IN_J_ENABLE => data_b_j_in_enable_state_top,
-      NTM_STATE_TOP_DATA_C_IN_I_ENABLE => data_c_i_in_enable_state_top,
-      NTM_STATE_TOP_DATA_C_IN_J_ENABLE => data_c_j_in_enable_state_top,
-      NTM_STATE_TOP_DATA_D_IN_I_ENABLE => data_d_i_in_enable_state_top,
-      NTM_STATE_TOP_DATA_D_IN_J_ENABLE => data_d_j_in_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_A_IN_I_ENABLE => data_a_i_in_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_A_IN_J_ENABLE => data_a_j_in_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_B_IN_I_ENABLE => data_b_i_in_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_B_IN_J_ENABLE => data_b_j_in_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_C_IN_I_ENABLE => data_c_i_in_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_C_IN_J_ENABLE => data_c_j_in_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_D_IN_I_ENABLE => data_d_i_in_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_D_IN_J_ENABLE => data_d_j_in_enable_state_top,
 
-      NTM_STATE_TOP_DATA_K_IN_I_ENABLE => data_k_in_i_enable_state_top,
-      NTM_STATE_TOP_DATA_K_IN_J_ENABLE => data_k_in_j_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_K_IN_I_ENABLE => data_k_in_i_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_K_IN_J_ENABLE => data_k_in_j_enable_state_top,
 
-      NTM_STATE_TOP_DATA_K_I_ENABLE => data_k_i_enable_state_top,
-      NTM_STATE_TOP_DATA_K_J_ENABLE => data_k_j_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_K_I_ENABLE => data_k_i_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_K_J_ENABLE => data_k_j_enable_state_top,
 
-      NTM_STATE_TOP_DATA_U_IN_ENABLE => data_u_in_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_U_IN_ENABLE => data_u_in_enable_state_top,
 
-      NTM_STATE_TOP_DATA_U_ENABLE => data_u_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_U_ENABLE => data_u_enable_state_top,
 
-      NTM_STATE_TOP_DATA_Y_OUT_ENABLE => data_y_out_enable_state_top,
+      ACCELERATOR_STATE_TOP_DATA_Y_OUT_ENABLE => data_y_out_enable_state_top,
 
       -- DATA
-      NTM_STATE_TOP_LENGTH_K_IN => length_k_in_top,
+      ACCELERATOR_STATE_TOP_LENGTH_K_IN => length_k_in_top,
 
-      NTM_STATE_TOP_SIZE_A_I_IN => size_a_i_in_top,
-      NTM_STATE_TOP_SIZE_A_J_IN => size_a_j_in_top,
-      NTM_STATE_TOP_SIZE_B_I_IN => size_b_i_in_top,
-      NTM_STATE_TOP_SIZE_B_J_IN => size_b_j_in_top,
-      NTM_STATE_TOP_SIZE_C_I_IN => size_c_i_in_top,
-      NTM_STATE_TOP_SIZE_C_J_IN => size_c_j_in_top,
-      NTM_STATE_TOP_SIZE_D_I_IN => size_d_i_in_top,
-      NTM_STATE_TOP_SIZE_D_J_IN => size_d_j_in_top,
+      ACCELERATOR_STATE_TOP_SIZE_A_I_IN => size_a_i_in_top,
+      ACCELERATOR_STATE_TOP_SIZE_A_J_IN => size_a_j_in_top,
+      ACCELERATOR_STATE_TOP_SIZE_B_I_IN => size_b_i_in_top,
+      ACCELERATOR_STATE_TOP_SIZE_B_J_IN => size_b_j_in_top,
+      ACCELERATOR_STATE_TOP_SIZE_C_I_IN => size_c_i_in_top,
+      ACCELERATOR_STATE_TOP_SIZE_C_J_IN => size_c_j_in_top,
+      ACCELERATOR_STATE_TOP_SIZE_D_I_IN => size_d_i_in_top,
+      ACCELERATOR_STATE_TOP_SIZE_D_J_IN => size_d_j_in_top,
 
-      NTM_STATE_TOP_DATA_A_IN => data_a_in_top,
-      NTM_STATE_TOP_DATA_B_IN => data_b_in_top,
-      NTM_STATE_TOP_DATA_C_IN => data_c_in_top,
-      NTM_STATE_TOP_DATA_D_IN => data_d_in_top,
+      ACCELERATOR_STATE_TOP_DATA_A_IN => data_a_in_top,
+      ACCELERATOR_STATE_TOP_DATA_B_IN => data_b_in_top,
+      ACCELERATOR_STATE_TOP_DATA_C_IN => data_c_in_top,
+      ACCELERATOR_STATE_TOP_DATA_D_IN => data_d_in_top,
 
-      NTM_STATE_TOP_DATA_K_IN => data_k_in_top,
+      ACCELERATOR_STATE_TOP_DATA_K_IN => data_k_in_top,
 
-      NTM_STATE_TOP_DATA_U_IN => data_u_in_state_top,
+      ACCELERATOR_STATE_TOP_DATA_U_IN => data_u_in_state_top,
 
-      NTM_STATE_TOP_DATA_Y_OUT => data_y_out_state_top
+      ACCELERATOR_STATE_TOP_DATA_Y_OUT => data_y_out_state_top
       );
 
   -- TOP
-  model_state_top_test : if (ENABLE_NTM_STATE_TOP_TEST) generate
+  model_state_top_test : if (ENABLE_ACCELERATOR_STATE_TOP_TEST) generate
     state_top : model_state_top
       generic map (
         DATA_SIZE    => DATA_SIZE,
